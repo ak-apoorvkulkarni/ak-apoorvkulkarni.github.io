@@ -495,123 +495,36 @@
     // Language switcher functionality
     const langSwitcher = document.querySelector('.lang-switcher');
     const langButtons = langSwitcher.querySelectorAll('.lang-btn');
-    const navLogoText = document.querySelector('.nav__logo-text');
-    const heroBadgeText = document.querySelector('.hero__badge-text');
-    const heroTitleHighlight = document.querySelector('.hero__title-highlight');
-    const heroSubtitle = document.querySelector('.hero__subtitle');
-    const heroDescription = document.querySelector('.hero__description');
-    const heroActions = document.querySelectorAll('.hero__actions .button');
-    const heroStats = document.querySelectorAll('.hero__stats .hero__stat-label');
-    const aboutHeading = document.querySelector('.about__heading');
-    const aboutDescription = document.querySelectorAll('.about__description');
-    const aboutInfoItems = document.querySelectorAll('.about__info-item');
-    const aboutSkillsTitle = document.querySelector('.about__skills-title');
-    const experiencePeriods = document.querySelectorAll('.experience__period');
-    const experienceTitles = document.querySelectorAll('.experience__title');
-    const experienceCompanies = document.querySelectorAll('.experience__company');
-    const experienceDescriptions = document.querySelectorAll('.experience__description');
-    const experienceTags = document.querySelectorAll('.experience__tag');
-    const projectTitles = document.querySelectorAll('.project__title');
-    const projectDescriptions = document.querySelectorAll('.project__description');
-    const projectTags = document.querySelectorAll('.project__tag');
-    const projectLinks = document.querySelectorAll('.project__links .project__link');
-    const contactTitle = document.querySelector('.contact__title');
-    const contactDescription = document.querySelector('.contact__description');
-    const footerLogo = document.querySelector('.footer__logo span');
-    const footerText = document.querySelector('.footer__text');
 
-    langButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const targetLang = button.getAttribute('data-lang');
-        const currentLang = document.documentElement.lang; // Get current language from HTML
-
-        if (targetLang === currentLang) {
-          return;
+    function setLanguage(lang) {
+      // Highlight the active button
+      langButtons.forEach(btn => {
+        if (btn.getAttribute('data-lang') === lang) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
         }
+      });
+      // Update all elements with data-en/data-de
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${lang}`);
+      });
+      // Set lang attribute on <html>
+      document.documentElement.lang = lang;
+      // Save preference
+      localStorage.setItem('lang', lang);
+    }
 
-        // Update language attributes
-        navLogoText.setAttribute('data-en', navLogoText.getAttribute('data-en'));
-        navLogoText.setAttribute('data-de', navLogoText.getAttribute('data-de'));
-        heroBadgeText.setAttribute('data-en', heroBadgeText.getAttribute('data-en'));
-        heroBadgeText.setAttribute('data-de', heroBadgeText.getAttribute('data-de'));
-        heroTitleHighlight.setAttribute('data-en', heroTitleHighlight.getAttribute('data-en'));
-        heroTitleHighlight.setAttribute('data-de', heroTitleHighlight.getAttribute('data-de'));
-        heroSubtitle.setAttribute('data-en', heroSubtitle.getAttribute('data-en'));
-        heroSubtitle.setAttribute('data-de', heroSubtitle.getAttribute('data-de'));
-        heroDescription.setAttribute('data-en', heroDescription.getAttribute('data-en'));
-        heroDescription.setAttribute('data-de', heroDescription.getAttribute('data-de'));
-        heroActions.forEach(action => {
-          action.setAttribute('data-en', action.getAttribute('data-en'));
-          action.setAttribute('data-de', action.getAttribute('data-de'));
-        });
-        heroStats.forEach(stat => {
-          stat.setAttribute('data-en', stat.getAttribute('data-en'));
-          stat.setAttribute('data-de', stat.getAttribute('data-de'));
-        });
-        aboutHeading.setAttribute('data-en', aboutHeading.getAttribute('data-en'));
-        aboutHeading.setAttribute('data-de', aboutHeading.getAttribute('data-de'));
-        aboutDescription.forEach(desc => {
-          desc.setAttribute('data-en', desc.getAttribute('data-en'));
-          desc.setAttribute('data-de', desc.getAttribute('data-de'));
-        });
-        aboutInfoItems.forEach(item => {
-          const icon = item.querySelector('i');
-          if (icon) {
-            icon.setAttribute('data-en', icon.getAttribute('data-en'));
-            icon.setAttribute('data-de', icon.getAttribute('data-de'));
-          }
-        });
-        aboutSkillsTitle.setAttribute('data-en', aboutSkillsTitle.getAttribute('data-en'));
-        aboutSkillsTitle.setAttribute('data-de', aboutSkillsTitle.getAttribute('data-de'));
-        experiencePeriods.forEach(period => {
-          period.setAttribute('data-en', period.getAttribute('data-en'));
-          period.setAttribute('data-de', period.getAttribute('data-de'));
-        });
-        experienceTitles.forEach(title => {
-          title.setAttribute('data-en', title.getAttribute('data-en'));
-          title.setAttribute('data-de', title.getAttribute('data-de'));
-        });
-        experienceCompanies.forEach(company => {
-          company.setAttribute('data-en', company.getAttribute('data-en'));
-          company.setAttribute('data-de', company.getAttribute('data-de'));
-        });
-        experienceDescriptions.forEach(desc => {
-          desc.setAttribute('data-en', desc.getAttribute('data-en'));
-          desc.setAttribute('data-de', desc.getAttribute('data-de'));
-        });
-        experienceTags.forEach(tag => {
-          tag.setAttribute('data-en', tag.getAttribute('data-en'));
-          tag.setAttribute('data-de', tag.getAttribute('data-de'));
-        });
-        projectTitles.forEach(title => {
-          title.setAttribute('data-en', title.getAttribute('data-en'));
-          title.setAttribute('data-de', title.getAttribute('data-de'));
-        });
-        projectDescriptions.forEach(desc => {
-          desc.setAttribute('data-en', desc.getAttribute('data-en'));
-          desc.setAttribute('data-de', desc.getAttribute('data-de'));
-        });
-        projectTags.forEach(tag => {
-          tag.setAttribute('data-en', tag.getAttribute('data-en'));
-          tag.setAttribute('data-de', tag.getAttribute('data-de'));
-        });
-        projectLinks.forEach(link => {
-          link.setAttribute('data-en', link.getAttribute('data-en'));
-          link.setAttribute('data-de', link.getAttribute('data-de'));
-        });
-        contactTitle.setAttribute('data-en', contactTitle.getAttribute('data-en'));
-        contactTitle.setAttribute('data-de', contactTitle.getAttribute('data-de'));
-        contactDescription.setAttribute('data-en', contactDescription.getAttribute('data-en'));
-        contactDescription.setAttribute('data-de', contactDescription.getAttribute('data-de'));
-        footerLogo.setAttribute('data-en', footerLogo.getAttribute('data-en'));
-        footerLogo.setAttribute('data-de', footerLogo.getAttribute('data-de'));
-        footerText.setAttribute('data-en', footerText.getAttribute('data-en'));
-        footerText.setAttribute('data-de', footerText.getAttribute('data-de'));
-
-        // Reload the page to apply new language attributes
-        location.reload();
+    // On click, switch language
+    langButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        setLanguage(btn.getAttribute('data-lang'));
       });
     });
+
+    // On page load, set language from localStorage or default to 'en'
+    const savedLang = localStorage.getItem('lang') || 'en';
+    setLanguage(savedLang);
 
     // Navigation functionality
     const navToggle = document.getElementById('nav-toggle');
