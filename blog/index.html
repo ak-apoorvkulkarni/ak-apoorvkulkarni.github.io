@@ -248,31 +248,41 @@
   </header>
 
   <!-- BLOG FILTERS -->
-  <section class="blog-filters">
-    <div class="container">
-      <div class="blog-filters__container">
-        <button class="blog-filter active" data-category="all" data-en="All Posts" data-de="Alle Beiträge">All Posts</button>
-        <button class="blog-filter" data-category="embedded-systems" data-en="Embedded Systems" data-de="Embedded Systems">Embedded Systems</button>
-        <button class="blog-filter" data-category="pcb-design" data-en="PCB Design" data-de="PCB-Design">PCB Design</button>
-        <button class="blog-filter" data-category="iot" data-en="IoT" data-de="IoT">IoT</button>
-        <button class="blog-filter" data-category="fpga" data-en="FPGA" data-de="FPGA">FPGA</button>
-        <button class="blog-filter" data-category="tutorials" data-en="Tutorials" data-de="Tutorials">Tutorials</button>
-      </div>
-    </div>
-  </section>
+  <!-- Removed blog-filters section -->
 
   <!-- BLOG GRID -->
   <main class="blog-grid">
     <div class="container">
       <div class="blog-grid__container" id="blog-grid">
         <!-- Blog posts will be dynamically loaded here -->
-        <div class="blog-empty">
-          <div class="blog-empty__icon">
-            <i class="fa-solid fa-newspaper"></i>
+        <a href="posts/pcb-design-basics.html" class="blog-card">
+          <div class="blog-card__image">
+            <i class="fa-solid fa-microchip"></i>
           </div>
-          <h3 data-en="Coming Soon!" data-de="Demnächst verfügbar!">Coming Soon!</h3>
-          <p data-en="I'm working on some great content. Check back soon for articles about embedded systems, PCB design, and engineering insights." data-de="Ich arbeite an großartigem Content. Schau bald wieder vorbei für Artikel über Embedded Systems, PCB-Design und Ingenieurwesen.">I'm working on some great content. Check back soon for articles about embedded systems, PCB design, and engineering insights.</p>
-        </div>
+          <div class="blog-card__content">
+            <div class="blog-card__meta">
+              <span class="blog-card__date">
+                <i class="fa-solid fa-calendar"></i>
+                <span data-en="January 15, 2025" data-de="15. Januar 2025">January 15, 2025</span>
+              </span>
+              <span class="blog-card__read-time">
+                <i class="fa-solid fa-clock"></i>
+                <span data-en="8 min read" data-de="8 Min. Lesezeit">8 min read</span>
+              </span>
+            </div>
+            <h3 class="blog-card__title" data-en="PCB Design Basics: A Comprehensive Guide for Beginners" data-de="PCB-Design-Grundlagen: Ein umfassender Leitfaden für Anfänger">PCB Design Basics: A Comprehensive Guide for Beginners</h3>
+            <p class="blog-card__excerpt" data-en="Learn the fundamental principles of PCB design, from component selection to layout optimization. This guide covers everything you need to know to create reliable and efficient printed circuit boards." data-de="Lerne die grundlegenden Prinzipien des PCB-Designs, von der Komponentenauswahl bis zur Layout-Optimierung. Dieser Leitfaden behandelt alles, was du wissen musst, um zuverlässige und effiziente Leiterplatten zu erstellen.">Learn the fundamental principles of PCB design, from component selection to layout optimization. This guide covers everything you need to know to create reliable and efficient printed circuit boards.</p>
+            <div class="blog-card__tags">
+              <span class="blog-card__tag" data-en="PCB Design" data-de="PCB-Design">PCB Design</span>
+              <span class="blog-card__tag" data-en="Electronics" data-de="Elektronik">Electronics</span>
+              <span class="blog-card__tag" data-en="Tutorial" data-de="Tutorial">Tutorial</span>
+            </div>
+            <span class="blog-card__link">
+              <span data-en="Read More" data-de="Mehr lesen">Read More</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </div>
+        </a>
       </div>
     </div>
   </main>

@@ -587,20 +587,25 @@
 
     window.addEventListener('scroll', updateActiveLink);
 
-    // Smooth scrolling for navigation links
+    // Smooth scrolling for navigation links (only for internal links)
     navLinks.forEach(link => {
       link.addEventListener('click', (e) => {
-        e.preventDefault();
         const targetId = link.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
         
-        if (targetSection) {
-          const offsetTop = targetSection.offsetTop - 80;
-          window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth'
-          });
+        // If it's an internal link (starts with #), handle smooth scrolling
+        if (targetId.startsWith('#')) {
+          e.preventDefault();
+          const targetSection = document.querySelector(targetId);
+          
+          if (targetSection) {
+            const offsetTop = targetSection.offsetTop - 80;
+            window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
+            });
+          }
         }
+        // If it's an external link (like blog/), let it navigate normally
       });
     });
   </script>
