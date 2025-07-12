@@ -3,150 +3,543 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Apoorv Kulkarni - Portfolio</title>
+  <meta name="description" content="Apoorv Kulkarni - Embedded Systems Engineer specializing in PCB design, product management, and IoT solutions" />
+  <meta name="keywords" content="embedded systems, PCB design, IoT, product management, Karlsruhe Institute of Technology" />
+  <title>Apoorv Kulkarni - Embedded Systems Engineer</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav class="nav container">
-    <a href="#" class="nav__logo">Apoorv Kulkarni</a>
-    <div class="nav__menu" id="nav-menu">
-      <ul class="nav__list">
-        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-        <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-      </ul>
-      <i class="fa-solid fa-xmark nav__close" id="nav-close"></i>
-    </div>
-    <div class="nav__toggle" id="nav-toggle"><i class="fa-solid fa-bars"></i></div>
-    <button id="dark-toggle" class="dark-toggle" aria-label="Toggle dark mode">🌙</button>
-  </nav>
-
-  <!-- HOME -->
-  <section class="hero section" id="home" data-aos="fade-down">
-    <div class="hero__container container grid">
-      <div class="hero__content">
-        <h1 class="home__title">Hi, I'm Apoorv Kulkarni</h1>
-        <h3 class="home__subtitle">Embedded Systems Engineer</h3>
-        <p class="home__description">Focused on PCB design, product management, and IoT solutions.</p>
-        <a href="#projects" class="button">View Projects</a>
+  <!-- NAVIGATION -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-text">Apoorv Kulkarni</span>
+      </a>
+      
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#home" class="nav__link active-link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#experience" class="nav__link">Experience</a>
+          </li>
+          <li class="nav__item">
+            <a href="#projects" class="nav__link">Projects</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
+        </ul>
+        
+        <div class="nav__close" id="nav-close">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
       </div>
-      <div class="hero__img">
-        <img src="profile.jpg" alt="Apoorv Kulkarni" />
+
+      <div class="nav__actions">
+        <button id="dark-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </div>
-    </div>
-  </section>
+    </nav>
+  </header>
 
-  <!-- ABOUT -->
-  <section class="about section" id="about" data-aos="fade-up">
-    <h2 class="section__title">About Me</h2>
-    <div class="about__container container grid">
-      <p class="about__description">Graduate student at Karlsruhe Institute of Technology specializing in embedded systems, low-power electronics, and hardware development.</p>
-      <ul class="about__info grid">
-        <li><span>📧</span> apoorvkulkarni.ak@gmail.com</li>
-        <li><span>📞</span> +49 176 6631 5354</li>
-        <li><span>📍</span> Karlsruhe, Germany</li>
-      </ul>
-    </div>
-  </section>
+  <main class="main">
+    <!-- HERO SECTION -->
+    <section class="hero section" id="home">
+      <div class="hero__container container">
+        <div class="hero__content" data-aos="fade-up">
+          <div class="hero__badge">
+            <span class="hero__badge-text">Available for opportunities</span>
+          </div>
+          
+          <h1 class="hero__title">
+            Hi, I'm <span class="hero__title-highlight">Apoorv Kulkarni</span>
+          </h1>
+          
+          <h2 class="hero__subtitle">Embedded Systems Engineer</h2>
+          
+          <p class="hero__description">
+            Specializing in PCB design, product management, and IoT solutions. 
+            Currently pursuing my Master's at Karlsruhe Institute of Technology.
+          </p>
+          
+          <div class="hero__actions">
+            <a href="#projects" class="button button--primary">
+              <span>View Projects</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="button button--secondary">
+              <span>Get in Touch</span>
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+          
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <span class="hero__stat-number">3+</span>
+              <span class="hero__stat-label">Years Experience</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-number">15+</span>
+              <span class="hero__stat-label">Projects Completed</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-number">5+</span>
+              <span class="hero__stat-label">Technologies</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero__image" data-aos="fade-left">
+          <div class="hero__image-wrapper">
+            <img src="profile.jpg" alt="Apoorv Kulkarni" class="hero__img" />
+            <div class="hero__image-bg"></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- PROJECTS -->
-  <section class="projects section" id="projects" data-aos="fade-up">
-    <h2 class="section__title">Projects</h2>
-    <div class="projects__container container grid">
-      <article class="project__card">
-        <h3 class="project__title">Hyperloop Electronics</h3>
-        <p class="project__description">Led embedded system and PCB design for a Hyperloop pod.</p>
-        <a href="https://github.com/ak-apoorvkulkarni" target="_blank" class="button button--flex">
-          View on GitHub <i class="fa-solid fa-arrow-up-right-from-square button__icon"></i>
-        </a>
-      </article>
-      <article class="project__card">
-        <h3 class="project__title">FPGA AFM Control</h3>
-        <p class="project__description">Precision nanoscale control system development using FPGA.</p>
-      </article>
-      <article class="project__card">
-        <h3 class="project__title">Speak Out Glove</h3>
-        <p class="project__description">Sign-language glove translating gestures to speech and text.</p>
-      </article>
-    </div>
-  </section>
+    <!-- ABOUT SECTION -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section__header" data-aos="fade-up">
+          <h2 class="section__title">About Me</h2>
+          <p class="section__subtitle">Get to know me better</p>
+        </div>
+        
+        <div class="about__container grid">
+          <div class="about__content" data-aos="fade-right">
+            <h3 class="about__heading">Passionate about embedded systems and innovation</h3>
+            <p class="about__description">
+              I'm a graduate student at Karlsruhe Institute of Technology specializing in embedded systems, 
+              low-power electronics, and hardware development. With a strong foundation in both theoretical 
+              knowledge and practical implementation, I focus on creating efficient, reliable, and innovative 
+              solutions for complex engineering challenges.
+            </p>
+            <p class="about__description">
+              My expertise spans from PCB design and FPGA development to IoT system architecture and 
+              product management. I believe in the power of interdisciplinary collaboration and 
+              continuous learning to drive technological advancement.
+            </p>
+            
+            <div class="about__info">
+              <div class="about__info-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div>
+                  <h4>Education</h4>
+                  <p>M.Sc. Embedded Systems Engineering<br>Karlsruhe Institute of Technology</p>
+                </div>
+              </div>
+              <div class="about__info-item">
+                <i class="fa-solid fa-map-marker-alt"></i>
+                <div>
+                  <h4>Location</h4>
+                  <p>Karlsruhe, Germany</p>
+                </div>
+              </div>
+              <div class="about__info-item">
+                <i class="fa-solid fa-clock"></i>
+                <div>
+                  <h4>Experience</h4>
+                  <p>3+ years in embedded systems</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="about__skills" data-aos="fade-left">
+            <h3 class="about__skills-title">Technical Skills</h3>
+            <div class="skills__container">
+              <div class="skill__category">
+                <h4 class="skill__category-title">Hardware Design</h4>
+                <div class="skill__tags">
+                  <span class="skill__tag">PCB Design</span>
+                  <span class="skill__tag">Altium Designer</span>
+                  <span class="skill__tag">KiCad</span>
+                  <span class="skill__tag">Circuit Design</span>
+                </div>
+              </div>
+              
+              <div class="skill__category">
+                <h4 class="skill__category-title">Programming</h4>
+                <div class="skill__tags">
+                  <span class="skill__tag">C/C++</span>
+                  <span class="skill__tag">Python</span>
+                  <span class="skill__tag">VHDL/Verilog</span>
+                  <span class="skill__tag">MATLAB</span>
+                </div>
+              </div>
+              
+              <div class="skill__category">
+                <h4 class="skill__category-title">Embedded Systems</h4>
+                <div class="skill__tags">
+                  <span class="skill__tag">ARM Cortex</span>
+                  <span class="skill__tag">FPGA</span>
+                  <span class="skill__tag">RTOS</span>
+                  <span class="skill__tag">IoT</span>
+                </div>
+              </div>
+              
+              <div class="skill__category">
+                <h4 class="skill__category-title">Tools & Technologies</h4>
+                <div class="skill__tags">
+                  <span class="skill__tag">Git</span>
+                  <span class="skill__tag">Docker</span>
+                  <span class="skill__tag">Linux</span>
+                  <span class="skill__tag">AWS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- CONTACT -->
-  <section class="contact section" id="contact" data-aos="fade-up">
-    <h2 class="section__title">Contact Me</h2>
-    <div class="contact__container container">
-      <p>Email: <a href="mailto:apoorvkulkarni.ak@gmail.com">apoorvkulkarni.ak@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/ak-apoorvkulkarni" target="_blank">ak-apoorvkulkarni</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/apoorvskulkarni" target="_blank">apoorvskulkarni</a></p>
-      <p>Google Scholar: <a href="https://scholar.google.com/citations?user=7ff821IAAAAJ" target="_blank">Publications</a></p>
-    </div>
-  </section>
+    <!-- EXPERIENCE SECTION -->
+    <section class="experience section" id="experience">
+      <div class="container">
+        <div class="section__header" data-aos="fade-up">
+          <h2 class="section__title">Experience</h2>
+          <p class="section__subtitle">My professional journey</p>
+        </div>
+        
+        <div class="experience__container" data-aos="fade-up">
+          <div class="experience__timeline">
+            <div class="experience__item">
+              <div class="experience__content">
+                <div class="experience__period">2023 - Present</div>
+                <h3 class="experience__title">Graduate Student</h3>
+                <h4 class="experience__company">Karlsruhe Institute of Technology</h4>
+                <p class="experience__description">
+                  Pursuing Master's in Embedded Systems Engineering with focus on low-power electronics, 
+                  FPGA development, and advanced embedded systems design.
+                </p>
+                <div class="experience__tags">
+                  <span class="experience__tag">Research</span>
+                  <span class="experience__tag">FPGA</span>
+                  <span class="experience__tag">Embedded Systems</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="experience__item">
+              <div class="experience__content">
+                <div class="experience__period">2022 - 2023</div>
+                <h3 class="experience__title">Embedded Systems Engineer</h3>
+                <h4 class="experience__company">Hyperloop Project</h4>
+                <p class="experience__description">
+                  Led embedded system and PCB design for a Hyperloop pod, managing the complete 
+                  electronics architecture and ensuring system reliability under extreme conditions.
+                </p>
+                <div class="experience__tags">
+                  <span class="experience__tag">PCB Design</span>
+                  <span class="experience__tag">System Architecture</span>
+                  <span class="experience__tag">Team Leadership</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="experience__item">
+              <div class="experience__content">
+                <div class="experience__period">2021 - 2022</div>
+                <h3 class="experience__title">Research Assistant</h3>
+                <h4 class="experience__company">FPGA AFM Control Project</h4>
+                <p class="experience__description">
+                  Developed precision nanoscale control systems using FPGA technology for 
+                  Atomic Force Microscopy applications.
+                </p>
+                <div class="experience__tags">
+                  <span class="experience__tag">FPGA</span>
+                  <span class="experience__tag">Precision Control</span>
+                  <span class="experience__tag">VHDL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- PROJECTS SECTION -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <div class="section__header" data-aos="fade-up">
+          <h2 class="section__title">Featured Projects</h2>
+          <p class="section__subtitle">Some of my recent work</p>
+        </div>
+        
+        <div class="projects__container grid">
+          <article class="project__card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project__image">
+              <div class="project__image-placeholder">
+                <i class="fa-solid fa-rocket"></i>
+              </div>
+            </div>
+            <div class="project__content">
+              <h3 class="project__title">Hyperloop Electronics</h3>
+              <p class="project__description">
+                Led the complete embedded system and PCB design for a Hyperloop pod, including 
+                sensor integration, communication systems, and safety-critical electronics.
+              </p>
+              <div class="project__tags">
+                <span class="project__tag">PCB Design</span>
+                <span class="project__tag">Embedded Systems</span>
+                <span class="project__tag">Safety Critical</span>
+              </div>
+              <div class="project__links">
+                <a href="https://github.com/ak-apoorvkulkarni" target="_blank" class="project__link">
+                  <i class="fa-brands fa-github"></i>
+                  <span>View Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project__card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project__image">
+              <div class="project__image-placeholder">
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+            </div>
+            <div class="project__content">
+              <h3 class="project__title">FPGA AFM Control</h3>
+              <p class="project__description">
+                Developed precision nanoscale control system using FPGA for Atomic Force Microscopy, 
+                achieving sub-nanometer positioning accuracy.
+              </p>
+              <div class="project__tags">
+                <span class="project__tag">FPGA</span>
+                <span class="project__tag">Precision Control</span>
+                <span class="project__tag">VHDL</span>
+              </div>
+              <div class="project__links">
+                <a href="#" class="project__link">
+                  <i class="fa-solid fa-external-link-alt"></i>
+                  <span>Learn More</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project__card" data-aos="fade-up" data-aos-delay="300">
+            <div class="project__image">
+              <div class="project__image-placeholder">
+                <i class="fa-solid fa-hand-paper"></i>
+              </div>
+            </div>
+            <div class="project__content">
+              <h3 class="project__title">Speak Out Glove</h3>
+              <p class="project__description">
+                Designed a smart glove that translates sign language gestures to speech and text 
+                using embedded sensors and machine learning algorithms.
+              </p>
+              <div class="project__tags">
+                <span class="project__tag">IoT</span>
+                <span class="project__tag">Machine Learning</span>
+                <span class="project__tag">Sensors</span>
+              </div>
+              <div class="project__links">
+                <a href="#" class="project__link">
+                  <i class="fa-solid fa-external-link-alt"></i>
+                  <span>Learn More</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="section__header" data-aos="fade-up">
+          <h2 class="section__title">Get In Touch</h2>
+          <p class="section__subtitle">Let's discuss your next project</p>
+        </div>
+        
+        <div class="contact__container grid">
+          <div class="contact__info" data-aos="fade-right">
+            <h3 class="contact__title">Let's work together</h3>
+            <p class="contact__description">
+              I'm always interested in new opportunities and exciting projects. 
+              Whether you have a question or just want to say hi, feel free to reach out!
+            </p>
+            
+            <div class="contact__details">
+              <div class="contact__item">
+                <div class="contact__icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="contact__info-content">
+                  <h4>Email</h4>
+                  <a href="mailto:apoorvkulkarni.ak@gmail.com">apoorvkulkarni.ak@gmail.com</a>
+                </div>
+              </div>
+              
+              <div class="contact__item">
+                <div class="contact__icon">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="contact__info-content">
+                  <h4>Phone</h4>
+                  <a href="tel:+4917666315354">+49 176 6631 5354</a>
+                </div>
+              </div>
+              
+              <div class="contact__item">
+                <div class="contact__icon">
+                  <i class="fa-solid fa-map-marker-alt"></i>
+                </div>
+                <div class="contact__info-content">
+                  <h4>Location</h4>
+                  <span>Karlsruhe, Germany</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact__social" data-aos="fade-left">
+            <h3 class="contact__title">Connect with me</h3>
+            <div class="social__links">
+              <a href="https://github.com/ak-apoorvkulkarni" target="_blank" class="social__link">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://linkedin.com/in/apoorvskulkarni" target="_blank" class="social__link">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://scholar.google.com/citations?user=7ff821IAAAAJ" target="_blank" class="social__link">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Google Scholar</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2025 Apoorv Kulkarni</p>
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__logo">
+          <span>Apoorv Kulkarni</span>
+        </div>
+        <p class="footer__text">© 2025 Apoorv Kulkarni. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
 
+  <!-- SCRIPTS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     // Initialize AOS
-    AOS.init({ duration: 1000 });
-
-    // Dark mode toggle
-    const darkToggle = document.getElementById('dark-toggle');
-    const body = document.body;
-
-    darkToggle.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      if(body.classList.contains('dark-mode')){
-        darkToggle.textContent = '☀️';
-        localStorage.setItem('theme', 'dark');
-      } else {
-        darkToggle.textContent = '🌙';
-        localStorage.setItem('theme', 'light');
-      }
+    AOS.init({ 
+      duration: 1000,
+      once: true,
+      offset: 100
     });
 
-    // Persist theme
-    if(localStorage.getItem('theme') === 'dark'){
-      body.classList.add('dark-mode');
-      darkToggle.textContent = '☀️';
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('dark-toggle');
+    const body = document.body;
+    const icon = themeToggle.querySelector('i');
+
+    // Check for saved theme preference or default to light mode
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    body.setAttribute('data-theme', currentTheme);
+    updateThemeIcon(currentTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+      if (theme === 'dark') {
+        icon.className = 'fa-solid fa-sun';
+      } else {
+        icon.className = 'fa-solid fa-moon';
+      }
     }
 
-    // Navigation menu toggle
-    const navToggle = document.getElementById('nav-toggle'),
-          navMenu = document.getElementById('nav-menu'),
-          navClose = document.getElementById('nav-close');
+    // Navigation functionality
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const navClose = document.getElementById('nav-close');
+    const navLinks = document.querySelectorAll('.nav__link');
 
-    if(navToggle){
-      navToggle.addEventListener('click', () => {
-        navMenu.classList.add('show-menu');
-      });
-    }
+    // Toggle mobile menu
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.add('show-menu');
+    });
 
-    if(navClose){
-      navClose.addEventListener('click', () => {
+    navClose.addEventListener('click', () => {
+      navMenu.classList.remove('show-menu');
+    });
+
+    // Close mobile menu when clicking on a link
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
         navMenu.classList.remove('show-menu');
       });
+    });
+
+    // Active link highlighting
+    const sections = document.querySelectorAll('section[id]');
+    
+    function updateActiveLink() {
+      const scrollY = window.pageYOffset;
+      
+      sections.forEach(section => {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 100;
+        const sectionId = section.getAttribute('id');
+        const navLink = document.querySelector(`.nav__link[href="#${sectionId}"]`);
+        
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          navLinks.forEach(link => link.classList.remove('active-link'));
+          navLink?.classList.add('active-link');
+        }
+      });
     }
 
-    // Active link on scroll
-    const sections = document.querySelectorAll('section[id]');
-    window.addEventListener('scroll', () => {
-      const scrollY = window.pageYOffset;
-      sections.forEach(current => {
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 50;
-        const sectionId = current.getAttribute('id');
-        const navLink = document.querySelector('.nav__menu a[href*=' + sectionId + ']');
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-          navLink.classList.add('active-link');
-        } else{
-          navLink.classList.remove('active-link');
+    window.addEventListener('scroll', updateActiveLink);
+
+    // Smooth scrolling for navigation links
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        
+        if (targetSection) {
+          const offsetTop = targetSection.offsetTop - 80;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
         }
       });
     });
