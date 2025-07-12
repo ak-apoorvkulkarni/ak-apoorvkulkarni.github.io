@@ -757,6 +757,20 @@ img {
   box-shadow: var(--shadow-xl);
 }
 
+.project__card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 1rem;
+}
+.project__card-link:focus .project__card,
+.project__card-link:hover .project__card {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-8px);
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
 .project__image {
   height: 200px;
   background-color: var(--gray-100);
