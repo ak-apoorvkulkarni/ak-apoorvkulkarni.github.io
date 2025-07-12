@@ -253,83 +253,63 @@
           <h2 class="section__title" data-en="Featured Projects" data-de="Ausgewählte Projekte">Featured Projects</h2>
           <p class="section__subtitle" data-en="Some of my recent work" data-de="Einige meiner aktuellen Arbeiten">Some of my recent work</p>
         </div>
-        <div class="projects__container grid">
-          <a href="projects/hyperloop/index.html" class="project__card-link">
-            <article class="project__card" data-aos="fade-up" data-aos-delay="100" tabindex="0">
-              <div class="project__image">
-                <div class="project__image-placeholder">
-                  <i class="fa-solid fa-rocket"></i>
-                </div>
+        <div class="projects__container grid" style="grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+          <article class="project__card" data-aos="fade-up" tabindex="0">
+            <div class="project__image">
+              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="FPGA AFM Control Cover" />
+            </div>
+            <div class="project__content">
+              <h3 class="project__title">FPGA-Based Control for Atomic Force Microscope (AFM)</h3>
+              <p class="project__description">Developed a precision control system using FPGA to manage nanoscale actuation in AFM instrumentation.</p>
+              <div class="project__tags">
+                <span class="project__tag">FPGA</span>
+                <span class="project__tag">Precision Control</span>
+                <span class="project__tag">AFM</span>
               </div>
-              <div class="project__content">
-                <h3 class="project__title" data-en="Hyperloop Electronics" data-de="Hyperloop-Elektronik">Hyperloop Electronics</h3>
-                <p class="project__description" data-en="Led the complete embedded system and PCB design for a Hyperloop pod, including sensor integration, communication systems, and safety-critical electronics." data-de="Leitung des gesamten Embedded-Systems- und PCB-Designs für eine Hyperloop-Kapsel, einschließlich Sensorintegration, Kommunikationssystemen und sicherheitskritischer Elektronik.">Led the complete embedded system and PCB design for a Hyperloop pod, including sensor integration, communication systems, and safety-critical electronics.</p>
-                <div class="project__tags">
-                  <span class="project__tag" data-en="PCB Design" data-de="PCB-Design">PCB Design</span>
-                  <span class="project__tag" data-en="Embedded Systems" data-de="Embedded Systems">Embedded Systems</span>
-                  <span class="project__tag" data-en="Safety Critical" data-de="Sicherheitskritisch">Safety Critical</span>
-                </div>
-                <div class="project__links">
-                  <span class="project__link" style="pointer-events:none;opacity:0.6;">
-                    <i class="fa-brands fa-github"></i>
-                    <span data-en="View Code" data-de="Code ansehen">View Code</span>
-                  </span>
-                  <span class="project__link" style="pointer-events:none;opacity:0.6;">
-                    <i class="fa-solid fa-external-link-alt"></i>
-                    <span data-en="Learn More" data-de="Mehr erfahren">Learn More</span>
-                  </span>
-                </div>
+            </div>
+          </article>
+          <article class="project__card" data-aos="fade-up" tabindex="0">
+            <div class="project__image">
+              <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Hyperloop Prototype Cover" />
+            </div>
+            <div class="project__content">
+              <h3 class="project__title">Electrical & Control Development – Hyperloop Prototype</h3>
+              <p class="project__description">Led electrical architecture and control system design for a functional Hyperloop pod prototype.</p>
+              <div class="project__tags">
+                <span class="project__tag">Hyperloop</span>
+                <span class="project__tag">Control Systems</span>
+                <span class="project__tag">Embedded</span>
               </div>
-            </article>
-          </a>
-          <a href="projects/fpga-afm/index.html" class="project__card-link">
-            <article class="project__card" data-aos="fade-up" data-aos-delay="200" tabindex="0">
-              <div class="project__image">
-                <div class="project__image-placeholder">
-                  <i class="fa-solid fa-microchip"></i>
-                </div>
+            </div>
+          </article>
+          <article class="project__card" data-aos="fade-up" tabindex="0">
+            <div class="project__image">
+              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Cloud Heating System Cover" />
+            </div>
+            <div class="project__content">
+              <h3 class="project__title">Smart Cloud-Based Heating Management System</h3>
+              <p class="project__description">Designed an IoT-enabled system to remotely monitor and control heating operations via cloud-based analytics.</p>
+              <div class="project__tags">
+                <span class="project__tag">IoT</span>
+                <span class="project__tag">Cloud</span>
+                <span class="project__tag">Analytics</span>
               </div>
-              <div class="project__content">
-                <h3 class="project__title" data-en="FPGA AFM Control" data-de="FPGA AFM-Steuerung">FPGA AFM Control</h3>
-                <p class="project__description" data-en="Developed precision nanoscale control system using FPGA for Atomic Force Microscopy, achieving sub-nanometer positioning accuracy." data-de="Entwicklung präziser Nanoskalensteuerungssystem mit FPGA für die Atomkraftmikroskopie, Erreichen einer Positionierungsgenauigkeit von Unter-Nanometer.">Developed precision nanoscale control system using FPGA for Atomic Force Microscopy, achieving sub-nanometer positioning accuracy.</p>
-                <div class="project__tags">
-                  <span class="project__tag" data-en="FPGA" data-de="FPGA">FPGA</span>
-                  <span class="project__tag" data-en="Precision Control" data-de="Präzisionssteuerung">Precision Control</span>
-                  <span class="project__tag" data-en="VHDL" data-de="VHDL">VHDL</span>
-                </div>
-                <div class="project__links">
-                  <span class="project__link" style="pointer-events:none;opacity:0.6;">
-                    <i class="fa-solid fa-external-link-alt"></i>
-                    <span data-en="Learn More" data-de="Mehr erfahren">Learn More</span>
-                  </span>
-                </div>
+            </div>
+          </article>
+          <article class="project__card" data-aos="fade-up" tabindex="0">
+            <div class="project__image">
+              <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Speak Out Glove Cover" />
+            </div>
+            <div class="project__content">
+              <h3 class="project__title">Speak Out</h3>
+              <p class="project__description">An intelligent glove for vocally impaired individuals that converts sign language into text and speech output.</p>
+              <div class="project__tags">
+                <span class="project__tag">Assistive Tech</span>
+                <span class="project__tag">Wearable</span>
+                <span class="project__tag">Machine Learning</span>
               </div>
-            </article>
-          </a>
-          <a href="projects/glove/index.html" class="project__card-link">
-            <article class="project__card" data-aos="fade-up" data-aos-delay="300" tabindex="0">
-              <div class="project__image">
-                <div class="project__image-placeholder">
-                  <i class="fa-solid fa-hand-paper"></i>
-                </div>
-              </div>
-              <div class="project__content">
-                <h3 class="project__title" data-en="Speak Out Glove" data-de="Sprechen Sie Geste">Speak Out Glove</h3>
-                <p class="project__description" data-en="Designed a smart glove that translates sign language gestures to speech and text using embedded sensors and machine learning algorithms." data-de="Entworfen eines intelligenten Handschuhs, der Geste der Signalisierung in Sprache und Text übersetzt, unter Verwendung eingebetteter Sensoren und maschinellen Lernalgorithmen.">Designed a smart glove that translates sign language gestures to speech and text using embedded sensors and machine learning algorithms.</p>
-                <div class="project__tags">
-                  <span class="project__tag" data-en="IoT" data-de="IoT">IoT</span>
-                  <span class="project__tag" data-en="Machine Learning" data-de="Maschinelles Lernen">Machine Learning</span>
-                  <span class="project__tag" data-en="Sensors" data-de="Sensoren">Sensors</span>
-                </div>
-                <div class="project__links">
-                  <span class="project__link" style="pointer-events:none;opacity:0.6;">
-                    <i class="fa-solid fa-external-link-alt"></i>
-                    <span data-en="Learn More" data-de="Mehr erfahren">Learn More</span>
-                  </span>
-                </div>
-              </div>
-            </article>
-          </a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
