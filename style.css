@@ -100,12 +100,12 @@
 }
 
 [data-theme="dark"] {
-  --body-color: #0a0a0a;
+  --body-color: #000;
   --container-color: #181818;
   --title-color: #fff;
   --text-color: #fff;
   --text-color-light: #b0b0b0;
-  --border-color: #232323;
+  --border-color: #181818;
   --first-color: #3B82F6;
   --first-color-alt: #60a5fa;
   --first-color-light: #22305b;
@@ -1396,7 +1396,30 @@ img, .hero__img, .project__image img, .blog-card__image img {
 }
 
 /* Card and container elevation for dark mode */
+[data-theme="dark"] {
+  --body-color: #000;
+  --container-color: #181818;
+  --title-color: #fff;
+  --text-color: #fff;
+  --text-color-light: #b0b0b0;
+  --border-color: #181818;
+  --first-color: #3B82F6;
+  --first-color-alt: #60a5fa;
+  --first-color-light: #22305b;
+  --first-color-dark: #1e40af;
+}
+
+[data-theme="dark"] body,
+[data-theme="dark"] .header,
+[data-theme="dark"] .nav,
+[data-theme="dark"] .hero,
+[data-theme="dark"] .about,
+[data-theme="dark"] .experience,
+[data-theme="dark"] .projects,
+[data-theme="dark"] .contact,
+[data-theme="dark"] .footer,
 [data-theme="dark"] .container,
+[data-theme="dark"] .section,
 [data-theme="dark"] .blog-card,
 [data-theme="dark"] .project__card,
 [data-theme="dark"] .contact__info,
@@ -1407,7 +1430,7 @@ img, .hero__img, .project__image img, .blog-card__image img {
 [data-theme="dark"] .blog-header,
 [data-theme="dark"] .blog-filters,
 [data-theme="dark"] .blog-post__content pre {
-  background: #181818 !important;
+  background: #000 !important;
   color: #fff !important;
   border: none !important;
   box-shadow: none !important;
@@ -1427,15 +1450,70 @@ img, .hero__img, .project__image img, .blog-card__image img {
 [data-theme="dark"] .blog-card__title,
 [data-theme="dark"] .project__title,
 [data-theme="dark"] .contact__title,
-[data-theme="dark"] .education__degree {
+[data-theme="dark"] .education__degree,
+[data-theme="dark"] .hero__title,
+[data-theme="dark"] .about__heading,
+[data-theme="dark"] .vertical-timeline__title {
   color: #fff !important;
 }
 
 [data-theme="dark"] .blog-card__tag,
 [data-theme="dark"] .project__tag,
-[data-theme="dark"] .education__period {
-  background: #232323 !important;
-  color: #60a5fa !important;
+[data-theme="dark"] .education__period,
+[data-theme="dark"] .vertical-timeline__year {
+  background: #181818 !important;
+  color: #3B82F6 !important;
+}
+
+[data-theme="dark"] .vertical-timeline__content,
+[data-theme="dark"] .about__skills,
+[data-theme="dark"] .project__card,
+[data-theme="dark"] .blog-card,
+[data-theme="dark"] .education__item {
+  background: #181818 !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+[data-theme="dark"] .vertical-timeline__company,
+[data-theme="dark"] .vertical-timeline__meta,
+[data-theme="dark"] .vertical-timeline__location,
+[data-theme="dark"] .vertical-timeline__desc,
+[data-theme="dark"] .vertical-timeline__desc-list {
+  color: #b0b0b0 !important;
+}
+
+[data-theme="dark"] .nav__logo,
+[data-theme="dark"] .nav__menu,
+[data-theme="dark"] .nav__actions,
+[data-theme="dark"] .lang-switcher {
+  background: transparent !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+[data-theme="dark"] .button--primary {
+  background-color: #3B82F6 !important;
+  color: #fff !important;
+}
+[data-theme="dark"] .button--secondary {
+  background-color: transparent !important;
+  color: #3B82F6 !important;
+  border: 2px solid #3B82F6 !important;
+}
+[data-theme="dark"] .button--primary:hover,
+[data-theme="dark"] .button--secondary:hover {
+  background-color: #60a5fa !important;
+  color: #000 !important;
+}
+
+[data-theme="dark"] .hero__image-bg {
+  background: linear-gradient(135deg, #3B82F6, #06b6d4) !important;
+}
+
+[data-theme="dark"] .footer__text {
+  color: #b0b0b0 !important;
 }
 
 /* Inputs, buttons, and other UI elements can be further styled as needed for contrast */
