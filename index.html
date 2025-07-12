@@ -411,6 +411,38 @@
         </div>
       </div>
     </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="education section" id="education">
+      <div class="container">
+        <div class="section__header" data-aos="fade-up">
+          <h2 class="section__title" data-en="Educational Background" data-de="Bildungsweg">Educational Background</h2>
+        </div>
+        <div class="education__container" data-aos="fade-up">
+          <div class="education__item">
+            <h3 class="education__degree" data-en="Karlsruhe Institute of Technology" data-de="Karlsruher Institut für Technologie">Karlsruhe Institute of Technology</h3>
+            <div class="education__meta">
+              <span class="education__period" data-en="2022–Present" data-de="2022–Heute">2022–Present</span>
+              <span class="education__location" data-en="Electrical Engineering and Information Technology, Karlsruhe, Germany" data-de="Elektrotechnik und Informationstechnik, Karlsruhe, Deutschland">Electrical Engineering and Information Technology, Karlsruhe, Germany</span>
+            </div>
+          </div>
+          <div class="education__item">
+            <h3 class="education__degree" data-en="University of Duke CE" data-de="University of Duke CE">University of Duke CE</h3>
+            <div class="education__meta">
+              <span class="education__period" data-en="2022–2023" data-de="2022–2023">2022–2023</span>
+              <span class="education__location" data-en="Product Management Certification Program" data-de="Produktmanagement-Zertifikatsprogramm">Product Management Certification Program</span>
+            </div>
+          </div>
+          <div class="education__item">
+            <h3 class="education__degree" data-en="University of Mumbai" data-de="Universität Mumbai">University of Mumbai</h3>
+            <div class="education__meta">
+              <span class="education__period" data-en="2016–2020" data-de="2016–2020">2016–2020</span>
+              <span class="education__location" data-en="Bachelor's Degree in Electronics Engineering, Mumbai" data-de="Bachelorabschluss in Elektronikingenieurwesen, Mumbai">Bachelor's Degree in Electronics Engineering, Mumbai</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- FOOTER -->
@@ -475,9 +507,9 @@
           btn.classList.remove('active');
         }
       });
-      // Update all elements with data-en/data-de
+      // Update all elements with data-en/data-de (use innerHTML for HTML content)
       document.querySelectorAll('[data-en]').forEach(el => {
-        el.textContent = el.getAttribute(`data-${lang}`);
+        el.innerHTML = el.getAttribute(`data-${lang}`);
       });
       // Set lang attribute on <html>
       document.documentElement.lang = lang;
