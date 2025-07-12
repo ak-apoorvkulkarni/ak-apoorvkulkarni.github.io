@@ -7,45 +7,60 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+
+  <!-- HERO -->
+  <section class="hero">
     <h1>Apoorv Kulkarni</h1>
-    <p>Engineer | Embedded Systems | PCB Design | Research</p>
-  </header>
+    <p>Embedded Systems · PCB Design · IoT · Product Management</p>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="#contact" class="btn btn-outline">Contact</a>
+    </div>
+  </section>
 
-  <section id="about">
+  <!-- ABOUT -->
+  <section class="about">
     <h2>About Me</h2>
-    <p>Graduate student at Karlsruhe Institute of Technology with a strong foundation in embedded systems, PCB design, and applied electronics. Experienced in research and low-power system development with a focus on real-world hardware applications.</p>
+    <p>I’m a graduate student at KIT with hands-on experience in embedded systems, PCB design, and thermoelectric sensor development. I bridge hardware innovation with real-world application.</p>
+    <div class="skills">
+      <span>STM32</span><span>KiCAD</span><span>ESP32</span><span>MATLAB</span><span>Simulink</span><span>Product Strategy</span>
+    </div>
   </section>
 
-  <section id="projects">
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
     <h2>Projects</h2>
-    <ul>
-      <li><strong>FPGA-Based AFM Control:</strong> Precision nanoscale control using FPGA.</li>
-      <li><strong>Hyperloop Electronics:</strong> Led embedded + PCB design for functional prototype.</li>
-      <li><strong>Smart Heating System:</strong> Cloud-based heating controller with IoT analytics.</li>
-      <li><strong>Speak Out:</strong> Sign-language glove converting gestures to speech.</li>
-      <li><strong>ROBOCON Robotics:</strong> Designed two robots for coordinated national-level tasks.</li>
-    </ul>
+    <div class="project-grid">
+      <div class="card">
+        <h3>Hyperloop Electronics</h3>
+        <p>Led embedded and PCB design for the mu-zero Hyperloop pod.</p>
+        <a href="https://github.com/ak-apoorvkulkarni" target="_blank">View GitHub</a>
+      </div>
+      <div class="card">
+        <h3>FPGA AFM Control</h3>
+        <p>Built nanoscale control systems using FPGA for Atomic Force Microscope.</p>
+      </div>
+      <div class="card">
+        <h3>Speak Out Glove</h3>
+        <p>Sign-language glove that converts gestures into text & speech output.</p>
+      </div>
+    </div>
   </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <p><strong>KIT – Thermoelectric Sensors (2022–Present):</strong> Research in sensor fabrication and energy harvesting.</p>
-    <p><strong>1&1 Mail & Media GmbH (2022–2024):</strong> Product strategy and roadmap planning.</p>
-    <p><strong>mu-zero HYPERLOOP e.V. (2022–2023):</strong> Led electronics and integration team.</p>
-    <p><strong>US Tech Solutions (2021):</strong> QA and data validation support.</p>
-  </section>
-
-  <section id="contact">
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:apoorvkulkarni.ak@gmail.com">apoorvkulkarni.ak@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/apoorvskulkarni" target="_blank">apoorvskulkarni</a></p>
-    <p>GitHub: <a href="https://github.com/ak-apoorvkulkarni" target="_blank">ak-apoorvkulkarni</a></p>
-    <p>Google Scholar: <a href="https://scholar.google.com/citations?user=7ff821IAAAAJ" target="_blank">Publications</a></p>
+    <div class="social-links">
+      <a href="https://linkedin.com/in/apoorvskulkarni" target="_blank">LinkedIn</a>
+      <a href="https://github.com/ak-apoorvkulkarni" target="_blank">GitHub</a>
+      <a href="https://scholar.google.com/citations?user=7ff821IAAAAJ" target="_blank">Scholar</a>
+    </div>
   </section>
 
   <footer>
     <p>© 2025 Apoorv Kulkarni</p>
   </footer>
+
 </body>
 </html>
