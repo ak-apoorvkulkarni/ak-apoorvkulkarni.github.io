@@ -1357,54 +1357,46 @@ img {
 }
 
 /* Card and container elevation for dark mode */
-[data-theme="dark"] .container, [data-theme="dark"] .blog-card, [data-theme="dark"] .blog-post, [data-theme="dark"] .about__skills, [data-theme="dark"] .about__info-item, [data-theme="dark"] .project__card, [data-theme="dark"] .contact__info, [data-theme="dark"] .contact__social, [data-theme="dark"] .education__item, [data-theme="dark"] .blog-header, [data-theme="dark"] .blog-filters, [data-theme="dark"] .blog-post__content pre {
-  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-  border: 1px solid var(--border-color);
+[data-theme="dark"] .container,
+[data-theme="dark"] .blog-card,
+[data-theme="dark"] .project__card,
+[data-theme="dark"] .contact__info,
+[data-theme="dark"] .contact__social,
+[data-theme="dark"] .education__item,
+[data-theme="dark"] .about__skills,
+[data-theme="dark"] .about__info-item,
+[data-theme="dark"] .blog-header,
+[data-theme="dark"] .blog-filters,
+[data-theme="dark"] .blog-post__content pre {
+  background: #181818 !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
-/* Ensure nav and header have good contrast */
-.header, .nav, .blog-header {
-  background: var(--container-color);
-  color: var(--title-color);
+[data-theme="dark"] .section__header,
+[data-theme="dark"] .section__title,
+[data-theme="dark"] .section__subtitle,
+[data-theme="dark"] .about__description,
+[data-theme="dark"] .blog-card__excerpt,
+[data-theme="dark"] .blog-post__excerpt,
+[data-theme="dark"] .blog-post__content,
+[data-theme="dark"] .blog-header__subtitle {
+  color: #b0b0b0 !important;
 }
 
-[data-theme="dark"] .header, [data-theme="dark"] .nav, [data-theme="dark"] .blog-header {
-  background: #181818;
-  color: #fff;
-  border-bottom: 1px solid var(--border-color);
+[data-theme="dark"] .blog-card__title,
+[data-theme="dark"] .project__title,
+[data-theme="dark"] .contact__title,
+[data-theme="dark"] .education__degree {
+  color: #fff !important;
 }
 
-/* Home icon contrast */
-.home-icon {
-  background: var(--container-color) !important;
-  color: var(--first-color) !important;
-  border: 1px solid var(--border-color);
-}
-[data-theme="dark"] .home-icon {
+[data-theme="dark"] .blog-card__tag,
+[data-theme="dark"] .project__tag,
+[data-theme="dark"] .education__period {
   background: #232323 !important;
-  color: #3B82F6 !important;
-  border: 1px solid #232323;
-}
-
-/* Blog card and post contrast */
-.blog-card, .blog-post {
-  background: var(--container-color);
-  color: var(--text-color);
-}
-
-[data-theme="dark"] .blog-card, [data-theme="dark"] .blog-post {
-  background: #181818;
-  color: #fff;
-}
-
-/* Blog card tags */
-.blog-card__tag, .blog-post__tag {
-  background: var(--first-color-light);
-  color: var(--first-color);
-}
-[data-theme="dark"] .blog-card__tag, [data-theme="dark"] .blog-post__tag {
-  background: #22305b;
-  color: #60a5fa;
+  color: #60a5fa !important;
 }
 
 /* Inputs, buttons, and other UI elements can be further styled as needed for contrast */
