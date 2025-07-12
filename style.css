@@ -74,6 +74,44 @@
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
+/* Add or update dark mode variables and selectors */
+:root {
+  --body-color: #f7f8fa;
+  --container-color: #fff;
+  --title-color: #181A20;
+  --text-color: #333a4d;
+  --text-color-light: #6b7280;
+  --border-color: #e5e7eb;
+  --first-color: #2563eb;
+  --first-color-alt: #1741a6;
+  --first-color-light: #e0e7ff;
+  --first-color-dark: #1e40af;
+  --h1-font-size: 2.5rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.25rem;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  --font-medium: 500;
+  --font-regular: 400;
+  --font-light: 300;
+  --small-font-size: 0.95rem;
+  --smaller-font-size: 0.85rem;
+  --border-radius: 1rem;
+}
+
+[data-theme="dark"] {
+  --body-color: #10121A;
+  --container-color: #181A20;
+  --title-color: #F3F4F6;
+  --text-color: #E5E7EB;
+  --text-color-light: #B0B3C6;
+  --border-color: #23263a;
+  --first-color: #3B82F6;
+  --first-color-alt: #2563eb;
+  --first-color-light: #22305b;
+  --first-color-dark: #1e40af;
+}
+
 /* ===== DARK MODE ===== */
 [data-theme="dark"] {
   --white: #0f172a;
@@ -108,6 +146,8 @@ body {
   color: var(--gray-700);
   background-color: var(--white);
   transition: var(--transition);
+  background: var(--body-color);
+  color: var(--text-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1315,3 +1355,56 @@ img {
     margin: 0 1rem;
   }
 }
+
+/* Card and container elevation for dark mode */
+[data-theme="dark"] .container, [data-theme="dark"] .blog-card, [data-theme="dark"] .blog-post, [data-theme="dark"] .about__skills, [data-theme="dark"] .about__info-item, [data-theme="dark"] .project__card, [data-theme="dark"] .contact__info, [data-theme="dark"] .contact__social, [data-theme="dark"] .education__item, [data-theme="dark"] .blog-header, [data-theme="dark"] .blog-filters, [data-theme="dark"] .blog-post__content pre {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  border: 1px solid var(--border-color);
+}
+
+/* Ensure nav and header have good contrast */
+.header, .nav, .blog-header {
+  background: var(--container-color);
+  color: var(--title-color);
+}
+
+[data-theme="dark"] .header, [data-theme="dark"] .nav, [data-theme="dark"] .blog-header {
+  background: #181A20;
+  color: #F3F4F6;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Home icon contrast */
+.home-icon {
+  background: var(--container-color) !important;
+  color: var(--first-color) !important;
+  border: 1px solid var(--border-color);
+}
+[data-theme="dark"] .home-icon {
+  background: #23263a !important;
+  color: #3B82F6 !important;
+  border: 1px solid #23263a;
+}
+
+/* Blog card and post contrast */
+.blog-card, .blog-post {
+  background: var(--container-color);
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .blog-card, [data-theme="dark"] .blog-post {
+  background: #181A20;
+  color: #E5E7EB;
+}
+
+/* Blog card tags */
+.blog-card__tag, .blog-post__tag {
+  background: var(--first-color-light);
+  color: var(--first-color);
+}
+[data-theme="dark"] .blog-card__tag, [data-theme="dark"] .blog-post__tag {
+  background: #22305b;
+  color: #3B82F6;
+}
+
+/* Inputs, buttons, and other UI elements can be further styled as needed for contrast */
