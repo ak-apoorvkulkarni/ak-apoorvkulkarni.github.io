@@ -19,7 +19,14 @@
   <header class="header">
     <nav class="nav container">
       <a href="#" class="nav__logo">
-        <span class="nav__logo-text">Apoorv Kulkarni</span>
+        <span class="nav__logo-img" style="display:inline-block;vertical-align:middle;margin-right:0.5rem;">
+          <!-- Placeholder SVG logo -->
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="16" fill="#2563eb"/>
+            <text x="16" y="21" text-anchor="middle" font-size="16" fill="white" font-family="Inter, Arial, sans-serif">A</text>
+          </svg>
+        </span>
+        <span class="nav__logo-text" data-en="Apoorv Kulkarni" data-de="Apoorv Kulkarni">Apoorv Kulkarni</span>
       </a>
       
       <div class="nav__menu" id="nav-menu">
@@ -47,6 +54,10 @@
       </div>
 
       <div class="nav__actions">
+        <div class="lang-switcher" style="display:inline-block;margin-right:1rem;">
+          <button class="lang-btn" data-lang="en" aria-label="Switch to English">EN</button>
+          <button class="lang-btn" data-lang="de" aria-label="Auf Deutsch umschalten">DE</button>
+        </div>
         <button id="dark-toggle" class="theme-toggle" aria-label="Toggle dark mode">
           <i class="fa-solid fa-moon"></i>
         </button>
@@ -63,27 +74,24 @@
       <div class="hero__container container">
         <div class="hero__content" data-aos="fade-up">
           <div class="hero__badge">
-            <span class="hero__badge-text">Available for opportunities</span>
+            <span class="hero__badge-text" data-en="Available for opportunities" data-de="Verfügbar für Möglichkeiten">Available for opportunities</span>
           </div>
           
           <h1 class="hero__title">
-            Hi, I'm <span class="hero__title-highlight">Apoorv Kulkarni</span>
+            <span data-en="Hi, I'm " data-de="Hallo, ich bin ">Hi, I'm </span><span class="hero__title-highlight" data-en="Apoorv Kulkarni" data-de="Apoorv Kulkarni">Apoorv Kulkarni</span>
           </h1>
           
-          <h2 class="hero__subtitle">Embedded Systems Engineer</h2>
+          <h2 class="hero__subtitle" data-en="Embedded Systems Engineer" data-de="Embedded Systems Ingenieur">Embedded Systems Engineer</h2>
           
-          <p class="hero__description">
-            Specializing in PCB design, product management, and IoT solutions. 
-            Currently pursuing my Master's at Karlsruhe Institute of Technology.
-          </p>
+          <p class="hero__description" data-en="Specializing in PCB design, product management, and IoT solutions. Currently pursuing my Master's at Karlsruhe Institute of Technology." data-de="Spezialisiert auf PCB-Design, Produktmanagement und IoT-Lösungen. Derzeit Masterstudent am Karlsruher Institut für Technologie.">Specializing in PCB design, product management, and IoT solutions. Currently pursuing my Master's at Karlsruhe Institute of Technology.</p>
           
           <div class="hero__actions">
             <a href="#projects" class="button button--primary">
-              <span>View Projects</span>
+              <span data-en="View Projects" data-de="Projekte ansehen">View Projects</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
             <a href="#contact" class="button button--secondary">
-              <span>Get in Touch</span>
+              <span data-en="Get in Touch" data-de="Kontakt aufnehmen">Get in Touch</span>
               <i class="fa-solid fa-envelope"></i>
             </a>
           </div>
@@ -91,15 +99,15 @@
           <div class="hero__stats">
             <div class="hero__stat">
               <span class="hero__stat-number">3+</span>
-              <span class="hero__stat-label">Years Experience</span>
+              <span class="hero__stat-label" data-en="Years Experience" data-de="Jahre Erfahrung">Years Experience</span>
             </div>
             <div class="hero__stat">
               <span class="hero__stat-number">15+</span>
-              <span class="hero__stat-label">Projects Completed</span>
+              <span class="hero__stat-label" data-en="Projects Completed" data-de="Abgeschlossene Projekte">Projects Completed</span>
             </div>
             <div class="hero__stat">
               <span class="hero__stat-number">5+</span>
-              <span class="hero__stat-label">Technologies</span>
+              <span class="hero__stat-label" data-en="Technologies" data-de="Technologien">Technologies</span>
             </div>
           </div>
         </div>
@@ -483,6 +491,127 @@
         icon.className = 'fa-solid fa-moon';
       }
     }
+
+    // Language switcher functionality
+    const langSwitcher = document.querySelector('.lang-switcher');
+    const langButtons = langSwitcher.querySelectorAll('.lang-btn');
+    const navLogoText = document.querySelector('.nav__logo-text');
+    const heroBadgeText = document.querySelector('.hero__badge-text');
+    const heroTitleHighlight = document.querySelector('.hero__title-highlight');
+    const heroSubtitle = document.querySelector('.hero__subtitle');
+    const heroDescription = document.querySelector('.hero__description');
+    const heroActions = document.querySelectorAll('.hero__actions .button');
+    const heroStats = document.querySelectorAll('.hero__stats .hero__stat-label');
+    const aboutHeading = document.querySelector('.about__heading');
+    const aboutDescription = document.querySelectorAll('.about__description');
+    const aboutInfoItems = document.querySelectorAll('.about__info-item');
+    const aboutSkillsTitle = document.querySelector('.about__skills-title');
+    const experiencePeriods = document.querySelectorAll('.experience__period');
+    const experienceTitles = document.querySelectorAll('.experience__title');
+    const experienceCompanies = document.querySelectorAll('.experience__company');
+    const experienceDescriptions = document.querySelectorAll('.experience__description');
+    const experienceTags = document.querySelectorAll('.experience__tag');
+    const projectTitles = document.querySelectorAll('.project__title');
+    const projectDescriptions = document.querySelectorAll('.project__description');
+    const projectTags = document.querySelectorAll('.project__tag');
+    const projectLinks = document.querySelectorAll('.project__links .project__link');
+    const contactTitle = document.querySelector('.contact__title');
+    const contactDescription = document.querySelector('.contact__description');
+    const footerLogo = document.querySelector('.footer__logo span');
+    const footerText = document.querySelector('.footer__text');
+
+    langButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const targetLang = button.getAttribute('data-lang');
+        const currentLang = document.documentElement.lang; // Get current language from HTML
+
+        if (targetLang === currentLang) {
+          return;
+        }
+
+        // Update language attributes
+        navLogoText.setAttribute('data-en', navLogoText.getAttribute('data-en'));
+        navLogoText.setAttribute('data-de', navLogoText.getAttribute('data-de'));
+        heroBadgeText.setAttribute('data-en', heroBadgeText.getAttribute('data-en'));
+        heroBadgeText.setAttribute('data-de', heroBadgeText.getAttribute('data-de'));
+        heroTitleHighlight.setAttribute('data-en', heroTitleHighlight.getAttribute('data-en'));
+        heroTitleHighlight.setAttribute('data-de', heroTitleHighlight.getAttribute('data-de'));
+        heroSubtitle.setAttribute('data-en', heroSubtitle.getAttribute('data-en'));
+        heroSubtitle.setAttribute('data-de', heroSubtitle.getAttribute('data-de'));
+        heroDescription.setAttribute('data-en', heroDescription.getAttribute('data-en'));
+        heroDescription.setAttribute('data-de', heroDescription.getAttribute('data-de'));
+        heroActions.forEach(action => {
+          action.setAttribute('data-en', action.getAttribute('data-en'));
+          action.setAttribute('data-de', action.getAttribute('data-de'));
+        });
+        heroStats.forEach(stat => {
+          stat.setAttribute('data-en', stat.getAttribute('data-en'));
+          stat.setAttribute('data-de', stat.getAttribute('data-de'));
+        });
+        aboutHeading.setAttribute('data-en', aboutHeading.getAttribute('data-en'));
+        aboutHeading.setAttribute('data-de', aboutHeading.getAttribute('data-de'));
+        aboutDescription.forEach(desc => {
+          desc.setAttribute('data-en', desc.getAttribute('data-en'));
+          desc.setAttribute('data-de', desc.getAttribute('data-de'));
+        });
+        aboutInfoItems.forEach(item => {
+          const icon = item.querySelector('i');
+          if (icon) {
+            icon.setAttribute('data-en', icon.getAttribute('data-en'));
+            icon.setAttribute('data-de', icon.getAttribute('data-de'));
+          }
+        });
+        aboutSkillsTitle.setAttribute('data-en', aboutSkillsTitle.getAttribute('data-en'));
+        aboutSkillsTitle.setAttribute('data-de', aboutSkillsTitle.getAttribute('data-de'));
+        experiencePeriods.forEach(period => {
+          period.setAttribute('data-en', period.getAttribute('data-en'));
+          period.setAttribute('data-de', period.getAttribute('data-de'));
+        });
+        experienceTitles.forEach(title => {
+          title.setAttribute('data-en', title.getAttribute('data-en'));
+          title.setAttribute('data-de', title.getAttribute('data-de'));
+        });
+        experienceCompanies.forEach(company => {
+          company.setAttribute('data-en', company.getAttribute('data-en'));
+          company.setAttribute('data-de', company.getAttribute('data-de'));
+        });
+        experienceDescriptions.forEach(desc => {
+          desc.setAttribute('data-en', desc.getAttribute('data-en'));
+          desc.setAttribute('data-de', desc.getAttribute('data-de'));
+        });
+        experienceTags.forEach(tag => {
+          tag.setAttribute('data-en', tag.getAttribute('data-en'));
+          tag.setAttribute('data-de', tag.getAttribute('data-de'));
+        });
+        projectTitles.forEach(title => {
+          title.setAttribute('data-en', title.getAttribute('data-en'));
+          title.setAttribute('data-de', title.getAttribute('data-de'));
+        });
+        projectDescriptions.forEach(desc => {
+          desc.setAttribute('data-en', desc.getAttribute('data-en'));
+          desc.setAttribute('data-de', desc.getAttribute('data-de'));
+        });
+        projectTags.forEach(tag => {
+          tag.setAttribute('data-en', tag.getAttribute('data-en'));
+          tag.setAttribute('data-de', tag.getAttribute('data-de'));
+        });
+        projectLinks.forEach(link => {
+          link.setAttribute('data-en', link.getAttribute('data-en'));
+          link.setAttribute('data-de', link.getAttribute('data-de'));
+        });
+        contactTitle.setAttribute('data-en', contactTitle.getAttribute('data-en'));
+        contactTitle.setAttribute('data-de', contactTitle.getAttribute('data-de'));
+        contactDescription.setAttribute('data-en', contactDescription.getAttribute('data-en'));
+        contactDescription.setAttribute('data-de', contactDescription.getAttribute('data-de'));
+        footerLogo.setAttribute('data-en', footerLogo.getAttribute('data-en'));
+        footerLogo.setAttribute('data-de', footerLogo.getAttribute('data-de'));
+        footerText.setAttribute('data-en', footerText.getAttribute('data-en'));
+        footerText.setAttribute('data-de', footerText.getAttribute('data-de'));
+
+        // Reload the page to apply new language attributes
+        location.reload();
+      });
+    });
 
     // Navigation functionality
     const navToggle = document.getElementById('nav-toggle');
