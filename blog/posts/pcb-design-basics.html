@@ -331,25 +331,56 @@
   <!-- SCRIPTS -->
   <script>
     // Theme toggle functionality
+    const themeToggle = document.getElementById('dark-toggle');
     const body = document.body;
-    
+    const icon = themeToggle?.querySelector('i');
+
     // Check for saved theme preference or default to light mode
     const currentTheme = localStorage.getItem('theme') || 'light';
     body.setAttribute('data-theme', currentTheme);
+    if (icon) updateThemeIcon(currentTheme);
+
+    if (themeToggle) themeToggle.addEventListener('click', () => {
+      const currentTheme = body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      if (icon) updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+      if (theme === 'dark') {
+        icon.className = 'fa-solid fa-sun';
+      } else {
+        icon.className = 'fa-solid fa-moon';
+      }
+    }
 
     // Language switcher functionality
+    const langSwitcher = document.querySelector('.lang-switcher');
+    const langButtons = langSwitcher?.querySelectorAll('.lang-btn') || [];
+
     function setLanguage(lang) {
-      // Update all elements with data-en/data-de
+      langButtons.forEach(btn => {
+        if (btn.getAttribute('data-lang') === lang) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
       document.querySelectorAll('[data-en]').forEach(el => {
         el.innerHTML = el.getAttribute(`data-${lang}`);
       });
-      // Set lang attribute on <html>
       document.documentElement.lang = lang;
-      // Save preference
       localStorage.setItem('lang', lang);
     }
 
-    // On page load, set language from localStorage or default to 'en'
+    langButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        setLanguage(btn.getAttribute('data-lang'));
+      });
+    });
+
     const savedLang = localStorage.getItem('lang') || 'en';
     setLanguage(savedLang);
   </script>
