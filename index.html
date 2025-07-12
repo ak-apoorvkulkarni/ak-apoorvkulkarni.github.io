@@ -2,65 +2,155 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apoorv Kulkarni | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Apoorv Kulkarni - Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Apoorv Kulkarni</h1>
-    <p>Embedded Systems · PCB Design · IoT · Product Management</p>
-    <div class="hero-buttons">
-      <a href="#projects" class="btn">View Projects</a>
-      <a href="#contact" class="btn btn-outline">Contact</a>
+  <!-- NAV -->
+  <nav class="nav container">
+    <a href="#" class="nav__logo">Apoorv Kulkarni</a>
+    <div class="nav__menu" id="nav-menu">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+      <i class="fa-solid fa-xmark nav__close" id="nav-close"></i>
+    </div>
+    <div class="nav__toggle" id="nav-toggle"><i class="fa-solid fa-bars"></i></div>
+    <button id="dark-toggle" class="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+  </nav>
+
+  <!-- HOME -->
+  <section class="hero section" id="home" data-aos="fade-down">
+    <div class="hero__container container grid">
+      <div class="hero__content">
+        <h1 class="home__title">Hi, I'm Apoorv Kulkarni</h1>
+        <h3 class="home__subtitle">Embedded Systems Engineer</h3>
+        <p class="home__description">Focused on PCB design, product management, and IoT solutions.</p>
+        <a href="#projects" class="button">View Projects</a>
+      </div>
+      <div class="hero__img">
+        <img src="profile.jpg" alt="Apoorv Kulkarni" />
+      </div>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section class="about">
-    <h2>About Me</h2>
-    <p>I’m a graduate student at KIT with hands-on experience in embedded systems, PCB design, and thermoelectric sensor development. I bridge hardware innovation with real-world application.</p>
-    <div class="skills">
-      <span>STM32</span><span>KiCAD</span><span>ESP32</span><span>MATLAB</span><span>Simulink</span><span>Product Strategy</span>
+  <section class="about section" id="about" data-aos="fade-up">
+    <h2 class="section__title">About Me</h2>
+    <div class="about__container container grid">
+      <p class="about__description">Graduate student at Karlsruhe Institute of Technology specializing in embedded systems, low-power electronics, and hardware development.</p>
+      <ul class="about__info grid">
+        <li><span>📧</span> apoorvkulkarni.ak@gmail.com</li>
+        <li><span>📞</span> +49 176 6631 5354</li>
+        <li><span>📍</span> Karlsruhe, Germany</li>
+      </ul>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section class="projects" id="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="card">
-        <h3>Hyperloop Electronics</h3>
-        <p>Led embedded and PCB design for the mu-zero Hyperloop pod.</p>
-        <a href="https://github.com/ak-apoorvkulkarni" target="_blank">View GitHub</a>
-      </div>
-      <div class="card">
-        <h3>FPGA AFM Control</h3>
-        <p>Built nanoscale control systems using FPGA for Atomic Force Microscope.</p>
-      </div>
-      <div class="card">
-        <h3>Speak Out Glove</h3>
-        <p>Sign-language glove that converts gestures into text & speech output.</p>
-      </div>
+  <section class="projects section" id="projects" data-aos="fade-up">
+    <h2 class="section__title">Projects</h2>
+    <div class="projects__container container grid">
+      <article class="project__card">
+        <h3 class="project__title">Hyperloop Electronics</h3>
+        <p class="project__description">Led embedded system and PCB design for a Hyperloop pod.</p>
+        <a href="https://github.com/ak-apoorvkulkarni" target="_blank" class="button button--flex">
+          View on GitHub <i class="fa-solid fa-arrow-up-right-from-square button__icon"></i>
+        </a>
+      </article>
+      <article class="project__card">
+        <h3 class="project__title">FPGA AFM Control</h3>
+        <p class="project__description">Precision nanoscale control system development using FPGA.</p>
+      </article>
+      <article class="project__card">
+        <h3 class="project__title">Speak Out Glove</h3>
+        <p class="project__description">Sign-language glove translating gestures to speech and text.</p>
+      </article>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:apoorvkulkarni.ak@gmail.com">apoorvkulkarni.ak@gmail.com</a></p>
-    <div class="social-links">
-      <a href="https://linkedin.com/in/apoorvskulkarni" target="_blank">LinkedIn</a>
-      <a href="https://github.com/ak-apoorvkulkarni" target="_blank">GitHub</a>
-      <a href="https://scholar.google.com/citations?user=7ff821IAAAAJ" target="_blank">Scholar</a>
+  <section class="contact section" id="contact" data-aos="fade-up">
+    <h2 class="section__title">Contact Me</h2>
+    <div class="contact__container container">
+      <p>Email: <a href="mailto:apoorvkulkarni.ak@gmail.com">apoorvkulkarni.ak@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/ak-apoorvkulkarni" target="_blank">ak-apoorvkulkarni</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/apoorvskulkarni" target="_blank">apoorvskulkarni</a></p>
+      <p>Google Scholar: <a href="https://scholar.google.com/citations?user=7ff821IAAAAJ" target="_blank">Publications</a></p>
     </div>
   </section>
 
-  <footer>
+  <footer class="footer">
     <p>© 2025 Apoorv Kulkarni</p>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({ duration: 1000 });
+
+    // Dark mode toggle
+    const darkToggle = document.getElementById('dark-toggle');
+    const body = document.body;
+
+    darkToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if(body.classList.contains('dark-mode')){
+        darkToggle.textContent = '☀️';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        darkToggle.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    // Persist theme
+    if(localStorage.getItem('theme') === 'dark'){
+      body.classList.add('dark-mode');
+      darkToggle.textContent = '☀️';
+    }
+
+    // Navigation menu toggle
+    const navToggle = document.getElementById('nav-toggle'),
+          navMenu = document.getElementById('nav-menu'),
+          navClose = document.getElementById('nav-close');
+
+    if(navToggle){
+      navToggle.addEventListener('click', () => {
+        navMenu.classList.add('show-menu');
+      });
+    }
+
+    if(navClose){
+      navClose.addEventListener('click', () => {
+        navMenu.classList.remove('show-menu');
+      });
+    }
+
+    // Active link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+      const scrollY = window.pageYOffset;
+      sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 50;
+        const sectionId = current.getAttribute('id');
+        const navLink = document.querySelector('.nav__menu a[href*=' + sectionId + ']');
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+          navLink.classList.add('active-link');
+        } else{
+          navLink.classList.remove('active-link');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
