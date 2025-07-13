@@ -1734,3 +1734,47 @@ img, .hero__img, .project__image img, .blog-card__image img {
   }
 }
 
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+  width: 100%;
+}
+.hero-blue-box {
+  width: 340px;
+  height: 340px;
+  background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+  border-radius: 1.5rem;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.hero-profile-img {
+  width: 200px;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 32px rgba(37,99,235,0.18);
+  z-index: 2;
+  background: #fff;
+  border: 6px solid #fff;
+  object-fit: cover;
+}
+@media (max-width: 500px) {
+  .hero-blue-box {
+    width: 220px;
+    height: 220px;
+  }
+  .hero-profile-img {
+    width: 120px;
+    bottom: -24px;
+    border-width: 4px;
+  }
+}
+
