@@ -908,18 +908,23 @@ img {
 }
 
 .project__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 500;
   color: var(--primary-color);
-  font-weight: var(--font-medium);
-  font-size: var(--small-font-size);
-  transition: var(--transition);
+  background: var(--first-color-light);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: none;
+  border: none;
+  margin-top: 1rem;
 }
-
 .project__link:hover {
-  color: var(--primary-color-dark);
-  transform: translateX(2px);
+  background: var(--primary-color);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.10);
 }
 
 /* ===== CONTACT SECTION ===== */
