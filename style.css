@@ -230,7 +230,7 @@ img {
   height: 4rem;
   gap: 2rem;
   flex-wrap: nowrap;
-  overflow-x: auto;
+  overflow-x: visible;
 }
 
 .nav__logo {
@@ -272,7 +272,7 @@ img {
   flex: 1 1 auto;
   min-width: 0;
   flex-shrink: 1;
-  overflow-x: auto;
+  /* overflow-x: auto; */
   max-width: none;
 }
 
