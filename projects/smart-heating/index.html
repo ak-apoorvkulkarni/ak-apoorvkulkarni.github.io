@@ -30,26 +30,40 @@
     </nav>
   </header>
   <main class="main">
-    <section class="section">
-      <div class="container">
-        <div class="section__header">
-          <h1 class="section__title" data-en="Smart Cloud-Based Heating Management System" data-de="Intelligentes Cloud-basiertes Heizungsmanagementsystem">Smart Cloud-Based Heating Management System</h1>
-          <p class="section__subtitle" data-en="Developed in the Student Innovation Lab @ KIT" data-de="Entwickelt im Student Innovation Lab @ KIT">Developed in the Student Innovation Lab @ KIT</p>
+    <!-- HERO SECTION -->
+    <section class="section" style="padding-bottom:2rem;">
+      <div class="container" style="max-width:900px;">
+        <div class="project__card" style="padding:0;overflow:visible;">
+          <div class="project__image" style="height:320px;overflow:hidden;border-radius:1rem 1rem 0 0;">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Smart Heating Hero" style="width:100%;height:100%;object-fit:cover;" />
+          </div>
+          <div class="project__content" style="padding:2.5rem 2rem 2rem 2rem;">
+            <h1 class="section__title" style="margin-bottom:0.5rem;" data-en="Smart Cloud-Based Heating Management System" data-de="Intelligentes Cloud-basiertes Heizungsmanagementsystem">Smart Cloud-Based Heating Management System</h1>
+            <p class="section__subtitle" style="margin-bottom:2rem;" data-en="Developed in the Student Innovation Lab @ KIT" data-de="Entwickelt im Student Innovation Lab @ KIT">Developed in the Student Innovation Lab @ KIT</p>
+            <p class="project__description" style="font-size:1.15rem;line-height:1.7;">The Smart Cloud-Based Heating Management System is a connected platform that helps users monitor their indoor environment and optimize heating behavior — using live sensor data, AI-based modeling, and personalized recommendations. By combining IoT hardware, a mobile app, and a cloud backend, the system gives users insight into their energy usage and air quality — and guides them toward greener, smarter heating decisions.</p>
+          </div>
         </div>
-        <div class="project__card" style="max-width:800px;margin:0 auto;">
-          <div class="project__image"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Smart Heating Hero" /></div>
+      </div>
+    </section>
+
+    <!-- DETAILS SECTIONS -->
+    <section class="section" style="padding-top:2rem;">
+      <div class="container" style="max-width:900px;display:grid;gap:2.5rem;">
+        <div class="project__card" data-aos="fade-up">
           <div class="project__content">
-            <h2 class="project__title" data-en="What Is It?" data-de="Was ist das?">What Is It?</h2>
-            <p data-en="The Smart Cloud-Based Heating Management System is a connected platform that helps users monitor their indoor environment and optimize heating behavior — using live sensor data, AI-based modeling, and personalized recommendations. By combining IoT hardware, a mobile app, and a cloud backend, the system gives users insight into their energy usage and air quality — and guides them toward greener, smarter heating decisions." data-de="Das intelligente cloudbasierte Heizungsmanagementsystem ist eine vernetzte Plattform, die Nutzern hilft, ihre Innenraumumgebung zu überwachen und das Heizverhalten zu optimieren – mit Live-Sensordaten, KI-basierter Modellierung und personalisierten Empfehlungen. Durch die Kombination von IoT-Hardware, einer mobilen App und einem Cloud-Backend erhalten Nutzer Einblicke in ihren Energieverbrauch und die Luftqualität – und werden zu umweltfreundlicheren, intelligenteren Heizentscheidungen geführt.">The Smart Cloud-Based Heating Management System is a connected platform that helps users monitor their indoor environment and optimize heating behavior — using live sensor data, AI-based modeling, and personalized recommendations. By combining IoT hardware, a mobile app, and a cloud backend, the system gives users insight into their energy usage and air quality — and guides them toward greener, smarter heating decisions.</p>
-            <div class="project__image" style="margin:2rem 0;"><img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="System Overview" /></div>
             <h2 class="project__title" data-en="What Makes It Smart?" data-de="Was macht es intelligent?">What Makes It Smart?</h2>
-            <ul class="project__tags">
+            <ul class="project__tags" style="margin-bottom:1.5rem;">
               <li>Tracks temperature, humidity, and CO₂ levels in real-time</li>
               <li>Suggests when to open/close windows or adjust heater settings</li>
               <li>Learns user behavior and housing characteristics (physics + neural networks)</li>
               <li>Estimates energy costs, savings, and impact from habit changes</li>
               <li>Gamifies the experience with challenges and achievements</li>
             </ul>
+            <div class="project__image" style="margin:2rem 0 0.5rem 0;"><img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=900&q=80" alt="System Overview" style="border-radius:0.75rem;" /></div>
+          </div>
+        </div>
+        <div class="project__card" data-aos="fade-up">
+          <div class="project__content">
             <h2 class="project__title" data-en="My Contributions" data-de="Meine Beiträge">My Contributions</h2>
             <ul class="project__tags">
               <li>Designed and set up the hardware system (ESP32 microcontroller with DHT11 and SCD4x sensors)</li>
@@ -58,6 +72,10 @@
               <li>Created logic for behavioral suggestion features (like optimal ventilation time)</li>
               <li>Participated in system architecture planning, user flow diagrams, and agile sprints</li>
             </ul>
+          </div>
+        </div>
+        <div class="project__card" data-aos="fade-up">
+          <div class="project__content">
             <h2 class="project__title" data-en="System Overview" data-de="Systemübersicht">System Overview</h2>
             <ul class="project__tags">
               <li><strong>Frontend:</strong> Mobile app (Flutter) for data display, insights, and user interaction</li>
@@ -65,6 +83,10 @@
               <li><strong>Hardware:</strong> ESP32-based sensor unit for temperature, humidity, CO₂ data</li>
               <li><strong>Protocols:</strong> WiFi (802.11ac / ESP-NOW), HTTPS</li>
             </ul>
+          </div>
+        </div>
+        <div class="project__card" data-aos="fade-up">
+          <div class="project__content">
             <h2 class="project__title" data-en="Tech Stack" data-de="Tech Stack">Tech Stack</h2>
             <ul class="project__tags">
               <li>Hardware: ESP32, DHT11, SCD4x</li>
@@ -72,10 +94,14 @@
               <li>Protocols: WiFi, HTTPS</li>
               <li>Modeling: OOP + neural networks</li>
             </ul>
-            <div class="project__image" style="margin:2rem 0;"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Tech Stack" /></div>
+            <div class="project__image" style="margin:2rem 0 0.5rem 0;"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80" alt="Tech Stack" style="border-radius:0.75rem;" /></div>
+          </div>
+        </div>
+        <div class="project__card" data-aos="fade-up">
+          <div class="project__content">
             <h2 class="project__title" data-en="Why It Matters" data-de="Warum ist das wichtig?">Why It Matters</h2>
-            <p data-en="Heating is one of the largest contributors to home energy use — and often, a lot of it is wasted. This system empowers users to understand their indoor environment, take control of energy habits, and make data-driven decisions that are both eco-conscious and cost-effective." data-de="Heizen ist einer der größten Energieverbraucher im Haushalt – und oft wird viel davon verschwendet. Dieses System befähigt Nutzer, ihre Innenraumumgebung zu verstehen, Energiegewohnheiten zu kontrollieren und datenbasierte, umweltbewusste und kosteneffiziente Entscheidungen zu treffen.">Heating is one of the largest contributors to home energy use — and often, a lot of it is wasted. This system empowers users to understand their indoor environment, take control of energy habits, and make data-driven decisions that are both eco-conscious and cost-effective.</p>
-            <blockquote style="margin:2rem 0;font-style:italic;color:var(--primary-color);border-left:4px solid var(--primary-color);padding-left:1rem;">“My focus was on creating systems that are not just technically impressive — but actually useful and sustainable in daily life.”</blockquote>
+            <p class="project__description">Heating is one of the largest contributors to home energy use — and often, a lot of it is wasted. This system empowers users to understand their indoor environment, take control of energy habits, and make data-driven decisions that are both eco-conscious and cost-effective.</p>
+            <blockquote style="margin:2rem 0 0 0;font-style:italic;color:var(--primary-color);border-left:4px solid var(--primary-color);padding-left:1rem;">“My focus was on creating systems that are not just technically impressive — but actually useful and sustainable in daily life.”</blockquote>
           </div>
         </div>
       </div>
