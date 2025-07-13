@@ -33,20 +33,50 @@
     <section class="section">
       <div class="container">
         <div class="section__header">
-          <h1 class="section__title" data-en="Speak Out Glove" data-de="Sprechen Sie Geste">Speak Out Glove</h1>
-          <p class="section__subtitle" data-en="Designed a smart glove that translates sign language gestures to speech and text using embedded sensors and machine learning algorithms." data-de="Entworfen eines intelligenten Handschuhs, der Geste der Signalisierung in Sprache und Text übersetzt, unter Verwendung eingebetteter Sensoren und maschinellen Lernalgorithmen.">Designed a smart glove that translates sign language gestures to speech and text using embedded sensors and machine learning algorithms.</p>
+          <h1 class="section__title" data-en="Speak Out – An Intelligent Glove for the Vocally Impaired" data-de="Sprechen Sie Geste – Ein intelligenter Handschuh für Sprachbehinderte">Speak Out – An Intelligent Glove for the Vocally Impaired</h1>
+          <p class="section__subtitle" data-en="Developed at Vidyalankar Institute of Technology, Mumbai" data-de="Entwickelt am Vidyalankar Institute of Technology, Mumbai">Developed at Vidyalankar Institute of Technology, Mumbai</p>
         </div>
         <div class="project__card" style="max-width:700px;margin:0 auto;">
-          <div class="project__image"><img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=700&q=80" alt="Speak Out Glove Cover" /></div>
+          <div class="project__image image-placeholder" style="height:280px;display:flex;align-items:center;justify-content:center;background:#e5e7eb;color:#64748b;font-size:1.15rem;border-radius:1rem;">Image 1 Placeholder</div>
           <div class="project__content">
-            <h2 class="project__title" data-en="Project Details" data-de="Projektdetails">Project Details</h2>
+            <h2 class="project__title">Project Overview</h2>
+            <p>As part of our undergraduate engineering program, this project was developed to address a real-world communication gap faced by vocally impaired individuals. The goal was to design a wearable device that could convert hand gestures into understandable text or speech — bridging the gap between sign language and everyday communication.</p>
+            <h2 class="project__title">What Is "Speak Out"?</h2>
+            <p>Speak Out is a smart glove that recognizes hand gestures made in sign language and translates them into readable or audible output via a smartphone. It combines sensor technology, machine learning, and cloud computing to act as a live translator for those who cannot speak but use their hands to communicate.</p>
+            <div class="project__image image-placeholder" style="height:180px;display:flex;align-items:center;justify-content:center;background:#e5e7eb;color:#64748b;font-size:1rem;border-radius:0.75rem;margin:2rem 0;">Image 2 Placeholder</div>
+            <h2 class="project__title">How It Works</h2>
             <ul class="project__tags">
-              <li>Developed embedded system for gesture recognition.</li>
-              <li>Machine learning algorithms for sign-to-speech translation.</li>
-              <li>Integrated sensors and wireless communication.</li>
+              <li><strong>Input:</strong> The glove uses a combination of sensors:
+                <ul>
+                  <li>Flex sensors to detect finger bends</li>
+                  <li>Contact sensors to sense palm contact</li>
+                  <li>MPU6050 gyroscope for wrist motion tracking (e.g., letters like J and Z)</li>
+                </ul>
+              </li>
+              <li><strong>Transmission:</strong> An ESP8266 Wi-Fi module sends data from the glove to a cloud database in real-time.</li>
+              <li><strong>Processing:</strong> A machine learning model (Random Forest algorithm) processes the gesture data and predicts the intended word or letter.</li>
+              <li><strong>Output:</strong> A mobile application fetches the prediction from the cloud and displays the text or converts it into speech.</li>
             </ul>
-            <h2 class="project__title" data-en="Gallery" data-de="Galerie">Gallery</h2>
-            <p data-en="(Project images coming soon)" data-de="(Projektbilder folgen)">(Project images coming soon)</p>
+            <div class="project__image image-placeholder" style="height:180px;display:flex;align-items:center;justify-content:center;background:#e5e7eb;color:#64748b;font-size:1rem;border-radius:0.75rem;margin:2rem 0;">Image 3 Placeholder</div>
+            <h2 class="project__title">My Role & Contributions</h2>
+            <ul class="project__tags">
+              <li>Interfaced and calibrated sensors (flex, contact, and gyroscope) with the microcontroller</li>
+              <li>Designed circuit logic and voltage-divider networks for resistance-based sensor inputs</li>
+              <li>Integrated ESP8266 Wi-Fi module for real-time data transmission</li>
+              <li>Contributed to building and training the ML model for gesture recognition</li>
+              <li>Developed the data flow pipeline from glove → cloud → app</li>
+              <li>Participated in multiple testing cycles for gesture accuracy and sensor consistency</li>
+            </ul>
+            <h2 class="project__title">Why It Matters</h2>
+            <p>Sign language is a rich and expressive form of communication — but most people don’t understand it. With Speak Out, we aimed to create an intuitive, low-cost wearable that helps vocally impaired individuals express themselves clearly in public spaces, hospitals, schools, and more.</p>
+            <blockquote style="margin:2rem 0 0 0;font-style:italic;color:var(--primary-color);border-left:4px solid var(--primary-color);padding-left:1rem;">“Rather than asking the world to learn sign language, we built a tool that speaks it for you.”</blockquote>
+            <h2 class="project__title">Tech Stack</h2>
+            <ul class="project__tags">
+              <li><strong>Hardware:</strong> Flex Sensors (x5), Contact Sensor (FSR-402), MPU6050 Gyroscope, NodeMCU (ESP8266)</li>
+              <li><strong>Software:</strong> Arduino IDE, Mobile App (custom-built), Cloud Database, Machine Learning (Random Forest algorithm)</li>
+              <li><strong>Protocols:</strong> I2C (for gyroscope), Analog/Digital IO, Wi-Fi (ESP8266)</li>
+            </ul>
+            <div class="project__image image-placeholder" style="height:180px;display:flex;align-items:center;justify-content:center;background:#e5e7eb;color:#64748b;font-size:1rem;border-radius:0.75rem;margin:2rem 0;">Image 4 Placeholder</div>
           </div>
         </div>
       </div>
