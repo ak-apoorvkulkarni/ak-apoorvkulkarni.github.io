@@ -1674,3 +1674,51 @@ img, .hero__img, .project__image img, .blog-card__image img {
   color: var(--gray-400);
 }
 
+.skills__container--columns {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.skills__col {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skills__group {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 0.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+[data-theme="dark"] .skills__group {
+  background: var(--gray-800);
+  border-color: var(--gray-700);
+  box-shadow: none;
+}
+
+.skills__category-title {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.skills__list {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+@media (max-width: 900px) {
+  .skills__container--columns {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
