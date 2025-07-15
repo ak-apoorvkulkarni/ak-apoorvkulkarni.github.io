@@ -1944,10 +1944,10 @@ img, .hero__img, .project__image img, .blog-card__image img {
 /* Mobile Hero Section */
 @media (max-width: 768px) {
   .hero {
-    padding: 6rem 0 4rem;
-    min-height: 100vh;
+    padding: 6rem 0 2rem;
+    min-height: auto;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
   
   .hero__container {
@@ -1979,7 +1979,7 @@ img, .hero__img, .project__image img, .blog-card__image img {
     flex-direction: column;
     gap: 1rem;
     align-items: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
   }
   
   .button {
@@ -2187,6 +2187,7 @@ img, .hero__img, .project__image img, .blog-card__image img {
   .project__link {
     width: 100%;
     justify-content: center;
+    text-align: center;
     margin-top: 1rem;
     padding: 0.875rem 1.5rem;
     font-size: 1rem;
@@ -2195,6 +2196,8 @@ img, .hero__img, .project__image img, .blog-card__image img {
     background-color: var(--primary-color);
     color: white;
     border: none;
+    display: flex;
+    align-items: center;
   }
   
   .project__link:hover {
@@ -2231,6 +2234,10 @@ img, .hero__img, .project__image img, .blog-card__image img {
   .project__link {
     padding: 0.75rem 1.25rem;
     font-size: 0.95rem;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
   }
 }
 
