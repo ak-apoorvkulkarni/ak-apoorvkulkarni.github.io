@@ -87,6 +87,7 @@
   --small-font-size: 0.95rem;
   --smaller-font-size: 0.85rem;
   --border-radius: 1rem;
+  --header-height-mobile: 4rem;
 }
 
 /* ===== BASE STYLES ===== */
@@ -1197,7 +1198,7 @@ img {
     transform: translateX(0);
   }
   .main, .hero, .section.hero {
-    padding-top: 4.5rem !important;
+    padding-top: 0 !important;
   }
 }
 
