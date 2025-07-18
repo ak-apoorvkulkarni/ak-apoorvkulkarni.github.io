@@ -48,10 +48,10 @@
             <a href="blog/" class="nav__link" data-en="Blog" data-de="Blog">Blog</a>
           </li>
           <li class="nav__item">
-            <a href="#contact" class="nav__link" data-en="Contact" data-de="Kontakt">Contact</a>
+            <a href="#education" class="nav__link" data-en="Education" data-de="Bildung">Education</a>
           </li>
           <li class="nav__item">
-            <a href="#education" class="nav__link" data-en="Education" data-de="Bildung">Education</a>
+            <a href="#contact" class="nav__link" data-en="Contact" data-de="Kontakt">Contact</a>
           </li>
         </ul>
         
@@ -110,10 +110,6 @@
     <!-- ABOUT SECTION -->
     <section class="about section" id="about">
       <div class="container">
-        <div class="section__header" data-aos="fade-up">
-          <h2 class="section__title" data-en="About Me" data-de="Über mich">About Me</h2>
-          <p class="section__subtitle" data-en="Get to know me better" data-de="Lerne mich besser kennen">Get to know me better</p>
-        </div>
         
         <div class="about__container grid">
           <div class="about__content" data-aos="fade-right">
@@ -125,28 +121,46 @@
               <div class="skills__col">
                 <div class="skills__group">
                   <span class="skills__category-title"><strong>Embedded Systems</strong></span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-percentage="90"></div>
+                  </div>
                   <span class="skills__list">Arduino, STM32, ESP32, UART, SPI, I2C</span>
                 </div>
                 <div class="skills__group">
                   <span class="skills__category-title"><strong>Simulations & Analysis</strong></span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-percentage="85"></div>
+                  </div>
                   <span class="skills__list">MATLAB, Simulink, Multisim, LTSpice, Proteus</span>
                 </div>
                 <div class="skills__group">
                   <span class="skills__category-title"><strong>Product & Project Management</strong></span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-percentage="80"></div>
+                  </div>
                   <span class="skills__list">Product Strategy, Agile, User Research, PM Tools</span>
                 </div>
               </div>
               <div class="skills__col">
                 <div class="skills__group">
                   <span class="skills__category-title"><strong>Design Tools</strong></span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-percentage="88"></div>
+                  </div>
                   <span class="skills__list">Fusion 360, AutoCAD, Cadence, OptiSystem</span>
                 </div>
                 <div class="skills__group">
                   <span class="skills__category-title"><strong>PCB Tools</strong></span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-percentage="92"></div>
+                  </div>
                   <span class="skills__list">EAGLE, KiCAD, Altium</span>
                 </div>
                 <div class="skills__group">
                   <span class="skills__category-title"><strong>Other Tools</strong></span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-percentage="75"></div>
+                  </div>
                   <span class="skills__list">MS Office, Git, LaTeX</span>
                 </div>
               </div>
@@ -251,7 +265,7 @@
                 <span class="project__tag">Precision Control</span>
                 <span class="project__tag">AFM</span>
               </div>
-              <a href="projects/fpga-afm/index.html" class="project__link" style="margin-top:1rem;">View Project</a>
+              <button class="project__link project-modal-btn" data-project="fpga-afm" style="margin-top:1rem;">View Project</button>
             </div>
           </article>
           <article class="project__card" data-aos="fade-up" tabindex="0">
@@ -266,7 +280,7 @@
                 <span class="project__tag">Control Systems</span>
                 <span class="project__tag">Embedded</span>
               </div>
-              <a href="projects/hyperloop/index.html" class="project__link" style="margin-top:1rem;">View Project</a>
+              <button class="project__link project-modal-btn" data-project="hyperloop" style="margin-top:1rem;">View Project</button>
             </div>
           </article>
           <article class="project__card" data-aos="fade-up" tabindex="0">
@@ -281,7 +295,7 @@
                 <span class="project__tag">Cloud</span>
                 <span class="project__tag">Analytics</span>
               </div>
-              <a href="projects/smart-heating/index.html" class="project__link" style="margin-top:1rem;">View Project</a>
+              <button class="project__link project-modal-btn" data-project="smart-heating" style="margin-top:1rem;">View Project</button>
             </div>
           </article>
           <article class="project__card" data-aos="fade-up" tabindex="0">
@@ -296,9 +310,53 @@
                 <span class="project__tag">Wearable</span>
                 <span class="project__tag">Machine Learning</span>
               </div>
-              <a href="projects/glove/index.html" class="project__link" style="margin-top:1rem;">View Project</a>
+              <button class="project__link project-modal-btn" data-project="glove" style="margin-top:1rem;">View Project</button>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="education section" id="education">
+      <div class="container">
+        <div class="section__header" data-aos="fade-up">
+          <h2 class="section__title" data-en="Educational Background" data-de="Bildungsweg">Educational Background</h2>
+        </div>
+        <div class="vertical-timeline" data-aos="fade-up">
+          <div class="vertical-timeline__item">
+            <div class="vertical-timeline__content">
+              <div class="vertical-timeline__year">2022–Present</div>
+              <h3 class="vertical-timeline__title" data-en="Karlsruhe Institute of Technology" data-de="Karlsruher Institut für Technologie">Karlsruhe Institute of Technology</h3>
+              <div class="vertical-timeline__meta">
+                <span class="vertical-timeline__location" data-en="Electrical Engineering and Information Technology, Karlsruhe, Germany" data-de="Elektrotechnik und Informationstechnik, Karlsruhe, Deutschland">Electrical Engineering and Information Technology, Karlsruhe, Germany</span>
+              </div>
+              <p class="vertical-timeline__desc" data-en="Graduate student specializing in embedded systems, low-power electronics, and applied research." data-de="Masterstudent mit Schwerpunkt auf Embedded Systems, stromsparender Elektronik und angewandter Forschung.">Graduate student specializing in embedded systems, low-power electronics, and applied research.</p>
+            </div>
+            <span class="vertical-timeline__circle" aria-hidden="true"></span>
+          </div>
+          <div class="vertical-timeline__item">
+            <div class="vertical-timeline__content">
+              <div class="vertical-timeline__year">2022–2023</div>
+              <h3 class="vertical-timeline__title" data-en="University of Duke CE" data-de="University of Duke CE">University of Duke CE</h3>
+              <div class="vertical-timeline__meta">
+                <span class="vertical-timeline__location" data-en="Product Management Certification Program" data-de="Produktmanagement-Zertifikatsprogramm">Product Management Certification Program</span>
+              </div>
+              <p class="vertical-timeline__desc" data-en="Completed a professional program in product management." data-de="Abschluss eines professionellen Programms im Produktmanagement.">Completed a professional program in product management.</p>
+            </div>
+            <span class="vertical-timeline__circle" aria-hidden="true"></span>
+          </div>
+          <div class="vertical-timeline__item">
+            <div class="vertical-timeline__content">
+              <div class="vertical-timeline__year">2016–2020</div>
+              <h3 class="vertical-timeline__title" data-en="University of Mumbai" data-de="Universität Mumbai">University of Mumbai</h3>
+              <div class="vertical-timeline__meta">
+                <span class="vertical-timeline__location" data-en="Bachelor's Degree in Electronics Engineering, Mumbai" data-de="Bachelorabschluss in Elektronikingenieurwesen, Mumbai">Bachelor's Degree in Electronics Engineering, Mumbai</span>
+              </div>
+              <p class="vertical-timeline__desc" data-en="Focused on electronics engineering, embedded systems, and project-based learning." data-de="Fokus auf Elektronikingenieurwesen, Embedded Systems und projektbasiertes Lernen.">Focused on electronics engineering, embedded systems, and project-based learning.</p>
+            </div>
+            <span class="vertical-timeline__circle" aria-hidden="true"></span>
+          </div>
         </div>
       </div>
     </section>
@@ -369,51 +427,81 @@
         </div>
       </div>
     </section>
+  </main>
 
-    <!-- EDUCATION SECTION -->
-    <section class="education section" id="education">
-      <div class="container">
-        <div class="section__header" data-aos="fade-up">
-          <h2 class="section__title" data-en="Educational Background" data-de="Bildungsweg">Educational Background</h2>
+  <!-- PROJECT MODAL -->
+  <div class="modal" id="projectModal">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+      <button class="modal__close" id="modalClose">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal__header">
+        <h3 class="modal__title"></h3>
+        <div class="modal__tags"></div>
+      </div>
+      <div class="modal__body">
+        <div class="modal__image">
+          <img src="" alt="" class="modal__img">
         </div>
-        <div class="vertical-timeline" data-aos="fade-up">
-          <div class="vertical-timeline__item">
-            <div class="vertical-timeline__content">
-              <div class="vertical-timeline__year">2022–Present</div>
-              <h3 class="vertical-timeline__title" data-en="Karlsruhe Institute of Technology" data-de="Karlsruher Institut für Technologie">Karlsruhe Institute of Technology</h3>
-              <div class="vertical-timeline__meta">
-                <span class="vertical-timeline__location" data-en="Electrical Engineering and Information Technology, Karlsruhe, Germany" data-de="Elektrotechnik und Informationstechnik, Karlsruhe, Deutschland">Electrical Engineering and Information Technology, Karlsruhe, Germany</span>
-              </div>
-              <p class="vertical-timeline__desc" data-en="Graduate student specializing in embedded systems, low-power electronics, and applied research." data-de="Masterstudent mit Schwerpunkt auf Embedded Systems, stromsparender Elektronik und angewandter Forschung.">Graduate student specializing in embedded systems, low-power electronics, and applied research.</p>
-            </div>
-            <span class="vertical-timeline__circle" aria-hidden="true"></span>
+        <div class="modal__description"></div>
+        <div class="modal__details">
+          <div class="modal__tech">
+            <h4>Technologies Used</h4>
+            <ul class="modal__tech-list"></ul>
           </div>
-          <div class="vertical-timeline__item">
-            <div class="vertical-timeline__content">
-              <div class="vertical-timeline__year">2022–2023</div>
-              <h3 class="vertical-timeline__title" data-en="University of Duke CE" data-de="University of Duke CE">University of Duke CE</h3>
-              <div class="vertical-timeline__meta">
-                <span class="vertical-timeline__location" data-en="Product Management Certification Program" data-de="Produktmanagement-Zertifikatsprogramm">Product Management Certification Program</span>
-              </div>
-              <p class="vertical-timeline__desc" data-en="Completed a professional program in product management." data-de="Abschluss eines professionellen Programms im Produktmanagement.">Completed a professional program in product management.</p>
-            </div>
-            <span class="vertical-timeline__circle" aria-hidden="true"></span>
-          </div>
-          <div class="vertical-timeline__item">
-            <div class="vertical-timeline__content">
-              <div class="vertical-timeline__year">2016–2020</div>
-              <h3 class="vertical-timeline__title" data-en="University of Mumbai" data-de="Universität Mumbai">University of Mumbai</h3>
-              <div class="vertical-timeline__meta">
-                <span class="vertical-timeline__location" data-en="Bachelor's Degree in Electronics Engineering, Mumbai" data-de="Bachelorabschluss in Elektronikingenieurwesen, Mumbai">Bachelor's Degree in Electronics Engineering, Mumbai</span>
-              </div>
-              <p class="vertical-timeline__desc" data-en="Focused on electronics engineering, embedded systems, and project-based learning." data-de="Fokus auf Elektronikingenieurwesen, Embedded Systems und projektbasiertes Lernen.">Focused on electronics engineering, embedded systems, and project-based learning.</p>
-            </div>
-            <span class="vertical-timeline__circle" aria-hidden="true"></span>
+          <div class="modal__features">
+            <h4>Key Features</h4>
+            <ul class="modal__features-list"></ul>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+      <div class="modal__footer">
+        <a href="#" class="button button--primary modal__link" target="_blank">
+          <span>View Full Project</span>
+          <i class="fa-solid fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ELECTRICAL ANIMATIONS BACKGROUND -->
+  <div class="electrical-bg">
+    <div class="pcb-pattern"></div>
+    <div class="circuit-traces">
+      <div class="circuit-trace"></div>
+      <div class="circuit-trace"></div>
+      <div class="circuit-trace"></div>
+      <div class="circuit-trace"></div>
+    </div>
+    <div class="components">
+      <div class="component">⚡</div>
+      <div class="component">🔌</div>
+      <div class="component">💻</div>
+      <div class="component">🔋</div>
+      <div class="component">📡</div>
+    </div>
+    <div class="voltage-indicators">
+      <div class="voltage-indicator"></div>
+      <div class="voltage-indicator"></div>
+      <div class="voltage-indicator"></div>
+    </div>
+    <div class="signal-processors">
+      <div class="signal-processor"></div>
+      <div class="signal-processor"></div>
+      <div class="signal-processor"></div>
+    </div>
+    <div class="microcontrollers">
+      <div class="microcontroller"></div>
+      <div class="microcontroller"></div>
+      <div class="microcontroller"></div>
+    </div>
+    <div class="data-flows">
+      <div class="data-flow"></div>
+      <div class="data-flow"></div>
+      <div class="data-flow"></div>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -428,8 +516,8 @@
           <a href="#experience" class="footer__link" data-en="Experience" data-de="Erfahrung">Experience</a>
           <a href="#projects" class="footer__link" data-en="Projects" data-de="Projekte">Projects</a>
           <a href="blog/" class="footer__link" data-en="Blog" data-de="Blog">Blog</a>
-          <a href="#contact" class="footer__link" data-en="Contact" data-de="Kontakt">Contact</a>
           <a href="#education" class="footer__link" data-en="Education" data-de="Bildung">Education</a>
+          <a href="#contact" class="footer__link" data-en="Contact" data-de="Kontakt">Contact</a>
         </nav>
         <p class="footer__text" data-en="© 2025 Apoorv Kulkarni. All rights reserved." data-de="© 2025 Apoorv Kulkarni. Alle Rechte vorbehalten.">© 2025 Apoorv Kulkarni. All rights reserved.</p>
       </div>
@@ -438,15 +526,30 @@
 
   <!-- SCRIPTS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"></script>
   <script>
-    // Initialize AOS
+    // Initialize AOS with enhanced settings
     AOS.init({ 
       duration: 1000,
       once: true,
-      offset: 100
+      offset: 100,
+      easing: 'ease-in-out-cubic'
     });
 
-    // Theme toggle functionality
+    // Typing animation for hero title
+    document.addEventListener('DOMContentLoaded', function() {
+      const typed = new Typed('.hero__title-highlight', {
+        strings: ['Apoorv Kulkarni', 'Electrical Engineer', 'Product Developer'],
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 2000,
+        loop: true,
+        showCursor: true,
+        cursorChar: '|'
+      });
+    });
+
+    // Enhanced theme toggle functionality
     const themeToggle = document.getElementById('dark-toggle');
     const body = document.body;
     const icon = themeToggle.querySelector('i');
@@ -460,9 +563,16 @@
       const currentTheme = body.getAttribute('data-theme');
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       
+      // Add transition effect
+      body.style.transition = 'all 0.3s ease';
       body.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
       updateThemeIcon(newTheme);
+      
+      // Remove transition after animation
+      setTimeout(() => {
+        body.style.transition = '';
+      }, 300);
     });
 
     function updateThemeIcon(theme) {
@@ -473,12 +583,12 @@
       }
     }
 
-    // Language switcher functionality
+    // Enhanced language switcher functionality
     const langSwitcher = document.querySelector('.lang-switcher');
     const langButtons = langSwitcher.querySelectorAll('.lang-btn');
 
     function setLanguage(lang) {
-      // Highlight the active button
+      // Highlight the active button with smooth transition
       langButtons.forEach(btn => {
         if (btn.getAttribute('data-lang') === lang) {
           btn.classList.add('active');
@@ -486,10 +596,16 @@
           btn.classList.remove('active');
         }
       });
-      // Update all elements with data-en/data-de (use innerHTML for HTML content)
+      
+      // Update all elements with data-en/data-de with fade effect
       document.querySelectorAll('[data-en]').forEach(el => {
-        el.innerHTML = el.getAttribute(`data-${lang}`);
+        el.style.opacity = '0';
+        setTimeout(() => {
+          el.innerHTML = el.getAttribute(`data-${lang}`);
+          el.style.opacity = '1';
+        }, 150);
       });
+      
       // Set lang attribute on <html>
       document.documentElement.lang = lang;
       // Save preference
@@ -507,29 +623,54 @@
     const savedLang = localStorage.getItem('lang') || 'en';
     setLanguage(savedLang);
 
-    // Navigation functionality
+    // Enhanced navigation functionality
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
     const navClose = document.getElementById('nav-close');
     const navLinks = document.querySelectorAll('.nav__link');
+    const header = document.querySelector('.header');
 
-    // Toggle mobile menu
+    // Toggle mobile menu with smooth animation
     navToggle.addEventListener('click', () => {
       navMenu.classList.add('show-menu');
+      document.body.style.overflow = 'hidden'; // Prevent background scroll
     });
 
     navClose.addEventListener('click', () => {
       navMenu.classList.remove('show-menu');
+      document.body.style.overflow = ''; // Restore scroll
     });
 
     // Close mobile menu when clicking on a link
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('show-menu');
+        document.body.style.overflow = '';
       });
     });
 
-    // Active link highlighting
+    // Header scroll effect
+    let lastScrollY = window.scrollY;
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+      
+      // Hide/show header on scroll
+      if (currentScrollY > lastScrollY && currentScrollY > 200) {
+        header.classList.add('header-hidden');
+      } else {
+        header.classList.remove('header-hidden');
+      }
+      
+      lastScrollY = currentScrollY;
+    });
+
+    // Enhanced active link highlighting with smooth transitions
     const sections = document.querySelectorAll('section[id]');
     
     function updateActiveLink() {
@@ -537,7 +678,7 @@
       
       sections.forEach(section => {
         const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 100;
+        const sectionTop = section.offsetTop - 150;
         const sectionId = section.getAttribute('id');
         const navLink = document.querySelector(`.nav__link[href="#${sectionId}"]`);
         
@@ -550,7 +691,7 @@
 
     window.addEventListener('scroll', updateActiveLink);
 
-    // Smooth scrolling for navigation links (only for internal links)
+    // Enhanced smooth scrolling for navigation links
     navLinks.forEach(link => {
       link.addEventListener('click', (e) => {
         const targetId = link.getAttribute('href');
@@ -568,9 +709,326 @@
             });
           }
         }
-        // If it's an external link (like blog/), let it navigate normally
       });
     });
+
+    // Interactive project cards with hover effects
+    const projectCards = document.querySelectorAll('.project__card');
+    
+    projectCards.forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px) scale(1.02)';
+        this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.15)';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+        this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.1)';
+      });
+      
+      // Add click effect
+      card.addEventListener('click', function() {
+        this.style.transform = 'translateY(-5px) scale(0.98)';
+        setTimeout(() => {
+          this.style.transform = 'translateY(-10px) scale(1.02)';
+        }, 150);
+      });
+    });
+
+    // Parallax effect for hero section
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const heroSection = document.querySelector('.hero');
+      const heroImage = document.querySelector('.hero__image');
+      
+      if (heroSection && heroImage) {
+        const rate = scrolled * -0.5;
+        heroImage.style.transform = `translateY(${rate}px)`;
+      }
+    });
+
+    // Enhanced skill bars animation with progress filling
+    function animateSkillBars() {
+      const skillProgressBars = document.querySelectorAll('.skill-progress');
+      
+      skillProgressBars.forEach((bar, index) => {
+        setTimeout(() => {
+          const percentage = bar.getAttribute('data-percentage');
+          bar.style.width = percentage + '%';
+        }, index * 200);
+      });
+    }
+
+    // Trigger skill animation when about section is in view
+    const aboutSection = document.querySelector('#about');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateSkillBars();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    if (aboutSection) {
+      observer.observe(aboutSection);
+    }
+
+    // Contact form enhancement (if you add a form later)
+    function enhanceContactForm() {
+      const contactForm = document.querySelector('.contact__form');
+      if (contactForm) {
+        const inputs = contactForm.querySelectorAll('input, textarea');
+        
+        inputs.forEach(input => {
+          input.addEventListener('focus', function() {
+            this.parentElement.classList.add('focused');
+          });
+          
+          input.addEventListener('blur', function() {
+            if (!this.value) {
+              this.parentElement.classList.remove('focused');
+            }
+          });
+        });
+      }
+    }
+
+    // Initialize contact form enhancements
+    enhanceContactForm();
+
+    // Loading animation
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+    });
+
+    // Scroll to top functionality
+    const scrollToTopBtn = document.createElement('button');
+    scrollToTopBtn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+    scrollToTopBtn.className = 'scroll-to-top';
+    scrollToTopBtn.setAttribute('aria-label', 'Scroll to top');
+    document.body.appendChild(scrollToTopBtn);
+
+    // Show/hide scroll to top button
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('show');
+      } else {
+        scrollToTopBtn.classList.remove('show');
+      }
+    });
+
+    // Scroll to top functionality
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Enhanced timeline animations
+    const timelineItems = document.querySelectorAll('.vertical-timeline__item');
+    
+    timelineItems.forEach((item, index) => {
+      item.style.opacity = '0';
+      item.style.transform = 'translateX(-50px)';
+      
+      const itemObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateX(0)';
+            }, index * 200);
+            itemObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      
+      itemObserver.observe(item);
+    });
+
+    // Particle effect for hero section (optional enhancement)
+    function createParticles() {
+      const heroSection = document.querySelector('.hero');
+      if (!heroSection) return;
+      
+      const particleContainer = document.createElement('div');
+      particleContainer.className = 'particles';
+      heroSection.appendChild(particleContainer);
+      
+      for (let i = 0; i < 50; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 20 + 's';
+        particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+        particleContainer.appendChild(particle);
+      }
+    }
+
+    // Initialize particles
+    createParticles();
+
+    // Electrical engineering animations are now created via HTML structure
+    // No JavaScript needed for the new animations
+
+    // Modal functionality
+    const modal = document.getElementById('projectModal');
+    const modalClose = document.getElementById('modalClose');
+    const projectModalBtns = document.querySelectorAll('.project-modal-btn');
+
+    // Project data for modals
+    const projectData = {
+      'fpga-afm': {
+        title: 'FPGA-Based Control for Atomic Force Microscope (AFM)',
+        image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
+        description: 'Developed a precision control system using FPGA to manage nanoscale actuation in AFM instrumentation. This project involved designing custom digital signal processing algorithms and implementing real-time control loops for atomic-scale measurements.',
+        technologies: ['FPGA', 'VHDL', 'Digital Signal Processing', 'Control Systems', 'Precision Electronics'],
+        features: ['Nanoscale precision control', 'Real-time signal processing', 'Custom DSP algorithms', 'Atomic-scale measurements', 'High-frequency control loops'],
+        link: 'projects/fpga-afm/index.html'
+      },
+      'hyperloop': {
+        title: 'Electrical & Control Development – Hyperloop Prototype',
+        image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80',
+        description: 'Led electrical architecture and control system design for a functional Hyperloop pod prototype. Managed system integration, testing, and optimization for high-speed transportation applications.',
+        technologies: ['Embedded Systems', 'Control Systems', 'Power Electronics', 'System Integration', 'Testing & Validation'],
+        features: ['High-speed control systems', 'Power management', 'System integration', 'Safety protocols', 'Performance optimization'],
+        link: 'projects/hyperloop/index.html'
+      },
+      'smart-heating': {
+        title: 'Smart Cloud-Based Heating Management System',
+        image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80',
+        description: 'Designed an IoT-enabled system to remotely monitor and control heating operations via cloud-based analytics. Implemented real-time data collection, analysis, and automated control algorithms.',
+        technologies: ['IoT', 'Cloud Computing', 'Data Analytics', 'Embedded Systems', 'Web Development'],
+        features: ['Remote monitoring', 'Cloud analytics', 'Automated control', 'Real-time data', 'Energy optimization'],
+        link: 'projects/smart-heating/index.html'
+      },
+      'glove': {
+        title: 'Speak Out - Intelligent Sign Language Translation Glove',
+        image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80',
+        description: 'An intelligent glove for vocally impaired individuals that converts sign language into text and speech output. Integrated multiple sensors and machine learning algorithms for accurate gesture recognition.',
+        technologies: ['Machine Learning', 'Sensor Integration', 'Signal Processing', 'Mobile App Development', 'Hardware Design'],
+        features: ['Gesture recognition', 'Real-time translation', 'Speech synthesis', 'Mobile connectivity', 'Accessibility focused'],
+        link: 'projects/glove/index.html'
+      }
+    };
+
+    // Open modal
+    function openModal(projectId) {
+      const data = projectData[projectId];
+      if (!data) return;
+
+      const modalTitle = modal.querySelector('.modal__title');
+      const modalTags = modal.querySelector('.modal__tags');
+      const modalImg = modal.querySelector('.modal__img');
+      const modalDescription = modal.querySelector('.modal__description');
+      const modalTechList = modal.querySelector('.modal__tech-list');
+      const modalFeaturesList = modal.querySelector('.modal__features-list');
+      const modalLink = modal.querySelector('.modal__link');
+
+      modalTitle.textContent = data.title;
+      modalImg.src = data.image;
+      modalImg.alt = data.title;
+      modalDescription.textContent = data.description;
+      modalLink.href = data.link;
+
+      // Clear and populate tags
+      modalTags.innerHTML = '';
+      const projectCard = document.querySelector(`[data-project="${projectId}"]`).closest('.project__card');
+      const tags = projectCard.querySelectorAll('.project__tag');
+      tags.forEach(tag => {
+        const modalTag = document.createElement('span');
+        modalTag.className = 'modal__tag';
+        modalTag.textContent = tag.textContent;
+        modalTags.appendChild(modalTag);
+      });
+
+      // Clear and populate technologies
+      modalTechList.innerHTML = '';
+      data.technologies.forEach(tech => {
+        const li = document.createElement('li');
+        li.textContent = tech;
+        modalTechList.appendChild(li);
+      });
+
+      // Clear and populate features
+      modalFeaturesList.innerHTML = '';
+      data.features.forEach(feature => {
+        const li = document.createElement('li');
+        li.textContent = feature;
+        modalFeaturesList.appendChild(li);
+      });
+
+      modal.classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Close modal
+    function closeModal() {
+      modal.classList.remove('show');
+      document.body.style.overflow = '';
+    }
+
+    // Event listeners for modal
+    projectModalBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const projectId = btn.getAttribute('data-project');
+        openModal(projectId);
+      });
+    });
+
+    modalClose.addEventListener('click', closeModal);
+    modal.querySelector('.modal__overlay').addEventListener('click', closeModal);
+
+    // Enhanced section transitions
+    function handleSectionTransitions() {
+      const sections = document.querySelectorAll('.section');
+      
+      const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            entry.target.classList.remove('fade-out');
+          } else {
+            entry.target.classList.remove('fade-in');
+            entry.target.classList.add('fade-out');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      sections.forEach(section => {
+        sectionObserver.observe(section);
+      });
+    }
+
+    // Initialize section transitions
+    handleSectionTransitions();
+
+    // Keyboard navigation support
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        navMenu.classList.remove('show-menu');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Performance optimization: Throttle scroll events
+    function throttle(func, limit) {
+      let inThrottle;
+      return function() {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+          func.apply(context, args);
+          inThrottle = true;
+          setTimeout(() => inThrottle = false, limit);
+        }
+      }
+    }
+
+    // Apply throttling to scroll events
+    window.addEventListener('scroll', throttle(updateActiveLink, 100));
   </script>
 
 </body>
