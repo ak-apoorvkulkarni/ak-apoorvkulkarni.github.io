@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills Card Grid Demo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      background: #f8fafc;
+      transition: background 0.3s;
+    }
+    .skills-section-bg {
+      background: #f8fafc;
+      padding: 4rem 0 4rem 0;
+      transition: background 0.3s;
+    }
+    .skills-section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 2.5rem;
+      color: #1a2233;
+      position: relative;
+      transition: color 0.3s;
+    }
+    .skills-section-title::after {
+      content: '';
+      display: block;
+      margin: 0.75rem auto 0 auto;
+      width: 60px;
+      height: 4px;
+      background: #2563eb;
+      border-radius: 2px;
+      transition: background 0.3s;
+    }
+    .skills-card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.5rem;
+      justify-content: center;
+      align-items: stretch;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .skill-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(37,99,235,0.10);
+      padding: 2.5rem 2rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-width: 0;
+      transition: box-shadow 0.2s, background 0.3s;
+    }
+    .skill-card:hover {
+      box-shadow: 0 8px 32px rgba(37,99,235,0.15);
+    }
+    .skill-card-title {
+      color: #2563eb;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      transition: color 0.3s;
+    }
+    .skill-list {
+      padding-left: 0;
+      margin: 0;
+      color: #222b45;
+      font-size: 1.08rem;
+      width: 100%;
+      transition: color 0.3s;
+    }
+    .skill-list li {
+      margin-bottom: 0.75rem;
+      list-style: none;
+      position: relative;
+      padding-left: 1.5em;
+    }
+    .skill-list li::before {
+      content: '';
+      position: absolute;
+      left: 0.3em;
+      top: 0.7em;
+      width: 0.5em;
+      height: 0.5em;
+      background: #2563eb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+    /* DARK THEME SUPPORT */
+    body[data-theme="dark"] {
+      background: #181a20;
+    }
+    body[data-theme="dark"] .skills-section-bg {
+      background: #181a20;
+    }
+    body[data-theme="dark"] .skills-section-title {
+      color: #f1f5f9;
+    }
+    body[data-theme="dark"] .skills-section-title::after {
+      background: #3b82f6;
+    }
+    body[data-theme="dark"] .skill-card {
+      background: #23272f;
+      box-shadow: 0 4px 24px rgba(59,130,246,0.10);
+    }
+    body[data-theme="dark"] .skill-card-title {
+      color: #3b82f6;
+    }
+    body[data-theme="dark"] .skill-list {
+      color: #f1f5f9;
+    }
+    body[data-theme="dark"] .skill-list li::before {
+      background: #3b82f6;
+    }
+    @media (max-width: 1200px) {
+      .skills-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 900px) {
+      .skills-section-bg {
+        padding: 2.5rem 0 2.5rem 0;
+      }
+      .skills-card-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .skill-card {
+        padding: 1.5rem 1rem;
+      }
+    }
+    .theme-toggle-btn {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      z-index: 1000;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      font-size: 1.3rem;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(37,99,235,0.10);
+      transition: background 0.2s;
+    }
+    .theme-toggle-btn:hover {
+      background: #3b82f6;
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle-btn" id="themeToggle" title="Toggle dark mode">🌙</button>
+  <section class="skills-section-bg">
+    <div class="container">
+      <h2 class="skills-section-title">Technical Skills</h2>
+      <div class="skills-card-grid">
+        <div class="skill-card">
+          <h3 class="skill-card-title">Embedded Systems</h3>
+          <ul class="skill-list">
+            <li>Arduino</li>
+            <li>STM32</li>
+            <li>ESP32</li>
+            <li>UART, SPI, I2C</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3 class="skill-card-title">Simulations & Analysis</h3>
+          <ul class="skill-list">
+            <li>MATLAB</li>
+            <li>Simulink</li>
+            <li>Multisim</li>
+            <li>LTSpice</li>
+            <li>Proteus</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3 class="skill-card-title">Product & Project Management</h3>
+          <ul class="skill-list">
+            <li>Product Strategy</li>
+            <li>Agile</li>
+            <li>User Research</li>
+            <li>PM Tools</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3 class="skill-card-title">Design Tools</h3>
+          <ul class="skill-list">
+            <li>Fusion 360</li>
+            <li>AutoCAD</li>
+            <li>Cadence</li>
+            <li>OptiSystem</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3 class="skill-card-title">PCB Tools</h3>
+          <ul class="skill-list">
+            <li>EAGLE</li>
+            <li>KiCAD</li>
+            <li>Altium</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3 class="skill-card-title">Other Tools</h3>
+          <ul class="skill-list">
+            <li>MS Office</li>
+            <li>Git</li>
+            <li>LaTeX</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    function setTheme(theme) {
+      document.body.setAttribute('data-theme', theme);
+      themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+    themeToggle.addEventListener('click', () => {
+      const current = document.body.getAttribute('data-theme') || 'light';
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+    // Optional: Set theme from system preference
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setTheme('dark');
+    }
+  </script>
+</body>
+</html> 
