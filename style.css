@@ -4083,3 +4083,218 @@ body:not(.loaded)::after {
   }
 }
 
+/* ===== EDUCATION CARD STYLES ===== */
+.education-grid {
+  max-width: 800px;
+  margin: 3rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.education-card {
+  background: var(--container-color);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.education-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.education-card__icon {
+  background: var(--primary-color);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+}
+
+.education-card:hover .education-card__icon {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+}
+
+.education-card__content {
+  flex: 1;
+}
+
+.education-card__title {
+  font-size: 1.25rem;
+  font-weight: var(--font-semibold);
+  color: var(--title-color);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+}
+
+.education-card__institution {
+  font-size: 1rem;
+  font-weight: var(--font-medium);
+  color: var(--primary-color);
+  margin: 0 0 0.5rem 0;
+}
+
+.education-card__dates {
+  font-size: 0.875rem;
+  font-weight: var(--font-medium);
+  color: var(--text-color-light);
+  margin: 0 0 1rem 0;
+  background: var(--gray-100);
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+
+.education-card__details {
+  margin-top: 1rem;
+}
+
+.education-card__details p {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+}
+
+.education-card__modules {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem;
+}
+
+.education-card__modules li {
+  font-size: 0.875rem;
+  color: var(--text-color);
+  padding: 0.25rem 0.5rem;
+  background: var(--gray-50);
+  border-radius: 0.25rem;
+  border-left: 3px solid var(--primary-color);
+  transition: var(--transition);
+}
+
+.education-card__modules li:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateX(3px);
+}
+
+/* Dark theme styles for education cards */
+[data-theme="dark"] .education-card {
+  background: var(--gray-800);
+  border-color: var(--gray-700);
+}
+
+[data-theme="dark"] .education-card:hover {
+  border-color: var(--primary-color);
+  background: var(--gray-700);
+}
+
+[data-theme="dark"] .education-card__title {
+  color: var(--white);
+}
+
+[data-theme="dark"] .education-card__institution {
+  color: var(--primary-color-light);
+}
+
+[data-theme="dark"] .education-card__dates {
+  background: var(--gray-700);
+  color: var(--gray-300);
+}
+
+[data-theme="dark"] .education-card__details p {
+  color: var(--gray-300);
+}
+
+[data-theme="dark"] .education-card__modules li {
+  background: var(--gray-700);
+  color: var(--gray-300);
+  border-left-color: var(--primary-color);
+}
+
+[data-theme="dark"] .education-card__modules li:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Responsive design for education cards */
+@media (max-width: 768px) {
+  .education-grid {
+    margin-top: 2rem;
+    gap: 1.5rem;
+  }
+  
+  .education-card {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .education-card__icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+  
+  .education-card__title {
+    font-size: 1.125rem;
+  }
+  
+  .education-card__institution {
+    font-size: 0.95rem;
+  }
+  
+  .education-card__modules {
+    grid-template-columns: 1fr;
+  }
+  
+  .education-card__modules li {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-card {
+    padding: 1.25rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .education-card__icon {
+    align-self: center;
+  }
+  
+  .education-card__title {
+    font-size: 1rem;
+  }
+  
+  .education-card__institution {
+    font-size: 0.9rem;
+  }
+  
+  .education-card__details p {
+    font-size: 0.9rem;
+  }
+  
+  .education-card__modules li {
+    font-size: 0.8rem;
+  }
+}
+
