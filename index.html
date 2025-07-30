@@ -1,9 +1,9 @@
-"""
+<!--
 Author: Apoorv Kulkarni
 GitHub: https://github.com/ak-apoorvkulkarni
 Project: Portfolio Website
 Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes all main sections and ensures the About/Technical Skills section renders correctly.
-"""
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +18,7 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=23" />
 </head>
 <body>
 
@@ -113,63 +113,143 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
       </div>
     </section>
 
-    <!-- TECHNICAL SKILLS SECTION (REFERENCE STYLE) -->
+    <!-- TECHNICAL SKILLS SECTION (MATCHED TO TIMELINE CARDS, WITH COLORFUL LOGOS) -->
     <section class="skills-section-bg" id="about">
       <div class="container">
         <h2 class="skills-section-title">Technical Skills</h2>
         <div class="skills-card-grid">
           <div class="skill-card">
-            <h3 class="skill-card-title">Embedded Systems</h3>
-            <ul class="skill-list">
-              <li>Arduino</li>
-              <li>STM32</li>
-              <li>ESP32</li>
-              <li>UART, SPI, I2C</li>
-            </ul>
+            <h3 class="skill-card-title">Embedded Systems & Hardware</h3>
+            <div class="skill-items-grid">
+              <div class="skill-item">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino" />
+                <span class="skill-name">Arduino</span>
+              </div>
+              <div class="skill-item">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="STM32" />
+                <span class="skill-name">STM32</span>
+              </div>
+              <div class="skill-item">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="ESP32" />
+                <span class="skill-name">ESP32</span>
+              </div>
+              <div class="skill-item">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg" alt="Raspberry Pi" />
+                <span class="skill-name">Raspberry Pi</span>
+              </div>
+              <div class="skill-item">
+                <i class="fa-solid fa-microchip skill-logo" aria-hidden="true"></i>
+                <span class="skill-name">UART, SPI, I2C</span>
+              </div>
+              <div class="skill-item">
+                <i class="fa-solid fa-code skill-logo" aria-hidden="true"></i>
+                <span class="skill-name">Embedded C</span>
+              </div>
+              <div class="skill-item">
+                <i class="fa-solid fa-project-diagram skill-logo" style="color: #2563EB;" aria-hidden="true"></i>
+                <span class="skill-name">EAGLE</span>
+              </div>
+              <div class="skill-item">
+                <i class="fa-solid fa-microchip skill-logo" style="color: #059669;" aria-hidden="true"></i>
+                <span class="skill-name">KiCAD</span>
+              </div>
+              <div class="skill-item">
+                <i class="fa-solid fa-layer-group skill-logo" style="color: #7C3AED;" aria-hidden="true"></i>
+                <span class="skill-name">Altium</span>
+              </div>
+            </div>
           </div>
+          
           <div class="skill-card">
-            <h3 class="skill-card-title">Simulations & Analysis</h3>
-            <ul class="skill-list">
-              <li>MATLAB</li>
-              <li>Simulink</li>
-              <li>Multisim</li>
-              <li>LTSpice</li>
-              <li>Proteus</li>
-            </ul>
+            <h3 class="skill-card-title">Design & Simulation Tools</h3>
+            <div class="skill-items-grid">
+              <div class="skill-item">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" alt="MATLAB" />
+                <span class="skill-name">MATLAB</span>
+              </div>
+              <div class="skill-item">
+                <i class="fa-solid fa-diagram-project skill-logo" aria-hidden="true"></i>
+                <span class="skill-name">Simulink</span>
+              </div>
+              <div class="skill-item">
+                <i class="fa-solid fa-project-diagram skill-logo" style="color: #00A651;" aria-hidden="true"></i>
+                <span class="skill-name">Multisim</span>
+              </div>
+              <div class="skill-item">
+                <i class="fa-solid fa-wave-square skill-logo" aria-hidden="true"></i>
+                <span class="skill-name">LTSpice</span>
+              </div>
+              <div class="skill-item">
+                <i class="fa-solid fa-microchip skill-logo" aria-hidden="true"></i>
+                <span class="skill-name">Proteus</span>
+              </div>
+              <div class="skill-item">
+                <i class="fa-solid fa-cube skill-logo" style="color: #0078D4;" aria-hidden="true"></i>
+                <span class="skill-name">Fusion 360</span>
+              </div>
+              <div class="skill-item">
+                <i class="fa-solid fa-drafting-compass skill-logo" style="color: #D16969;" aria-hidden="true"></i>
+                <span class="skill-name">AutoCAD</span>
+              </div>
+              <div class="skill-item">
+                <i class="fa-solid fa-microchip skill-logo" style="color: #FF6B35;" aria-hidden="true"></i>
+                <span class="skill-name">Cadence</span>
+              </div>
+              <div class="skill-item">
+                <i class="fa-solid fa-lightbulb skill-logo" style="color: #FFD700;" aria-hidden="true"></i>
+                <span class="skill-name">OptiSystem</span>
+              </div>
+            </div>
           </div>
+          
           <div class="skill-card">
-            <h3 class="skill-card-title">Product & Project Management</h3>
-            <ul class="skill-list">
-              <li>Product Strategy</li>
-              <li>Agile</li>
-              <li>User Research</li>
-              <li>PM Tools</li>
-            </ul>
-          </div>
-          <div class="skill-card">
-            <h3 class="skill-card-title">Design Tools</h3>
-            <ul class="skill-list">
-              <li>Fusion 360</li>
-              <li>AutoCAD</li>
-              <li>Cadence</li>
-              <li>OptiSystem</li>
-            </ul>
-          </div>
-          <div class="skill-card">
-            <h3 class="skill-card-title">PCB Tools</h3>
-            <ul class="skill-list">
-              <li>EAGLE</li>
-              <li>KiCAD</li>
-              <li>Altium</li>
-            </ul>
-          </div>
-          <div class="skill-card">
-            <h3 class="skill-card-title">Other Tools</h3>
-            <ul class="skill-list">
-              <li>MS Office</li>
-              <li>Git</li>
-              <li>LaTeX</li>
-            </ul>
+            <h3 class="skill-card-title">AI/ML & Development</h3>
+            <div class="skill-items-grid">
+              <div class="skill-item">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+                <span class="skill-name">Python</span>
+              </div>
+              <div class="skill-item">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" />
+                <span class="skill-name">C++</span>
+              </div>
+              <div class="skill-item">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" />
+                <span class="skill-name">TensorFlow</span>
+              </div>
+              <div class="skill-item">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" />
+                <span class="skill-name">PyTorch</span>
+              </div>
+              <div class="skill-item">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV" />
+                <span class="skill-name">OpenCV</span>
+              </div>
+              <div class="skill-item">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" />
+                <span class="skill-name">Pandas</span>
+              </div>
+              <div class="skill-item">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" />
+                <span class="skill-name">NumPy</span>
+              </div>
+              <div class="skill-item">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib" />
+                <span class="skill-name">Matplotlib</span>
+              </div>
+              <div class="skill-item">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="scikit-learn" />
+                <span class="skill-name">scikit-learn</span>
+              </div>
+              <div class="skill-item">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+                <span class="skill-name">Git</span>
+              </div>
+              <div class="skill-item">
+                <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira" />
+                <span class="skill-name">Jira</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -184,13 +264,10 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
         </div>
         <div class="education-grid" data-aos="fade-up">
           <div class="education-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="education-card__icon">
-              <i class="fa-solid fa-graduation-cap"></i>
-            </div>
             <div class="education-card__content">
+              <div class="education-card__dates">2022 – Present</div>
               <h3 class="education-card__title" data-en="Master's in Electrical Engineering" data-de="Master in Elektrotechnik">Master's in Electrical Engineering</h3>
               <h4 class="education-card__institution" data-en="Karlsruhe Institute of Technology" data-de="Karlsruher Institut für Technologie">Karlsruhe Institute of Technology</h4>
-              <div class="education-card__dates">2022 – Present</div>
               <div class="education-card__details">
                 <p data-en="Specializing in embedded systems, low-power electronics, and applied research." data-de="Spezialisierung auf Embedded Systems, stromsparende Elektronik und angewandte Forschung.">Specializing in embedded systems, low-power electronics, and applied research.</p>
               </div>
@@ -198,13 +275,10 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
           </div>
           
           <div class="education-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="education-card__icon">
-              <i class="fa-solid fa-certificate"></i>
-            </div>
             <div class="education-card__content">
+              <div class="education-card__dates">2022 – 2023</div>
               <h3 class="education-card__title" data-en="Product Management Certification" data-de="Produktmanagement-Zertifikat">Product Management Certification</h3>
               <h4 class="education-card__institution" data-en="University of Duke CE" data-de="University of Duke CE">University of Duke CE</h4>
-              <div class="education-card__dates">2022 – 2023</div>
               <div class="education-card__details">
                 <p data-en="Professional program in product management and strategy." data-de="Professionelles Programm in Produktmanagement und -strategie.">Professional program in product management and strategy.</p>
               </div>
@@ -212,20 +286,15 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
           </div>
           
           <div class="education-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="education-card__icon">
-              <i class="fa-solid fa-microchip"></i>
-            </div>
             <div class="education-card__content">
+              <div class="education-card__dates">2016 – 2020</div>
               <h3 class="education-card__title" data-en="Bachelor's in Electronics Engineering" data-de="Bachelor in Elektronikingenieurwesen">Bachelor's in Electronics Engineering</h3>
               <h4 class="education-card__institution" data-en="University of Mumbai" data-de="Universität Mumbai">University of Mumbai</h4>
-              <div class="education-card__dates">2016 – 2020</div>
               <div class="education-card__details">
                 <p data-en="Focused on electronics engineering, embedded systems, and project-based learning." data-de="Fokus auf Elektronikingenieurwesen, Embedded Systems und projektbasiertes Lernen.">Focused on electronics engineering, embedded systems, and project-based learning.</p>
               </div>
             </div>
           </div>
-          
-
         </div>
       </div>
     </section>
@@ -239,6 +308,7 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
         </div>
         <div class="vertical-timeline" data-aos="fade-up">
           <div class="vertical-timeline__item">
+            <div class="vertical-timeline__circle"></div>
             <div class="vertical-timeline__content">
               <div class="vertical-timeline__year">08/2022 – Present</div>
               <h3 class="vertical-timeline__title">Research Assistant</h3>
@@ -249,9 +319,9 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
                 <li>Designing FPGA-based control hardware for precise atomic scale measurements using Atomic Force Microscopy (AFM).</li>
               </ul>
             </div>
-            <span class="vertical-timeline__circle" aria-hidden="true"></span>
           </div>
           <div class="vertical-timeline__item">
+            <div class="vertical-timeline__circle"></div>
             <div class="vertical-timeline__content">
               <div class="vertical-timeline__year">10/2022 – 10/2024</div>
               <h3 class="vertical-timeline__title">Intern – Product Management</h3>
@@ -261,9 +331,9 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
                 <li>Collaborated with cross-functional teams to align product features with user needs.</li>
               </ul>
             </div>
-            <span class="vertical-timeline__circle" aria-hidden="true"></span>
           </div>
           <div class="vertical-timeline__item">
+            <div class="vertical-timeline__circle"></div>
             <div class="vertical-timeline__content">
               <div class="vertical-timeline__year">08/2022 – 09/2023</div>
               <h3 class="vertical-timeline__title">Team Lead – Electronics</h3>
@@ -273,9 +343,9 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
                 <li>Worked with multidisciplinary teams to ensure system functionality and testing.</li>
               </ul>
             </div>
-            <span class="vertical-timeline__circle" aria-hidden="true"></span>
           </div>
           <div class="vertical-timeline__item">
+            <div class="vertical-timeline__circle"></div>
             <div class="vertical-timeline__content">
               <div class="vertical-timeline__year">04/2021 – 08/2021</div>
               <h3 class="vertical-timeline__title">Trainee – Quality Analyst</h3>
@@ -285,9 +355,9 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
                 <li>Participated in workflow reviews to ensure compliance and quality standards.</li>
               </ul>
             </div>
-            <span class="vertical-timeline__circle" aria-hidden="true"></span>
           </div>
           <div class="vertical-timeline__item">
+            <div class="vertical-timeline__circle"></div>
             <div class="vertical-timeline__content">
               <div class="vertical-timeline__year">07/2019 – 03/2021</div>
               <h3 class="vertical-timeline__title">Research Assistant</h3>
@@ -299,7 +369,6 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
                 <li>Utilizing modulation methods such as Single Side Band (SSB), Modified-SSB, and Vestigial Side Band (VSB).</li>
               </ul>
             </div>
-            <span class="vertical-timeline__circle" aria-hidden="true"></span>
           </div>
         </div>
       </div>
@@ -526,15 +595,6 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
         <div class="footer__logo">
           <span data-en="Apoorv Kulkarni" data-de="Apoorv Kulkarni">Apoorv Kulkarni</span>
         </div>
-        <nav class="footer__nav">
-          <a href="#home" class="footer__link" data-en="Home" data-de="Startseite">Home</a>
-          <a href="#about" class="footer__link" data-en="About" data-de="Über mich">About</a>
-          <a href="#education" class="footer__link" data-en="Education" data-de="Bildung">Education</a>
-          <a href="#experience" class="footer__link" data-en="Experience" data-de="Erfahrung">Experience</a>
-          <a href="#projects" class="footer__link" data-en="Projects" data-de="Projekte">Projects</a>
-          <a href="blog/" class="footer__link" data-en="Blog" data-de="Blog">Blog</a>
-          <a href="#contact" class="footer__link" data-en="Contact" data-de="Kontakt">Contact</a>
-        </nav>
         <p class="footer__text" data-en="© 2025 Apoorv Kulkarni. All rights reserved." data-de="© 2025 Apoorv Kulkarni. Alle Rechte vorbehalten.">© 2025 Apoorv Kulkarni. All rights reserved.</p>
       </div>
     </div>
@@ -917,14 +977,14 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
         image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80',
         description: 'Designed an IoT-enabled system to remotely monitor and control heating operations via cloud-based analytics. Implemented real-time data collection, analysis, and automated control algorithms.',
         technologies: ['IoT', 'Cloud Computing', 'Data Analytics', 'Embedded Systems', 'Web Development'],
-        features: ['Remote monitoring', 'Cloud analytics', 'Automated control', 'Real-time data', 'Energy optimization'],
+        features: ['Remote monitoring', 'Cloud-based analytics', 'Real-time data collection', 'Automated control', 'Energy optimization'],
         link: 'projects/smart-heating/index.html'
       },
       'glove': {
         title: 'Speak Out - Intelligent Sign Language Translation Glove',
         image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80',
-        description: 'An intelligent glove for vocally impaired individuals that converts sign language into text and speech output. Integrated multiple sensors and machine learning algorithms for accurate gesture recognition.',
-        technologies: ['Machine Learning', 'Sensor Integration', 'Signal Processing', 'Mobile App Development', 'Hardware Design'],
+        description: 'An intelligent glove for vocally impaired individuals that converts sign language into text and speech output. This project combines wearable technology with machine learning to provide real-time translation capabilities.',
+        technologies: ['Machine Learning', 'Wearable Technology', 'Signal Processing', 'Embedded Systems', 'Mobile App Development'],
         features: ['Gesture recognition', 'Real-time translation', 'Speech synthesis', 'Mobile connectivity', 'Accessibility focused'],
         link: 'projects/glove/index.html'
       }
@@ -932,8 +992,12 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
 
     // Open modal
     function openModal(projectId) {
+      console.log('Opening modal for project:', projectId);
       const data = projectData[projectId];
-      if (!data) return;
+      if (!data) {
+        console.error('No data found for project:', projectId);
+        return;
+      }
 
       const modalTitle = modal.querySelector('.modal__title');
       const modalTags = modal.querySelector('.modal__tags');
@@ -942,6 +1006,11 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
       const modalTechList = modal.querySelector('.modal__tech-list');
       const modalFeaturesList = modal.querySelector('.modal__features-list');
       const modalLink = modal.querySelector('.modal__link');
+
+      if (!modalTitle || !modalTags || !modalImg || !modalDescription || !modalTechList || !modalFeaturesList || !modalLink) {
+        console.error('Modal elements not found');
+        return;
+      }
 
       modalTitle.textContent = data.title;
       modalImg.src = data.image;
@@ -952,13 +1021,15 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
       // Clear and populate tags
       modalTags.innerHTML = '';
       const projectCard = document.querySelector(`[data-project="${projectId}"]`).closest('.project__card');
-      const tags = projectCard.querySelectorAll('.project__tag');
-      tags.forEach(tag => {
-        const modalTag = document.createElement('span');
-        modalTag.className = 'modal__tag';
-        modalTag.textContent = tag.textContent;
-        modalTags.appendChild(modalTag);
-      });
+      if (projectCard) {
+        const tags = projectCard.querySelectorAll('.project__tag');
+        tags.forEach(tag => {
+          const modalTag = document.createElement('span');
+          modalTag.className = 'modal__tag';
+          modalTag.textContent = tag.textContent;
+          modalTags.appendChild(modalTag);
+        });
+      }
 
       // Clear and populate technologies
       modalTechList.innerHTML = '';
@@ -978,6 +1049,7 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
 
       modal.classList.add('show');
       document.body.style.overflow = 'hidden';
+      console.log('Modal opened successfully');
     }
 
     // Close modal
@@ -988,14 +1060,30 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
 
     // Event listeners for modal
     projectModalBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         const projectId = btn.getAttribute('data-project');
+        console.log('Button clicked for project:', projectId);
         openModal(projectId);
       });
     });
 
-    modalClose.addEventListener('click', closeModal);
-    modal.querySelector('.modal__overlay').addEventListener('click', closeModal);
+    if (modalClose) {
+      modalClose.addEventListener('click', closeModal);
+    }
+    
+    const modalOverlay = modal.querySelector('.modal__overlay');
+    if (modalOverlay) {
+      modalOverlay.addEventListener('click', closeModal);
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('show')) {
+        closeModal();
+      }
+    });
 
     // Enhanced section transitions
     function handleSectionTransitions() {
