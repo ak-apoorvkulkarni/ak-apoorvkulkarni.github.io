@@ -10,6 +10,9 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Apoorv Kulkarni - Embedded Systems Engineer specializing in PCB design, product management, and IoT solutions" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <meta name="keywords" content="embedded systems, PCB design, IoT, product management, Karlsruhe Institute of Technology" />
   <title>Apoorv Kulkarni - Electrical Engineer</title>
   <link rel="icon" type="image/jpeg" href="favicon.jpg" />
@@ -18,7 +21,7 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=24" />
+  <link rel="stylesheet" href="style.css?v=53" />
 </head>
 <body>
 
@@ -106,7 +109,6 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
         
         <div class="hero__image" data-aos="fade-left">
           <div class="hero__image-wrapper">
-            <div class="hero__image-bg"></div>
             <img src="profile.jpg?v=2" alt="Apoorv Kulkarni" class="hero__img" />
           </div>
         </div>
@@ -260,7 +262,6 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
       <div class="container">
         <div class="section__header" data-aos="fade-up">
           <h2 class="section__title" data-en="Educational Background" data-de="Bildungsweg">Educational Background</h2>
-          <p class="section__subtitle" data-en="Academic journey and professional development" data-de="Akademische Reise und berufliche Entwicklung">Academic journey and professional development</p>
         </div>
         <div class="education-grid" data-aos="fade-up">
           <div class="education-card" data-aos="fade-up" data-aos-delay="100">
@@ -303,83 +304,91 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
     <section class="experience section" id="experience">
       <div class="container">
         <div class="section__header" data-aos="fade-up">
-          <h2 class="section__title" data-en="Experience" data-de="Erfahrung">Experience</h2>
-          <p class="section__subtitle" data-en="My professional journey" data-de="Mein beruflicher Werdegang">My professional journey</p>
+          <h2 class="section__title" data-en="Work Experience" data-de="Berufserfahrung">Work Experience</h2>
         </div>
-        <div class="vertical-timeline" data-aos="fade-up">
-          <div class="vertical-timeline__item">
-            <div class="vertical-timeline__circle"></div>
-            <div class="vertical-timeline__content">
-              <div class="vertical-timeline__year">08/2022 – Present</div>
-              <h3 class="vertical-timeline__title">Research Assistant</h3>
-              <h4 class="vertical-timeline__company">Karlsruhe Institute of Technology</h4>
-              <ul class="vertical-timeline__desc-list">
-                <li>Working on multiple projects including thermoelectric sensor systems and their applications.</li>
-                <li>Developing inkjet-printed thermoelectric sensors for energy harvesting with electrical performance optimization and experimental validation for ultra-low voltage readout circuits.</li>
-                <li>Designing FPGA-based control hardware for precise atomic scale measurements using Atomic Force Microscopy (AFM).</li>
-              </ul>
+        <div class="experience-grid" data-aos="fade-up">
+          <div class="experience-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="experience-card__content">
+              <div class="experience-card__dates">08/2022 – Present</div>
+              <h3 class="experience-card__title">Research Assistant</h3>
+              <h4 class="experience-card__company">Karlsruhe Institute of Technology</h4>
+              <div class="experience-card__details">
+                <p>Working on multiple projects including thermoelectric sensor systems and their applications. Developing inkjet-printed thermoelectric sensors for energy harvesting with electrical performance optimization and experimental validation for ultra-low voltage readout circuits.</p>
+                <button class="experience-read-more-btn" data-experience="research-assistant">Read More</button>
+              </div>
             </div>
           </div>
-          <div class="vertical-timeline__item">
-            <div class="vertical-timeline__circle"></div>
-            <div class="vertical-timeline__content">
-              <div class="vertical-timeline__year">10/2022 – 10/2024</div>
-              <h3 class="vertical-timeline__title">Intern – Product Management</h3>
-              <h4 class="vertical-timeline__company">1&1 Mail & Media GmbH</h4>
-              <ul class="vertical-timeline__desc-list">
-                <li>Contributed to product strategy and roadmap planning for large-scale platforms.</li>
-                <li>Collaborated with cross-functional teams to align product features with user needs.</li>
-              </ul>
+          <div class="experience-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="experience-card__content">
+              <div class="experience-card__dates">10/2022 – 10/2024</div>
+              <h3 class="experience-card__title">Intern – Product Management</h3>
+              <h4 class="experience-card__company">1&1 Mail & Media GmbH</h4>
+              <div class="experience-card__details">
+                <p>Contributed to product strategy and roadmap planning for large-scale platforms.</p>
+                <button class="experience-read-more-btn" data-experience="product-management">Read More</button>
+              </div>
             </div>
           </div>
-          <div class="vertical-timeline__item">
-            <div class="vertical-timeline__circle"></div>
-            <div class="vertical-timeline__content">
-              <div class="vertical-timeline__year">08/2022 – 09/2023</div>
-              <h3 class="vertical-timeline__title">Team Lead – Electronics</h3>
-              <h4 class="vertical-timeline__company">mu-zero HYPERLOOP e.V.</h4>
-              <ul class="vertical-timeline__desc-list">
-                <li>Led system design and managed electronics and control integration for the Hyperloop pod.</li>
-                <li>Worked with multidisciplinary teams to ensure system functionality and testing.</li>
-              </ul>
+          <div class="experience-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="experience-card__content">
+              <div class="experience-card__dates">08/2022 – 09/2023</div>
+              <h3 class="experience-card__title">Team Lead – Electronics</h3>
+              <h4 class="experience-card__company">mu-zero HYPERLOOP e.V.</h4>
+              <div class="experience-card__details">
+                <p>Led system design and managed electronics and control integration for the Hyperloop pod.</p>
+                <button class="experience-read-more-btn" data-experience="hyperloop">Read More</button>
+              </div>
             </div>
           </div>
-          <div class="vertical-timeline__item">
-            <div class="vertical-timeline__circle"></div>
-            <div class="vertical-timeline__content">
-              <div class="vertical-timeline__year">04/2021 – 08/2021</div>
-              <h3 class="vertical-timeline__title">Trainee – Quality Analyst</h3>
-              <h4 class="vertical-timeline__company">US Tech Solutions Pvt. Ltd</h4>
-              <ul class="vertical-timeline__desc-list">
-                <li>Executed data validation and supported client-side QA processes and reporting.</li>
-                <li>Participated in workflow reviews to ensure compliance and quality standards.</li>
-              </ul>
+          <div class="experience-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="experience-card__content">
+              <div class="experience-card__dates">04/2021 – 08/2021</div>
+              <h3 class="experience-card__title">Trainee – Quality Analyst</h3>
+              <h4 class="experience-card__company">US Tech Solutions Pvt. Ltd</h4>
+              <div class="experience-card__details">
+                <p>Executed data validation and supported client-side QA processes and reporting.</p>
+                <button class="experience-read-more-btn" data-experience="quality-analyst">Read More</button>
+              </div>
             </div>
           </div>
-          <div class="vertical-timeline__item">
-            <div class="vertical-timeline__circle"></div>
-            <div class="vertical-timeline__content">
-              <div class="vertical-timeline__year">07/2019 – 03/2021</div>
-              <h3 class="vertical-timeline__title">Research Assistant</h3>
-              <h4 class="vertical-timeline__company">Vidyalankar Institute of Technology, Mumbai</h4>
-              <ul class="vertical-timeline__desc-list">
-                <li>Conducted research in optical communication systems, including:</li>
-                <li>Designing high-speed Radio-over-Fiber transmission systems.</li>
-                <li>Combining WDM-OFDM-PON with Radio-over-Fiber techniques.</li>
-                <li>Utilizing modulation methods such as Single Side Band (SSB), Modified-SSB, and Vestigial Side Band (VSB).</li>
-              </ul>
+          <div class="experience-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="experience-card__content">
+              <div class="experience-card__dates">07/2019 – 03/2021</div>
+              <h3 class="experience-card__title">Research Assistant</h3>
+              <h4 class="experience-card__company">Vidyalankar Institute of Technology, Mumbai</h4>
+              <div class="experience-card__details">
+                <p>Conducted research in optical communication systems, including designing high-speed Radio-over-Fiber transmission systems.</p>
+                <button class="experience-read-more-btn" data-experience="optical-research">Read More</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- EXPERIENCE MODAL -->
+    <div id="experienceModal" class="modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__content">
+        <button class="modal__close" id="experienceModalClose">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="modal__header">
+          <h3 class="modal__title" id="experienceModalTitle"></h3>
+          <h4 class="modal__company" id="experienceModalCompany"></h4>
+          <div class="modal__period" id="experienceModalPeriod"></div>
+        </div>
+        <div class="modal__body">
+          <div class="modal__description" id="experienceModalDescription"></div>
+        </div>
+      </div>
+    </div>
+
     <!-- PROJECTS SECTION -->
     <section class="projects section" id="projects">
       <div class="container">
         <div class="section__header" data-aos="fade-up">
           <h2 class="section__title" data-en="Featured Projects" data-de="Ausgewählte Projekte">Featured Projects</h2>
-          <p class="section__subtitle" data-en="Some of my recent work" data-de="Einige meiner aktuellen Arbeiten">Some of my recent work</p>
         </div>
         <div class="projects__container grid">
           <article class="project__card" data-aos="fade-up" tabindex="0">
@@ -497,15 +506,15 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
             <div class="social__links">
               <a href="https://github.com/ak-apoorvkulkarni" target="_blank" class="social__link">
                 <i class="fa-brands fa-github"></i>
-                <span data-en="GitHub" data-de="GitHub">GitHub</span>
+                <span class="social__text" data-en="GitHub" data-de="GitHub">GitHub</span>
               </a>
               <a href="https://linkedin.com/in/apoorvskulkarni" target="_blank" class="social__link">
                 <i class="fa-brands fa-linkedin"></i>
-                <span data-en="LinkedIn" data-de="LinkedIn">LinkedIn</span>
+                <span class="social__text" data-en="LinkedIn" data-de="LinkedIn">LinkedIn</span>
               </a>
               <a href="https://scholar.google.com/citations?user=7ff821IAAAAJ" target="_blank" class="social__link">
                 <i class="fa-solid fa-graduation-cap"></i>
-                <span data-en="Google Scholar" data-de="Google Scholar">Google Scholar</span>
+                <span class="social__text" data-en="Google Scholar" data-de="Google Scholar">Google Scholar</span>
               </a>
             </div>
           </div>
@@ -546,6 +555,24 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
           <span>View Full Project</span>
           <i class="fa-solid fa-external-link-alt"></i>
         </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE MODAL -->
+  <div class="modal" id="experienceModal">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+      <button class="modal__close" id="experienceModalClose">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal__header">
+        <h3 class="modal__title"></h3>
+        <div class="modal__company"></div>
+        <div class="modal__period"></div>
+      </div>
+      <div class="modal__body">
+        <div class="modal__description"></div>
       </div>
     </div>
   </div>
@@ -1108,6 +1135,106 @@ Description: Main HTML file for Apoorv Kulkarni's portfolio. This file includes 
 
     // Initialize section transitions
     handleSectionTransitions();
+
+    // Experience Modal functionality
+    const experienceModal = document.getElementById('experienceModal');
+    const experienceModalClose = document.getElementById('experienceModalClose');
+    const experienceReadMoreBtns = document.querySelectorAll('.experience-read-more-btn');
+
+    // Experience data for modals
+    const experienceData = {
+      'research-assistant': {
+        title: 'Research Assistant',
+        company: 'Karlsruhe Institute of Technology',
+        period: '08/2022 – Present',
+        description: `
+          <ul>
+            <li>Working on multiple projects including thermoelectric sensor systems and their applications.</li>
+            <li>Developing inkjet-printed thermoelectric sensors for energy harvesting with electrical performance optimization and experimental validation for ultra-low voltage readout circuits.</li>
+            <li>Designing FPGA-based control hardware for precise atomic scale measurements using Atomic Force Microscopy (AFM).</li>
+          </ul>
+        `
+      },
+      'product-management': {
+        title: 'Intern – Product Management',
+        company: '1&1 Mail & Media GmbH',
+        period: '10/2022 – 10/2024',
+        description: `
+          <ul>
+            <li>Contributed to product strategy and roadmap planning for large-scale platforms.</li>
+            <li>Collaborated with cross-functional teams to align product features with user needs.</li>
+          </ul>
+        `
+      },
+      'hyperloop': {
+        title: 'Team Lead – Electronics',
+        company: 'mu-zero HYPERLOOP e.V.',
+        period: '08/2022 – 09/2023',
+        description: `
+          <ul>
+            <li>Led system design and managed electronics and control integration for the Hyperloop pod.</li>
+            <li>Worked with multidisciplinary teams to ensure system functionality and testing.</li>
+          </ul>
+        `
+      },
+      'quality-analyst': {
+        title: 'Trainee – Quality Analyst',
+        company: 'US Tech Solutions Pvt. Ltd',
+        period: '04/2021 – 08/2021',
+        description: `
+          <ul>
+            <li>Executed data validation and supported client-side QA processes and reporting.</li>
+            <li>Participated in workflow reviews to ensure compliance and quality standards.</li>
+          </ul>
+        `
+      },
+      'optical-research': {
+        title: 'Research Assistant',
+        company: 'Vidyalankar Institute of Technology, Mumbai',
+        period: '07/2019 – 03/2021',
+        description: `
+          <ul>
+            <li>Conducted research in optical communication systems, including:</li>
+            <li>Designing high-speed Radio-over-Fiber transmission systems.</li>
+            <li>Combining WDM-OFDM-PON with Radio-over-Fiber techniques.</li>
+            <li>Utilizing modulation methods such as Single Side Band (SSB), Modified-SSB, and Vestigial Side Band (VSB).</li>
+          </ul>
+        `
+      }
+    };
+
+    // Open experience modal
+    function openExperienceModal(key) {
+      const data = experienceData[key];
+      if (!data) return;
+      document.getElementById('experienceModalTitle').textContent = data.title;
+      document.getElementById('experienceModalCompany').textContent = data.company;
+      document.getElementById('experienceModalPeriod').textContent = data.period;
+      document.getElementById('experienceModalDescription').innerHTML = data.description;
+      experienceModal.classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Close experience modal
+    function closeExperienceModal() {
+      experienceModal.classList.remove('show');
+      document.body.style.overflow = '';
+    }
+
+    experienceReadMoreBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const key = btn.getAttribute('data-experience');
+        openExperienceModal(key);
+      });
+    });
+    if (experienceModalClose) experienceModalClose.addEventListener('click', closeExperienceModal);
+    const experienceModalOverlay = experienceModal.querySelector('.modal__overlay');
+    if (experienceModalOverlay) experienceModalOverlay.addEventListener('click', closeExperienceModal);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && experienceModal.classList.contains('show')) {
+        closeExperienceModal();
+      }
+    });
 
     // Keyboard navigation support
     document.addEventListener('keydown', (e) => {
