@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-en="Speak Out – An Intelligent Glove for the Vocally Impaired" data-de="Sprechen Sie Geste – Ein intelligenter Handschuh für Sprachbehinderte">Speak Out – An Intelligent Glove for the Vocally Impaired</title>
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="../../index.html" class="nav__logo">
+        <span class="nav__logo-img">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="16" fill="#2563eb"/>
+            <text x="16" y="21" text-anchor="middle" font-size="16" fill="white" font-family="Inter, Arial, sans-serif">A</text>
+          </svg>
+        </span>
+        <span class="nav__logo-text" data-en="Apoorv Kulkarni" data-de="Apoorv Kulkarni">Apoorv Kulkarni</span>
+      </a>
+      <div class="nav__actions">
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="en" aria-label="Switch to English">EN</button>
+          <button class="lang-btn" data-lang="de" aria-label="Auf Deutsch umschalten">DE</button>
+        </div>
+        <a href="../../index.html" class="button button--secondary">
+          <span data-en="Back to Portfolio" data-de="Zurück zum Portfolio">Back to Portfolio</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+    <!-- HERO SECTION -->
+    <section class="section" style="padding-bottom:2rem;">
+      <div class="container" style="max-width:900px;">
+        <div class="project__card" style="padding:0;overflow:visible;">
+          <div class="project__image image-placeholder" style="height:320px;overflow:hidden;border-radius:1rem 1rem 0 0;display:flex;align-items:center;justify-content:center;background:#e5e7eb;color:#64748b;font-size:1.25rem;">
+            Image Placeholder
+          </div>
+          <div class="project__content" style="padding:2.5rem 2rem 2rem 2rem;">
+            <h1 class="section__title" style="margin-bottom:0.5rem;" data-en="Speak Out – An Intelligent Glove for the Vocally Impaired" data-de="Sprechen Sie Geste – Ein intelligenter Handschuh für Sprachbehinderte">Speak Out – An Intelligent Glove for the Vocally Impaired</h1>
+            <p class="section__subtitle" style="margin-bottom:2rem;" data-en="Developed at Vidyalankar Institute of Technology, Mumbai" data-de="Entwickelt am Vidyalankar Institute of Technology, Mumbai">Developed at Vidyalankar Institute of Technology, Mumbai</p>
+            <p class="project__description" style="font-size:1.15rem;line-height:1.7;">As part of our undergraduate engineering program, this project was developed to address a real-world communication gap faced by vocally impaired individuals. The goal was to design a wearable device that could convert hand gestures into understandable text or speech — bridging the gap between sign language and everyday communication.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETAILS SECTIONS -->
+    <section class="section" style="padding-top:2rem;">
+      <div class="container" style="max-width:900px;display:grid;gap:2.5rem;">
+        <div class="project__card" data-aos="fade-up">
+          <div class="project__content">
+            <h2 class="project__title">What Is "Speak Out"?</h2>
+            <p class="project__description">Speak Out is a smart glove that recognizes hand gestures made in sign language and translates them into readable or audible output via a smartphone. It combines sensor technology, machine learning, and cloud computing to act as a live translator for those who cannot speak but use their hands to communicate.</p>
+            <div class="project__image image-placeholder" style="margin:2rem 0 0.5rem 0;height:200px;display:flex;align-items:center;justify-content:center;background:#e5e7eb;color:#64748b;font-size:1.1rem;border-radius:0.75rem;">Image Placeholder</div>
+          </div>
+        </div>
+        <div class="project__card" data-aos="fade-up">
+          <div class="project__content">
+            <h2 class="project__title">How It Works</h2>
+            <ul class="project__tags">
+              <li><strong>Input:</strong> The glove uses a combination of sensors:
+                <ul>
+                  <li>Flex sensors to detect finger bends</li>
+                  <li>Contact sensors to sense palm contact</li>
+                  <li>MPU6050 gyroscope for wrist motion tracking (e.g., letters like J and Z)</li>
+                </ul>
+              </li>
+              <li><strong>Transmission:</strong> An ESP8266 Wi-Fi module sends data from the glove to a cloud database in real-time.</li>
+              <li><strong>Processing:</strong> A machine learning model (Random Forest algorithm) processes the gesture data and predicts the intended word or letter.</li>
+              <li><strong>Output:</strong> A mobile application fetches the prediction from the cloud and displays the text or converts it into speech.</li>
+            </ul>
+            <div class="project__image image-placeholder" style="margin:2rem 0 0.5rem 0;height:200px;display:flex;align-items:center;justify-content:center;background:#e5e7eb;color:#64748b;font-size:1.1rem;border-radius:0.75rem;">Image Placeholder</div>
+          </div>
+        </div>
+        <div class="project__card" data-aos="fade-up">
+          <div class="project__content">
+            <h2 class="project__title">My Role & Contributions</h2>
+            <ul class="project__tags">
+              <li>Interfaced and calibrated sensors (flex, contact, and gyroscope) with the microcontroller</li>
+              <li>Designed circuit logic and voltage-divider networks for resistance-based sensor inputs</li>
+              <li>Integrated ESP8266 Wi-Fi module for real-time data transmission</li>
+              <li>Contributed to building and training the ML model for gesture recognition</li>
+              <li>Developed the data flow pipeline from glove → cloud → app</li>
+              <li>Participated in multiple testing cycles for gesture accuracy and sensor consistency</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project__card" data-aos="fade-up">
+          <div class="project__content">
+            <h2 class="project__title">Why It Matters</h2>
+            <p class="project__description">Sign language is a rich and expressive form of communication — but most people don’t understand it. With Speak Out, we aimed to create an intuitive, low-cost wearable that helps vocally impaired individuals express themselves clearly in public spaces, hospitals, schools, and more.</p>
+            <blockquote style="margin:2rem 0 0 0;font-style:italic;color:var(--primary-color);border-left:4px solid var(--primary-color);padding-left:1rem;">“Rather than asking the world to learn sign language, we built a tool that speaks it for you.”</blockquote>
+          </div>
+        </div>
+        <div class="project__card" data-aos="fade-up">
+          <div class="project__content">
+            <h2 class="project__title">Tech Stack</h2>
+            <ul class="project__tags">
+              <li><strong>Hardware:</strong> Flex Sensors (x5), Contact Sensor (FSR-402), MPU6050 Gyroscope, NodeMCU (ESP8266)</li>
+              <li><strong>Software:</strong> Arduino IDE, Mobile App (custom-built), Cloud Database, Machine Learning (Random Forest algorithm)</li>
+              <li><strong>Protocols:</strong> I2C (for gyroscope), Analog/Digital IO, Wi-Fi (ESP8266)</li>
+            </ul>
+            <div class="project__image image-placeholder" style="margin:2rem 0 0.5rem 0;height:200px;display:flex;align-items:center;justify-content:center;background:#e5e7eb;color:#64748b;font-size:1.1rem;border-radius:0.75rem;">Image Placeholder</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    // Language switcher logic (same as main site)
+    const langButtons = document.querySelectorAll('.lang-btn');
+    function setLanguage(lang) {
+      langButtons.forEach(btn => {
+        if (btn.getAttribute('data-lang') === lang) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.innerHTML = el.getAttribute(`data-${lang}`);
+      });
+      document.documentElement.lang = lang;
+      localStorage.setItem('lang', lang);
+    }
+    langButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        setLanguage(btn.getAttribute('data-lang'));
+      });
+    });
+    const savedLang = localStorage.getItem('lang') || 'en';
+    setLanguage(savedLang);
+  </script>
+</body>
+</html> 

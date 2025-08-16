@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-en="FPGA AFM Control" data-de="FPGA AFM-Steuerung">FPGA AFM Control</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="../../index.html" class="nav__logo">
+        <span class="nav__logo-img">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="16" fill="#2563eb"/>
+            <text x="16" y="21" text-anchor="middle" font-size="16" fill="white" font-family="Inter, Arial, sans-serif">A</text>
+          </svg>
+        </span>
+        <span class="nav__logo-text" data-en="Apoorv Kulkarni" data-de="Apoorv Kulkarni">Apoorv Kulkarni</span>
+      </a>
+      <div class="nav__actions">
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="en" aria-label="Switch to English">EN</button>
+          <button class="lang-btn" data-lang="de" aria-label="Auf Deutsch umschalten">DE</button>
+        </div>
+        <a href="../../index.html" class="button button--secondary">
+          <span data-en="Back to Portfolio" data-de="Zurück zum Portfolio">Back to Portfolio</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <h1 class="section__title" data-en="FPGA AFM Control" data-de="FPGA AFM-Steuerung">FPGA AFM Control</h1>
+          <p class="section__subtitle" data-en="Developed precision nanoscale control system using FPGA for Atomic Force Microscopy, achieving sub-nanometer positioning accuracy." data-de="Entwicklung präziser Nanoskalensteuerungssystem mit FPGA für die Atomkraftmikroskopie, Erreichen einer Positionierungsgenauigkeit von Unter-Nanometer.">Developed precision nanoscale control system using FPGA for Atomic Force Microscopy, achieving sub-nanometer positioning accuracy.</p>
+        </div>
+        <div class="project__card" style="max-width:700px;margin:0 auto;">
+          <div class="project__image"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=700&q=80" alt="FPGA AFM Cover" /></div>
+          <div class="project__content">
+            <h2 class="project__title" data-en="Project Details" data-de="Projektdetails">Project Details</h2>
+            <ul class="project__tags">
+              <li>FPGA-based real-time control for AFM instrumentation.</li>
+              <li>Achieved sub-nanometer positioning accuracy.</li>
+              <li>Developed VHDL modules for signal processing.</li>
+            </ul>
+            <h2 class="project__title" data-en="Gallery" data-de="Galerie">Gallery</h2>
+            <p data-en="(Project images coming soon)" data-de="(Projektbilder folgen)">(Project images coming soon)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    // Language switcher logic (same as main site)
+    const langButtons = document.querySelectorAll('.lang-btn');
+    function setLanguage(lang) {
+      langButtons.forEach(btn => {
+        if (btn.getAttribute('data-lang') === lang) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.innerHTML = el.getAttribute(`data-${lang}`);
+      });
+      document.documentElement.lang = lang;
+      localStorage.setItem('lang', lang);
+    }
+    langButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        setLanguage(btn.getAttribute('data-lang'));
+      });
+    });
+    const savedLang = localStorage.getItem('lang') || 'en';
+    setLanguage(savedLang);
+  </script>
+</body>
+</html> 
