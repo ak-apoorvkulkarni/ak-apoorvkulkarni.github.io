@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/apoorv-portfolio-react/static/css/main.b0a2877c.css",
-    "main.js": "/apoorv-portfolio-react/static/js/main.96eccead.js",
-    "static/js/453.59359150.chunk.js": "/apoorv-portfolio-react/static/js/453.59359150.chunk.js",
-    "index.html": "/apoorv-portfolio-react/index.html",
-    "main.b0a2877c.css.map": "/apoorv-portfolio-react/static/css/main.b0a2877c.css.map",
-    "main.96eccead.js.map": "/apoorv-portfolio-react/static/js/main.96eccead.js.map",
-    "453.59359150.chunk.js.map": "/apoorv-portfolio-react/static/js/453.59359150.chunk.js.map"
+    "main.css": "/static/css/main.b0a2877c.css",
+    "main.js": "/static/js/main.6f6c070b.js",
+    "static/js/453.59359150.chunk.js": "/static/js/453.59359150.chunk.js",
+    "index.html": "/index.html",
+    "main.b0a2877c.css.map": "/static/css/main.b0a2877c.css.map",
+    "main.6f6c070b.js.map": "/static/js/main.6f6c070b.js.map",
+    "453.59359150.chunk.js.map": "/static/js/453.59359150.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b0a2877c.css",
-    "static/js/main.96eccead.js"
+    "static/js/main.6f6c070b.js"
   ]
 }
