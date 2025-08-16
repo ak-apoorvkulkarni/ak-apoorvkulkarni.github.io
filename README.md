@@ -122,14 +122,16 @@ I'm a graduate student at the **Karlsruhe Institute of Technology** with a stron
 - **Email**: [Your Email]
 - **LinkedIn**: [Your LinkedIn]
 - **GitHub**: [Your GitHub]
-- **Portfolio**: [Your Portfolio URL]
+- **Portfolio**: https://ak-apoorvkulkarni.github.io/
 - **Location**: Karlsruhe, Germany
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Live Portfolio
 
-This portfolio is built with **React.js** and features:
+**🌐 Visit my interactive portfolio**: [https://ak-apoorvkulkarni.github.io/](https://ak-apoorvkulkarni.github.io/)
+
+### **Portfolio Features**
 - Responsive design for all devices
 - Modern UI/UX with dark theme
 - Interactive project showcases

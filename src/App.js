@@ -174,7 +174,7 @@ function App() {
           </div>
           <div className="hero-content">
             <div className="profile-container">
-              <img src="/profile.jpg" alt="Apoorv Kulkarni" className="profile-image" />
+              <img src="/images/profile.jpg" alt="Apoorv Kulkarni" className="profile-image" />
               <div className="profile-glow"></div>
             </div>
             <h1 className="hero-title">
