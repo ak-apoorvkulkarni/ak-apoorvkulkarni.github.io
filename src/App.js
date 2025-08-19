@@ -847,6 +847,12 @@ function App() {
                     </div>
                     <span className="skill-name">ESP32</span>
                   </div>
+                  <div className="skill-item" data-tooltip="ARM Architecture Development & Optimization">
+                    <div className="skill-logo arm">
+                      <i className="fas fa-microchip"></i>
+                    </div>
+                    <span className="skill-name">ARM Development</span>
+                  </div>
                 </div>
               </div>
 
@@ -916,6 +922,12 @@ function App() {
                       <i className="fas fa-terminal"></i>
                     </div>
                     <span className="skill-name">Bash</span>
+                  </div>
+                  <div className="skill-item" data-tooltip="Linux System Administration & Development">
+                    <div className="skill-logo linux">
+                      <i className="fab fa-linux"></i>
+                    </div>
+                    <span className="skill-name">Linux</span>
                   </div>
                   <div className="skill-item" data-tooltip="Interactive Computing & Data Analysis">
                     <div className="skill-logo jupyter">
@@ -1147,7 +1159,7 @@ function App() {
                     <span className="command typing-text" data-text="whoami">whoami</span>
                   </div>
                   <div className="output-line">
-                    <span className="output">Apoorv Kulkarni - Embedded Systems Engineer</span>
+                    <span className="output">Apoorv Kulkarni - Electrical Engineer</span>
                   </div>
                   
                   <div className="command-line">

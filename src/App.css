@@ -1326,6 +1326,7 @@ section.animate-in {
 .skill-logo.fpga { background: linear-gradient(135deg, #e01f27, #b71c1c); }
 .skill-logo.stm32 { background: linear-gradient(135deg, #002d72, #00aeef); }
 .skill-logo.esp32 { background: linear-gradient(135deg, #e7352c, #b71c1c); }
+.skill-logo.arm { background: linear-gradient(135deg, #0091ea, #0066cc); }
 .skill-logo.simulink { background: linear-gradient(135deg, #f59c00, #d87a00); }
 .skill-logo.multisim { background: linear-gradient(135deg, #0a3d91, #072d6b); }
 .skill-logo.ltspice { background: linear-gradient(135deg, #a00000, #6e0000); }
@@ -1333,6 +1334,7 @@ section.animate-in {
 
 .skill-logo.c { background: linear-gradient(135deg, #283593, #1e88e5); }
 .skill-logo.bash { background: linear-gradient(135deg, #2e7d32, #1b5e20); }
+.skill-logo.linux { background: linear-gradient(135deg, #fcc624, #f39c12); }
 .skill-logo.jupyter { background: linear-gradient(135deg, #f37626, #f28705); }
 .skill-logo.scipy { background: linear-gradient(135deg, #1a85ff, #0b61d8); }
 .skill-logo.matplotlib { background: linear-gradient(135deg, #1f77b4, #0d4d73); }
