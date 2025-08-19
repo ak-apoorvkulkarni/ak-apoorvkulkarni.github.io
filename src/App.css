@@ -1028,20 +1028,38 @@ section.animate-in {
 
 .skills-showcase {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.2rem;
+  margin-top: 2rem;
+  align-items: start; /* prevent cards from stretching to tallest item */
+}
+
+/* Desktop: switch to masonry-style columns to remove large gaps between uneven card heights */
+@media (min-width: 1024px) {
+  .skills-showcase {
+    display: block;
+    column-width: 340px;
+    column-gap: 1.4rem;
+    margin-top: 1.6rem;
+  }
+  .skills-showcase .skill-category-card {
+    display: inline-block;
+    width: 100%;
+    break-inside: avoid;
+    margin: 0 0 1.4rem;
+    vertical-align: top;
+  }
 }
 
 .skill-category-card {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
-  padding: 1.5rem;
+  padding: 1.25rem;
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   position: relative;
-  overflow: hidden;
+  overflow: visible; /* allow tooltips to overflow outside the card */
 }
 
 .skill-category-card::before {
@@ -1069,7 +1087,7 @@ section.animate-in {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .category-icon {
@@ -1100,26 +1118,26 @@ section.animate-in {
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  gap: 0.6rem;
+  gap: 0.5rem;
 }
 
 .skill-item {
   background: transparent;
   border: none;
   border-radius: 8px;
-  padding: 0.8rem 0.5rem;
+  padding: 0.6rem 0.4rem;
   text-align: center;
   transition: all 0.3s ease;
   cursor: pointer;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .skill-item {
   position: relative;
 }
 
-.skill-item::before {
+.skill-item .skill-logo::before {
   content: '';
   position: absolute;
   top: 0;
@@ -1133,7 +1151,7 @@ section.animate-in {
   z-index: 0;
 }
 
-.skill-item:hover::before {
+.skill-item:hover .skill-logo::before {
   transform: scale(1);
 }
 
@@ -1194,17 +1212,25 @@ section.animate-in {
   bottom: 120%;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.85);
   color: white;
-  padding: 0.5rem 0.8rem;
+  padding: 0.45rem 0.7rem;
   border-radius: 8px;
   font-size: 0.75rem;
-  white-space: nowrap;
+  white-space: normal;
+  width: max-content;
+  height: auto;
+  max-width: 220px;
+  line-height: 1.2;
+  text-align: center;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
   z-index: 1000;
   pointer-events: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
 }
 
 .skill-item[data-tooltip]::after {
@@ -1223,10 +1249,42 @@ section.animate-in {
 }
 
 .skill-item:hover[data-tooltip]::before,
-.skill-item:hover[data-tooltip]::after {
+.skill-item:hover[data-tooltip]::after,
+.skill-item.show-tooltip[data-tooltip]::before,
+.skill-item.show-tooltip[data-tooltip]::after,
+.skill-item:active[data-tooltip]::before,
+.skill-item:active[data-tooltip]::after,
+.skill-item:focus-within[data-tooltip]::before,
+.skill-item:focus-within[data-tooltip]::after {
   opacity: 1;
   visibility: visible;
   transform: translateX(-50%) translateY(-5px);
+}
+
+/* Mobile-friendly tooltip placement */
+@media (max-width: 768px) {
+  .skill-item[data-tooltip]::before {
+    bottom: auto;
+    top: calc(100% + 10px);
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    max-width: min(260px, 80vw);
+  }
+  .skill-item[data-tooltip]::after {
+    bottom: auto;
+    top: 100%;
+    border-top-color: transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.85);
+    transform: translateX(-50%);
+  }
+  .skill-item:hover[data-tooltip]::before,
+  .skill-item:hover[data-tooltip]::after,
+  .skill-item:active[data-tooltip]::before,
+  .skill-item:active[data-tooltip]::after,
+  .skill-item:focus-within[data-tooltip]::before,
+  .skill-item:focus-within[data-tooltip]::after {
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 /* Animation for skill items */
@@ -1263,6 +1321,45 @@ section.animate-in {
 .skill-logo.matlab { background: linear-gradient(135deg, #0076a8, #005a8b); }
 .skill-logo.numpy { background: linear-gradient(135deg, #4dabcf, #2b5f75); }
 .skill-logo.pandas { background: linear-gradient(135deg, #130654, #2b5f75); }
+
+/* Additional brand colors for skill logos */
+.skill-logo.fpga { background: linear-gradient(135deg, #e01f27, #b71c1c); }
+.skill-logo.stm32 { background: linear-gradient(135deg, #002d72, #00aeef); }
+.skill-logo.esp32 { background: linear-gradient(135deg, #e7352c, #b71c1c); }
+.skill-logo.simulink { background: linear-gradient(135deg, #f59c00, #d87a00); }
+.skill-logo.multisim { background: linear-gradient(135deg, #0a3d91, #072d6b); }
+.skill-logo.ltspice { background: linear-gradient(135deg, #a00000, #6e0000); }
+.skill-logo.proteus { background: linear-gradient(135deg, #1e90ff, #0066cc); }
+
+.skill-logo.c { background: linear-gradient(135deg, #283593, #1e88e5); }
+.skill-logo.bash { background: linear-gradient(135deg, #2e7d32, #1b5e20); }
+.skill-logo.jupyter { background: linear-gradient(135deg, #f37626, #f28705); }
+.skill-logo.scipy { background: linear-gradient(135deg, #1a85ff, #0b61d8); }
+.skill-logo.matplotlib { background: linear-gradient(135deg, #1f77b4, #0d4d73); }
+.skill-logo.tkinter { background: linear-gradient(135deg, #3c6e71, #284b63); }
+.skill-logo.pyqt { background: linear-gradient(135deg, #41cd52, #21a366); }
+.skill-logo.pyvisa { background: linear-gradient(135deg, #7e57c2, #5e35b1); }
+
+.skill-logo.product-strategy { background: linear-gradient(135deg, #00c6ff, #0072ff); }
+.skill-logo.agile { background: linear-gradient(135deg, #ff6f00, #ff8f00); }
+.skill-logo.user-research { background: linear-gradient(135deg, #7c4dff, #651fff); }
+.skill-logo.pmtools { background: linear-gradient(135deg, #26a69a, #00796b); }
+
+.skill-logo.autocad { background: linear-gradient(135deg, #cc0000, #990000); }
+.skill-logo.cadence { background: linear-gradient(135deg, #c8102e, #8a102e); }
+.skill-logo.optisystem { background: linear-gradient(135deg, #1e88e5, #1565c0); }
+
+.skill-logo.eagle { background: linear-gradient(135deg, #c3002f, #8b001f); }
+.skill-logo.kicad { background: linear-gradient(135deg, #2f64bd, #1f4f91); }
+.skill-logo.altium { background: linear-gradient(135deg, #a68f00, #7b6f00); }
+
+.skill-logo.screenprinting { background: linear-gradient(135deg, #6d4c41, #4e342e); }
+.skill-logo.inkjet { background: linear-gradient(135deg, #00bcd4, #0097a7); }
+.skill-logo.printed { background: linear-gradient(135deg, #26a69a, #00796b); }
+
+.skill-logo.msoffice { background: linear-gradient(135deg, #d83b01, #a62a00); }
+.skill-logo.git { background: linear-gradient(135deg, #f05032, #c0351a); }
+.skill-logo.latex { background: linear-gradient(135deg, #008080, #006666); }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {

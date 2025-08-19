@@ -121,6 +121,52 @@ function App() {
     };
   }, [currentRoleIndex, roles]);
 
+  // Improve skill tooltip behavior for mobile/touch and accessibility
+  useEffect(() => {
+    const skillItems = document.querySelectorAll('.skill-item[data-tooltip]');
+
+    // Make items keyboard-focusable
+    skillItems.forEach((el) => {
+      if (!el.hasAttribute('tabindex')) {
+        el.setAttribute('tabindex', '0');
+      }
+    });
+
+    const showTooltip = (el) => {
+      el.classList.add('show-tooltip');
+      if (el._tooltipTimer) clearTimeout(el._tooltipTimer);
+      el._tooltipTimer = setTimeout(() => {
+        el.classList.remove('show-tooltip');
+      }, 1800);
+    };
+
+    const handleTouch = (e) => {
+      showTooltip(e.currentTarget);
+    };
+
+    const handleKey = (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        showTooltip(e.currentTarget);
+      }
+    };
+
+    skillItems.forEach((el) => {
+      el.addEventListener('touchstart', handleTouch, { passive: true });
+      el.addEventListener('click', handleTouch);
+      el.addEventListener('keydown', handleKey);
+    });
+
+    return () => {
+      skillItems.forEach((el) => {
+        el.removeEventListener('touchstart', handleTouch);
+        el.removeEventListener('click', handleTouch);
+        el.removeEventListener('keydown', handleKey);
+        if (el._tooltipTimer) clearTimeout(el._tooltipTimer);
+      });
+    };
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -212,14 +258,16 @@ function App() {
             <div className="about-content">
               <div className="about-text">
                 <p>
-                  I'm a graduate student at the Karlsruhe Institute of Technology with a strong foundation in 
-                  embedded systems, PCB design, and applied electronics. My passion lies in developing 
-                  innovative solutions that bridge the gap between hardware and software.
+                  I am a graduate student at the Karlsruhe Institute of Technology with a solid background in 
+                  embedded systems, PCB design, and applied electronics. My work focuses on building practical, 
+                  hardware‑driven solutions that integrate both hardware and software effectively.
                 </p>
                 <p>
-                  Currently working on thermoelectric sensors using inkjet printing for temperature and 
-                  energy sensing, I bring expertise in low-power system development and end-to-end 
-                  hardware solutions for real-world applications.
+                  Currently, I am developing an ultra‑low voltage sensing and signal processing unit for 
+                  thermoelectric sensors. This includes designing precision analog front‑end circuits, 
+                  amplification and filtering systems, and digital readout interfaces optimized for microvolt‑level 
+                  signals. The project aims to enable reliable, low‑power sensing for applications such as temperature 
+                  and energy monitoring.
                 </p>
               </div>
             </div>
@@ -493,6 +541,17 @@ function App() {
           <div className="container">
             <h2 className="section-title">Featured Projects</h2>
             <div className="projects-grid">
+              {/* New: Precision Signal Conditioning & Acquisition System (first featured) */}
+              <div className="project-card">
+                <div className="project-content">
+                  <h3>Precision Signal Conditioning & Acquisition System</h3>
+                  <p>High-precision analog front-end and data acquisition pipeline for microvolt-level thermoelectric sensors, featuring low-noise amplification, filtering, high-resolution ADC, and real-time Python tooling.</p>
+                  <div className="project-links">
+                    <button onClick={() => openProjectModal('signal-conditioning')} className="btn btn-outline">View Details</button>
+                  </div>
+                </div>
+              </div>
+
               <div className="project-card">
                 <div className="project-content">
                   <h3>FPGA-Based Control for AFM</h3>
@@ -544,6 +603,58 @@ function App() {
                 <i className="fas fa-times"></i>
               </button>
               <div className="modal-body">
+                {selectedProject === 'signal-conditioning' && (
+                  <div className="project-details">
+                    <h2>Precision Signal Conditioning & Acquisition System</h2>
+                    <div className="project-tech-modal">
+                      <span>Instrumentation Amplifier</span>
+                      <span>Low-Noise AFE</span>
+                      <span>Programmable Gain</span>
+                      <span>Filtering</span>
+                      <span>Impedance Matching</span>
+                      <span>High-Res ADC</span>
+                      <span>Python</span>
+                      <span>USB DAQ</span>
+                      <span>PCB Design</span>
+                    </div>
+                    <div className="project-description">
+                      <h3>Project Overview</h3>
+                      <p>Designed and implemented a high-precision analog front-end (AFE) to acquire and process ultra-low voltage signals generated by thermoelectric sensors. The design addresses the core challenges of microvolt-level acquisition including noise, offset, and thermal drift while preserving signal fidelity for downstream analysis.</p>
+
+                      <h3>Key Features</h3>
+                      <ul>
+                        <li>Multi-stage instrumentation amplifier architecture with high CMRR and low input-referred noise.</li>
+                        <li>Programmable gain via precision external resistors to adapt to varying sensor amplitudes.</li>
+                        <li>Input and post-amplification filtering plus impedance matching for stable, wideband operation.</li>
+                        <li>Integrated high-resolution ADC stage to digitize conditioned signals for analysis.</li>
+                        <li>Real-time Python data acquisition over USB, live waveform plotting, and CSV logging with metadata.</li>
+                      </ul>
+
+                      <h3>Technical Implementation</h3>
+                      <ul>
+                        <li>Differential sensing front-end with careful layout for low leakage and minimal parasitic coupling.</li>
+                        <li>Analog–digital isolation, star-grounding strategy, decoupling and ground plane optimization.</li>
+                        <li>Thermal stability considerations in component selection and placement.</li>
+                        <li>Impedance matching network and anti-alias filtering preceding the ADC.</li>
+                      </ul>
+
+                      <h3>Applications</h3>
+                      <ul>
+                        <li>Infrared heat flux measurement and thermal energy sensing.</li>
+                        <li>Multi-channel thermal sensor arrays for environmental monitoring and wearable systems.</li>
+                        <li>General-purpose scientific instrumentation requiring microvolt-level measurements.</li>
+                      </ul>
+
+                      <h3>Documentation & Deliverables</h3>
+                      <ul>
+                        <li>Complete schematics and PCB layout files with simulation notes.</li>
+                        <li>Python acquisition scripts with instrument control, plotting, and structured CSV logging.</li>
+                        <li>Assembly, calibration, and test procedure notes enabling reproducibility and scale-up.</li>
+                      </ul>
+                    </div>
+                  </div>
+                )}
+
                 {selectedProject === 'fpga-afm' && (
                   <div className="project-details">
                     <h2>FPGA-Based Control for AFM</h2>
@@ -713,25 +824,25 @@ function App() {
                 </div>
                 <div className="skills-grid">
                   <div className="skill-item" data-tooltip="Field Programmable Gate Arrays - Digital Design & Implementation">
-                    <div className="skill-logo">
+                    <div className="skill-logo fpga">
                       <i className="fas fa-cogs"></i>
                     </div>
                     <span className="skill-name">FPGA</span>
                   </div>
                   <div className="skill-item" data-tooltip="Microcontroller Development & IoT Projects">
-                    <div className="skill-logo">
+                    <div className="skill-logo arduino">
                       <i className="fas fa-bolt"></i>
                     </div>
                     <span className="skill-name">Arduino</span>
                   </div>
                   <div className="skill-item" data-tooltip="ARM Cortex-M Development & Real-time Systems">
-                    <div className="skill-logo">
+                    <div className="skill-logo stm32">
                       <i className="fas fa-microchip"></i>
                     </div>
                     <span className="skill-name">STM32</span>
                   </div>
                   <div className="skill-item" data-tooltip="WiFi & Bluetooth IoT Development">
-                    <div className="skill-logo">
+                    <div className="skill-logo esp32">
                       <i className="fas fa-wifi"></i>
                     </div>
                     <span className="skill-name">ESP32</span>
@@ -748,31 +859,31 @@ function App() {
                 </div>
                 <div className="skills-grid">
                   <div className="skill-item" data-tooltip="Numerical Computing & Signal Processing">
-                    <div className="skill-logo">
+                    <div className="skill-logo matlab">
                       <i className="fas fa-chart-bar"></i>
                     </div>
                     <span className="skill-name">MATLAB</span>
                   </div>
                   <div className="skill-item" data-tooltip="Model-Based Design & Simulation">
-                    <div className="skill-logo">
+                    <div className="skill-logo simulink">
                       <i className="fas fa-project-diagram"></i>
                     </div>
                     <span className="skill-name">Simulink</span>
                   </div>
                   <div className="skill-item" data-tooltip="Electronics Simulation">
-                    <div className="skill-logo">
+                    <div className="skill-logo multisim">
                       <i className="fas fa-microchip"></i>
                     </div>
                     <span className="skill-name">Multisim</span>
                   </div>
                   <div className="skill-item" data-tooltip="Circuit Simulation & Analysis">
-                    <div className="skill-logo">
+                    <div className="skill-logo ltspice">
                       <i className="fas fa-bolt"></i>
                     </div>
                     <span className="skill-name">LTSpice</span>
                   </div>
                   <div className="skill-item" data-tooltip="PCB Design & Simulation">
-                    <div className="skill-logo">
+                    <div className="skill-logo proteus">
                       <i className="fas fa-layer-group"></i>
                     </div>
                     <span className="skill-name">Proteus</span>
@@ -789,67 +900,67 @@ function App() {
                 </div>
                 <div className="skills-grid">
                   <div className="skill-item" data-tooltip="Data Science, Automation & AI/ML">
-                    <div className="skill-logo">
+                    <div className="skill-logo python">
                       <i className="fab fa-python"></i>
                     </div>
                     <span className="skill-name">Python</span>
                   </div>
                   <div className="skill-item" data-tooltip="Embedded Systems & System Programming">
-                    <div className="skill-logo">
+                    <div className="skill-logo c">
                       <i className="fas fa-code"></i>
                     </div>
                     <span className="skill-name">C</span>
                   </div>
                   <div className="skill-item" data-tooltip="Shell Scripting & Automation">
-                    <div className="skill-logo">
+                    <div className="skill-logo bash">
                       <i className="fas fa-terminal"></i>
                     </div>
                     <span className="skill-name">Bash</span>
                   </div>
                   <div className="skill-item" data-tooltip="Interactive Computing & Data Analysis">
-                    <div className="skill-logo">
+                    <div className="skill-logo jupyter">
                       <i className="fas fa-book"></i>
                     </div>
                     <span className="skill-name">Jupyter</span>
                   </div>
                   <div className="skill-item" data-tooltip="Numerical Computing & Array Operations">
-                    <div className="skill-logo">
+                    <div className="skill-logo numpy">
                       <i className="fas fa-calculator"></i>
                     </div>
                     <span className="skill-name">NumPy</span>
                   </div>
                   <div className="skill-item" data-tooltip="Data Manipulation & Analysis">
-                    <div className="skill-logo">
+                    <div className="skill-logo pandas">
                       <i className="fas fa-table"></i>
                     </div>
                     <span className="skill-name">Pandas</span>
                   </div>
                   <div className="skill-item" data-tooltip="Scientific Computing">
-                    <div className="skill-logo">
+                    <div className="skill-logo scipy">
                       <i className="fas fa-flask"></i>
                     </div>
                     <span className="skill-name">SciPy</span>
                   </div>
                   <div className="skill-item" data-tooltip="Data Visualization & Plotting">
-                    <div className="skill-logo">
+                    <div className="skill-logo matplotlib">
                       <i className="fas fa-chart-pie"></i>
                     </div>
                     <span className="skill-name">Matplotlib</span>
                   </div>
                   <div className="skill-item" data-tooltip="GUI Development">
-                    <div className="skill-logo">
+                    <div className="skill-logo tkinter">
                       <i className="fas fa-window-maximize"></i>
                     </div>
                     <span className="skill-name">Tkinter</span>
                   </div>
                   <div className="skill-item" data-tooltip="Advanced GUI Development">
-                    <div className="skill-logo">
+                    <div className="skill-logo pyqt">
                       <i className="fas fa-desktop"></i>
                     </div>
                     <span className="skill-name">PyQt</span>
                   </div>
                   <div className="skill-item" data-tooltip="Instrument Control & Automation">
-                    <div className="skill-logo">
+                    <div className="skill-logo pyvisa">
                       <i className="fas fa-cogs"></i>
                     </div>
                     <span className="skill-name">PyVISA</span>
@@ -866,25 +977,25 @@ function App() {
                 </div>
                 <div className="skills-grid">
                   <div className="skill-item" data-tooltip="Product Strategy & Roadmap Planning">
-                    <div className="skill-logo">
+                    <div className="skill-logo product-strategy">
                       <i className="fas fa-route"></i>
                     </div>
                     <span className="skill-name">Product Strategy</span>
                   </div>
                   <div className="skill-item" data-tooltip="Agile Development & Scrum">
-                    <div className="skill-logo">
+                    <div className="skill-logo agile">
                       <i className="fas fa-sync-alt"></i>
                     </div>
                     <span className="skill-name">Agile</span>
                   </div>
                   <div className="skill-item" data-tooltip="User Research & UX Design">
-                    <div className="skill-logo">
+                    <div className="skill-logo user-research">
                       <i className="fas fa-users"></i>
                     </div>
                     <span className="skill-name">User Research</span>
                   </div>
                   <div className="skill-item" data-tooltip="Project Management Tools">
-                    <div className="skill-logo">
+                    <div className="skill-logo pmtools">
                       <i className="fas fa-tools"></i>
                     </div>
                     <span className="skill-name">PM Tools</span>
@@ -901,25 +1012,25 @@ function App() {
                 </div>
                 <div className="skills-grid">
                   <div className="skill-item" data-tooltip="3D CAD Design & Engineering">
-                    <div className="skill-logo">
+                    <div className="skill-logo fusion360">
                       <i className="fas fa-cube"></i>
                     </div>
                     <span className="skill-name">Fusion 360</span>
                   </div>
                   <div className="skill-item" data-tooltip="2D CAD Design & Drafting">
-                    <div className="skill-logo">
+                    <div className="skill-logo autocad">
                       <i className="fas fa-drafting-compass"></i>
                     </div>
                     <span className="skill-name">AutoCAD</span>
                   </div>
                   <div className="skill-item" data-tooltip="PCB Design & Circuit Simulation">
-                    <div className="skill-logo">
+                    <div className="skill-logo cadence">
                       <i className="fas fa-sitemap"></i>
                     </div>
                     <span className="skill-name">Cadence</span>
                   </div>
                   <div className="skill-item" data-tooltip="Optical System Design">
-                    <div className="skill-logo">
+                    <div className="skill-logo optisystem">
                       <i className="fas fa-eye"></i>
                     </div>
                     <span className="skill-name">OptiSystem</span>
@@ -936,19 +1047,19 @@ function App() {
                 </div>
                 <div className="skills-grid">
                   <div className="skill-item" data-tooltip="PCB Layout & Schematic Design">
-                    <div className="skill-logo">
+                    <div className="skill-logo eagle">
                       <i className="fas fa-project-diagram"></i>
                     </div>
                     <span className="skill-name">EAGLE</span>
                   </div>
                   <div className="skill-item" data-tooltip="Open Source PCB Design">
-                    <div className="skill-logo">
+                    <div className="skill-logo kicad">
                       <i className="fas fa-layer-group"></i>
                     </div>
                     <span className="skill-name">KiCAD</span>
                   </div>
                   <div className="skill-item" data-tooltip="Professional PCB Design & Manufacturing">
-                    <div className="skill-logo">
+                    <div className="skill-logo altium">
                       <i className="fas fa-layer-group"></i>
                     </div>
                     <span className="skill-name">Altium</span>
@@ -965,19 +1076,19 @@ function App() {
                 </div>
                 <div className="skills-grid">
                   <div className="skill-item" data-tooltip="Screen Printing Technology">
-                    <div className="skill-logo">
+                    <div className="skill-logo screenprinting">
                       <i className="fas fa-print"></i>
                     </div>
                     <span className="skill-name">Screen Printing</span>
                   </div>
                   <div className="skill-item" data-tooltip="Inkjet Printing Technology">
-                    <div className="skill-logo">
+                    <div className="skill-logo inkjet">
                       <i className="fas fa-print"></i>
                     </div>
                     <span className="skill-name">Inkjet Printing</span>
                   </div>
                   <div className="skill-item" data-tooltip="Printed Electronics Manufacturing">
-                    <div className="skill-logo">
+                    <div className="skill-logo printed">
                       <i className="fas fa-microchip"></i>
                     </div>
                     <span className="skill-name">Printed Electronics</span>
@@ -994,19 +1105,19 @@ function App() {
                 </div>
                 <div className="skills-grid">
                   <div className="skill-item" data-tooltip="Microsoft Office Suite">
-                    <div className="skill-logo">
+                    <div className="skill-logo msoffice">
                       <i className="fas fa-file-word"></i>
                     </div>
                     <span className="skill-name">MS Office</span>
                   </div>
                   <div className="skill-item" data-tooltip="Version Control & Collaboration">
-                    <div className="skill-logo">
+                    <div className="skill-logo git">
                       <i className="fab fa-git-alt"></i>
                     </div>
                     <span className="skill-name">Git</span>
                   </div>
                   <div className="skill-item" data-tooltip="Document Preparation & Typesetting">
-                    <div className="skill-logo">
+                    <div className="skill-logo latex">
                       <i className="fas fa-file-alt"></i>
                     </div>
                     <span className="skill-name">LaTeX</span>
