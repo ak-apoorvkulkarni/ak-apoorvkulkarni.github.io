@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="PCB Design Basics: A comprehensive guide for beginners in embedded systems and electronics design" />
+  <meta name="keywords" content="PCB design, electronics, embedded systems, circuit design, Altium Designer, KiCad" />
+  <title>PCB Design Basics - Apoorv Kulkarni</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .blog-post {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+    
+    .blog-post__header {
+      margin-bottom: 3rem;
+    }
+    
+    .blog-post__meta {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 1rem;
+      font-size: var(--small-font-size);
+      color: var(--text-color-light);
+      flex-wrap: wrap;
+    }
+    
+    .blog-post__date,
+    .blog-post__read-time,
+    .blog-post__category {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .blog-post__title {
+      font-size: var(--h1-font-size);
+      font-weight: var(--font-bold);
+      color: var(--title-color);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    
+    .blog-post__excerpt {
+      font-size: var(--h3-font-size);
+      color: var(--text-color);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    
+    .blog-post__tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    
+    .blog-post__tag {
+      padding: 0.5rem 1rem;
+      background: var(--first-color-light);
+      color: var(--first-color);
+      border-radius: 2rem;
+      font-size: var(--small-font-size);
+      font-weight: var(--font-medium);
+    }
+    
+    .blog-post__content {
+      line-height: 1.8;
+      color: var(--text-color);
+    }
+    
+    .blog-post__content h2 {
+      font-size: var(--h2-font-size);
+      font-weight: var(--font-semi-bold);
+      color: var(--title-color);
+      margin: 2.5rem 0 1rem 0;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-color);
+    }
+    
+    .blog-post__content h3 {
+      font-size: var(--h3-font-size);
+      font-weight: var(--font-semi-bold);
+      color: var(--title-color);
+      margin: 2rem 0 1rem 0;
+    }
+    
+    .blog-post__content p {
+      margin-bottom: 1.5rem;
+    }
+    
+    .blog-post__content ul,
+    .blog-post__content ol {
+      margin: 1.5rem 0;
+      padding-left: 2rem;
+    }
+    
+    .blog-post__content li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .blog-post__content code {
+      background: var(--container-color);
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--first-color);
+    }
+    
+    .blog-post__content pre {
+      background: var(--container-color);
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border: 1px solid var(--border-color);
+    }
+    
+    .blog-post__content pre code {
+      background: none;
+      padding: 0;
+      color: var(--text-color);
+    }
+    
+    .blog-post__content blockquote {
+      border-left: 4px solid var(--first-color);
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: var(--text-color-light);
+    }
+    
+    .blog-post__navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-color);
+    }
+    
+    .blog-post__nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: var(--container-color);
+      color: var(--text-color);
+      text-decoration: none;
+      border-radius: 0.5rem;
+      border: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+    
+    .blog-post__nav-link:hover {
+      background: var(--first-color);
+      color: white;
+      border-color: var(--first-color);
+    }
+    
+    .blog-post__nav-link--disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    
+    .blog-post__back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--first-color);
+      text-decoration: none;
+      font-weight: var(--font-medium);
+      margin-bottom: 2rem;
+      transition: gap 0.3s ease;
+    }
+    
+    .blog-post__back-link:hover {
+      gap: 0.75rem;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .blog-post {
+        padding: 1rem;
+      }
+      
+      .blog-post__meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+      
+      .blog-post__navigation {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HOME ICON (not on home page) -->
+  <a href="../../index.html" class="home-icon" aria-label="Back to Home" style="position:fixed;top:1.5rem;left:1.5rem;z-index:1000;background:var(--container-color);border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.08);width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:var(--first-color);font-size:1.5rem;text-decoration:none;transition:background 0.2s;">
+    <i class="fa-solid fa-house"></i>
+  </a>
+  <div class="container">
+    <div class="blog-post">
+      <!-- Back to Blog -->
+      <a href="../" class="blog-post__back-link">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span data-en="Back to Blog" data-de="Zurück zum Blog">Back to Blog</span>
+      </a>
+
+      <!-- Blog Post Header -->
+      <header class="blog-post__header">
+        <div class="blog-post__meta">
+          <span class="blog-post__date">
+            <i class="fa-solid fa-calendar"></i>
+            <span data-en="January 15, 2025" data-de="15. Januar 2025">January 15, 2025</span>
+          </span>
+          <span class="blog-post__read-time">
+            <i class="fa-solid fa-clock"></i>
+            <span data-en="8 min read" data-de="8 Min. Lesezeit">8 min read</span>
+          </span>
+          <span class="blog-post__category">
+            <i class="fa-solid fa-tag"></i>
+            <span data-en="PCB Design" data-de="PCB-Design">PCB Design</span>
+          </span>
+        </div>
+        
+        <h1 class="blog-post__title" data-en="PCB Design Basics: A Comprehensive Guide for Beginners" data-de="PCB-Design-Grundlagen: Ein umfassender Leitfaden für Anfänger">PCB Design Basics: A Comprehensive Guide for Beginners</h1>
+        
+        <p class="blog-post__excerpt" data-en="Learn the fundamental principles of PCB design, from component selection to layout optimization. This guide covers everything you need to know to create reliable and efficient printed circuit boards." data-de="Lerne die grundlegenden Prinzipien des PCB-Designs, von der Komponentenauswahl bis zur Layout-Optimierung. Dieser Leitfaden behandelt alles, was du wissen musst, um zuverlässige und effiziente Leiterplatten zu erstellen.">Learn the fundamental principles of PCB design, from component selection to layout optimization. This guide covers everything you need to know to create reliable and efficient printed circuit boards.</p>
+        
+        <div class="blog-post__tags">
+          <span class="blog-post__tag" data-en="PCB Design" data-de="PCB-Design">PCB Design</span>
+          <span class="blog-post__tag" data-en="Electronics" data-de="Elektronik">Electronics</span>
+          <span class="blog-post__tag" data-en="Tutorial" data-de="Tutorial">Tutorial</span>
+          <span class="blog-post__tag" data-en="Altium Designer" data-de="Altium Designer">Altium Designer</span>
+        </div>
+      </header>
+
+      <!-- Blog Post Content -->
+      <article class="blog-post__content">
+        <h2 data-en="Introduction to PCB Design" data-de="Einführung in PCB-Design">Introduction to PCB Design</h2>
+        
+        <p data-en="Printed Circuit Board (PCB) design is the foundation of modern electronics. Whether you're building a simple LED circuit or a complex embedded system, understanding PCB design principles is crucial for creating reliable, manufacturable, and cost-effective electronic products." data-de="Leiterplatten-Design ist die Grundlage der modernen Elektronik. Ob du eine einfache LED-Schaltung oder ein komplexes Embedded-System baust, das Verständnis der PCB-Design-Prinzipien ist entscheidend für die Erstellung zuverlässiger, herstellbarer und kostengünstiger elektronischer Produkte.">Printed Circuit Board (PCB) design is the foundation of modern electronics. Whether you're building a simple LED circuit or a complex embedded system, understanding PCB design principles is crucial for creating reliable, manufacturable, and cost-effective electronic products.</p>
+
+        <h2 data-en="Key Design Considerations" data-de="Wichtige Design-Überlegungen">Key Design Considerations</h2>
+
+        <h3 data-en="1. Component Selection" data-de="1. Komponentenauswahl">1. Component Selection</h3>
+        <p data-en="The first step in PCB design is selecting the right components for your application. Consider factors such as:" data-de="Der erste Schritt im PCB-Design ist die Auswahl der richtigen Komponenten für deine Anwendung. Berücksichtige Faktoren wie:">The first step in PCB design is selecting the right components for your application. Consider factors such as:</p>
+        
+        <ul>
+          <li data-en="Power requirements and voltage ratings" data-de="Leistungsanforderungen und Spannungsbewertungen">Power requirements and voltage ratings</li>
+          <li data-en="Temperature and environmental conditions" data-de="Temperatur- und Umweltbedingungen">Temperature and environmental conditions</li>
+          <li data-en="Package types and footprint compatibility" data-de="Gehäusetypen und Footprint-Kompatibilität">Package types and footprint compatibility</li>
+          <li data-en="Cost and availability" data-de="Kosten und Verfügbarkeit">Cost and availability</li>
+        </ul>
+
+        <h3 data-en="2. Schematic Design" data-de="2. Schaltplan-Design">2. Schematic Design</h3>
+        <p data-en="A well-designed schematic is the blueprint for your PCB. Key principles include:" data-de="Ein gut gestalteter Schaltplan ist die Blaupause für deine Leiterplatte. Wichtige Prinzipien umfassen:">A well-designed schematic is the blueprint for your PCB. Key principles include:</p>
+        
+        <ul>
+          <li data-en="Clear component labeling and organization" data-de="Klare Komponentenbezeichnung und Organisation">Clear component labeling and organization</li>
+          <li data-en="Proper power and ground distribution" data-de="Ordentliche Strom- und Masseverteilung">Proper power and ground distribution</li>
+          <li data-en="Signal integrity considerations" data-de="Signalintegritäts-Überlegungen">Signal integrity considerations</li>
+          <li data-en="Design rule checking (DRC)" data-de="Design-Regel-Prüfung (DRC)">Design rule checking (DRC)</li>
+        </ul>
+
+        <h2 data-en="Layout Best Practices" data-de="Layout-Best-Practices">Layout Best Practices</h2>
+
+        <h3 data-en="Component Placement" data-de="Komponentenplatzierung">Component Placement</h3>
+        <p data-en="Strategic component placement can significantly impact your PCB's performance and manufacturability:" data-de="Strategische Komponentenplatzierung kann die Leistung und Herstellbarkeit deiner Leiterplatte erheblich beeinflussen:">Strategic component placement can significantly impact your PCB's performance and manufacturability:</p>
+
+        <blockquote data-en="Place components logically based on signal flow and functional blocks. Keep high-speed signals short and avoid crossing sensitive analog and digital sections." data-de="Platziere Komponenten logisch basierend auf Signalfluss und Funktionsblöcken. Halte Hochgeschwindigkeitssignale kurz und vermeide die Kreuzung empfindlicher analoger und digitaler Bereiche.">Place components logically based on signal flow and functional blocks. Keep high-speed signals short and avoid crossing sensitive analog and digital sections.</blockquote>
+
+        <h3 data-en="Routing Guidelines" data-de="Verdrahtungsrichtlinien">Routing Guidelines</h3>
+        <p data-en="Proper routing is essential for signal integrity and EMI reduction:" data-de="Ordentliche Verdrahtung ist entscheidend für Signalintegrität und EMI-Reduzierung:">Proper routing is essential for signal integrity and EMI reduction:</p>
+
+        <ul>
+          <li data-en="Use appropriate trace widths for current requirements" data-de="Verwende angemessene Leiterbahnbreiten für Stromanforderungen">Use appropriate trace widths for current requirements</li>
+          <li data-en="Maintain consistent impedance for high-speed signals" data-de="Behalte konsistente Impedanz für Hochgeschwindigkeitssignale">Maintain consistent impedance for high-speed signals</li>
+          <li data-en="Implement proper ground planes and power distribution" data-de="Implementiere ordentliche Masseflächen und Stromverteilung">Implement proper ground planes and power distribution</li>
+          <li data-en="Avoid sharp corners and use 45-degree turns" data-de="Vermeide scharfe Ecken und verwende 45-Grad-Kurven">Avoid sharp corners and use 45-degree turns</li>
+        </ul>
+
+        <h2 data-en="Design for Manufacturing (DFM)" data-de="Design für Fertigung (DFM)">Design for Manufacturing (DFM)</h2>
+        
+        <p data-en="Designing with manufacturing in mind from the start can save time and reduce costs:" data-de="Das Design mit Blick auf die Fertigung von Anfang an kann Zeit sparen und Kosten reduzieren:">Designing with manufacturing in mind from the start can save time and reduce costs:</p>
+
+        <h3 data-en="Common DFM Considerations" data-de="Häufige DFM-Überlegungen">Common DFM Considerations</h3>
+        <ul>
+          <li data-en="Minimum trace widths and spacing" data-de="Minimale Leiterbahnbreiten und Abstände">Minimum trace widths and spacing</li>
+          <li data-en="Component spacing and orientation" data-de="Komponentenabstände und -ausrichtung">Component spacing and orientation</li>
+          <li data-en="Solder mask and silkscreen requirements" data-de="Lötstopplack- und Beschriftungsanforderungen">Solder mask and silkscreen requirements</li>
+          <li data-en="Test point placement" data-de="Testpunkt-Platzierung">Test point placement</li>
+        </ul>
+
+        <h2 data-en="Conclusion" data-de="Fazit">Conclusion</h2>
+        
+        <p data-en="PCB design is both an art and a science. While software tools like Altium Designer and KiCad make the process more accessible, understanding the fundamental principles is crucial for creating successful designs. Remember that good PCB design is iterative - expect to make multiple revisions as you optimize for performance, cost, and manufacturability." data-de="PCB-Design ist sowohl Kunst als auch Wissenschaft. Während Software-Tools wie Altium Designer und KiCad den Prozess zugänglicher machen, ist das Verständnis der grundlegenden Prinzipien entscheidend für erfolgreiche Designs. Denke daran, dass gutes PCB-Design iterativ ist - erwarte mehrere Überarbeitungen, während du für Leistung, Kosten und Herstellbarkeit optimierst.">PCB design is both an art and a science. While software tools like Altium Designer and KiCad make the process more accessible, understanding the fundamental principles is crucial for creating successful designs. Remember that good PCB design is iterative - expect to make multiple revisions as you optimize for performance, cost, and manufacturability.</p>
+
+        <p data-en="In future posts, we'll dive deeper into advanced topics like high-speed design, thermal management, and RF considerations. Stay tuned!" data-de="In zukünftigen Beiträgen werden wir tiefer in fortgeschrittene Themen wie Hochgeschwindigkeits-Design, Wärmemanagement und HF-Überlegungen eintauchen. Bleib dran!">In future posts, we'll dive deeper into advanced topics like high-speed design, thermal management, and RF considerations. Stay tuned!</p>
+      </article>
+
+      <!-- Blog Post Navigation -->
+      <nav class="blog-post__navigation">
+        <a href="#" class="blog-post__nav-link blog-post__nav-link--disabled">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span data-en="Previous Post" data-de="Vorheriger Beitrag">Previous Post</span>
+        </a>
+        <a href="../" class="blog-post__nav-link">
+          <span data-en="Back to Blog" data-de="Zurück zum Blog">Back to Blog</span>
+          <i class="fa-solid fa-list"></i>
+        </a>
+        <a href="#" class="blog-post__nav-link blog-post__nav-link--disabled">
+          <span data-en="Next Post" data-de="Nächster Beitrag">Next Post</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('dark-toggle');
+    const body = document.body;
+    const icon = themeToggle?.querySelector('i');
+
+    // Check for saved theme preference or default to light mode
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    body.setAttribute('data-theme', currentTheme);
+    if (icon) updateThemeIcon(currentTheme);
+
+    if (themeToggle) themeToggle.addEventListener('click', () => {
+      const currentTheme = body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      if (icon) updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+      if (theme === 'dark') {
+        icon.className = 'fa-solid fa-sun';
+      } else {
+        icon.className = 'fa-solid fa-moon';
+      }
+    }
+
+    // Language switcher functionality
+    const langSwitcher = document.querySelector('.lang-switcher');
+    const langButtons = langSwitcher?.querySelectorAll('.lang-btn') || [];
+
+    function setLanguage(lang) {
+      langButtons.forEach(btn => {
+        if (btn.getAttribute('data-lang') === lang) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.innerHTML = el.getAttribute(`data-${lang}`);
+      });
+      document.documentElement.lang = lang;
+      localStorage.setItem('lang', lang);
+    }
+
+    langButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        setLanguage(btn.getAttribute('data-lang'));
+      });
+    });
+
+    const savedLang = localStorage.getItem('lang') || 'en';
+    setLanguage(savedLang);
+  </script>
+
+</body>
+</html> 
