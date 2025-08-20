@@ -1,214 +1,140 @@
 # Apoorv Kulkarni - Portfolio
 
-## 👨‍💻 Electrical Engineer & Embedded Systems Developer
+## About Me
+Graduate student at the Karlsruhe Institute of Technology with a strong foundation in embedded systems, PCB design, and applied electronics. Experienced in research, low-power system development, and end-to-end hardware development for real-world applications.
 
-> **Passionate about bridging the gap between hardware and software through innovative embedded solutions.**
+## Contact Information
+- **Email**: apoorvkulkarni.ak@gmail.com
+- **Phone**: +49-17666315354
+- **Address**: Nancystraße 18, 76187, Karlsruhe
+- **LinkedIn**: [linkedin.com/in/apoorvskulkarni](https://www.linkedin.com/in/apoorvskulkarni)
+- **Portfolio**: [ak-apoorvkulkarni.github.io](https://ak-apoorvkulkarni.github.io)
+- **GitHub**: [ak-apoorvkulkarni](https://github.com/ak-apoorvkulkarni)
 
----
+## Work Experience
 
-## 🎯 About Me
+### Research & Student Assistant
+**Karlsruhe Institute of Technology** | 08/2022 – Present
+- Developing thermoelectric sensors using inkjet printing for temperature and energy sensing, including analog front-end circuits for ultra-low voltage IR and heat flux signals
+- Designed FPGA-based control logic for Atomic Force Microscopy and a Python GUI for CO2 laser alignment with real-time control and visualization
 
-I am a graduate student at the **Karlsruhe Institute of Technology** with a solid background in embedded systems, PCB design, and applied electronics. My work focuses on building practical, hardware-driven solutions that integrate both hardware and software effectively.
+### Intern – Product Management
+**1&1 Mail & Media GmbH** | 10/2022 – 10/2024
+- Analyzed customer behavior, subscription patterns, and pricing data to support product strategy and engagement
+- Investigated fraud detection, optimized landing pages, and restructured help content to enhance user self-service and reduce support tickets
 
-Currently, I am developing an ultra-low voltage sensing and signal processing unit for thermoelectric sensors. This includes designing precision analog front-end circuits, amplification and filtering systems, and digital readout interfaces optimized for microvolt-level signals. The project aims to enable reliable, low-power sensing for applications such as temperature and energy monitoring.
+### Team Lead – Electronics
+**mu-zero HYPERLOOP e.V.** | 08/2022 – 09/2023
+- Led cross-functional teams to design, build, and test electronic systems for the Hyperloop pod, including inventory and sourcing
+- Oversaw debugging, system integration, test cases, and ensured execution under challenging conditions
 
-### 🚀 Core Competencies
-- **Embedded Systems Development** - Microcontrollers, RTOS, IoT
-- **PCB Design & Manufacturing** - Altium Designer, KiCad, Prototyping
-- **Hardware-Software Integration** - Firmware Development, Driver Development
-- **Product Development** - From Concept to Production
-- **Programming Languages** - C/C++, Python, JavaScript, VHDL/Verilog
-- **ARM Development** - ARM Architecture Development & Optimization
-- **Linux System Administration** - Linux System Administration & Development
+### Trainee – Quality Analyst
+**US Tech Solutions Pvt. Ltd** | 04/2021 – 08/2021
+- Performed data validation, QA testing, and client-side reporting for enterprise-level processes
+- Reviewed workflows to ensure compliance and quality standards
 
----
+### Research Assistant
+**Vidyalankar Institute of Technology, Mumbai** | 07/2019 – 03/2021
+- Conducted research on biosensor interfacing and biomedical signal processing for real-time health monitoring
+- Investigated signal acquisition and transmission methods to improve embedded system communication
 
-## 🛠️ Technical Skills
+## Internships
 
-### **Hardware Design**
-- **PCB Design**: Altium Designer, KiCad, Eagle
-- **Circuit Design**: Analog, Digital, Mixed-Signal
-- **Prototyping**: Breadboarding, Soldering, Testing
-- **Manufacturing**: Gerber Files, Assembly, Quality Control
+### Qualität Systems, Pune
+**12/2018 – 01/2019**
+- Tested embedded circuits and optimized firmware for industrial applications
+- Worked on improving microcontroller-based control logic and conducted validation tests for reliability in harsh environments
 
-### **Embedded Systems**
-- **Microcontrollers**: ARM Cortex-M, AVR, ESP32, STM32
-- **ARM Development**: ARM Architecture Development & Optimization
-- **RTOS**: FreeRTOS, Zephyr, VxWorks
-- **Communication Protocols**: I2C, SPI, UART, CAN, Ethernet
-- **Sensors & Actuators**: Integration and Calibration
+### Accusonic Controls Pvt Ltd, Pune
+**06/2018**
+- Assisted in testing control panels and wiring PLC-based systems
+- Gained hands-on experience with industrial automation hardware, performed continuity checks, and supported basic system integration tasks
 
-### **Software Development**
-- **Languages**: C/C++, Python, JavaScript, VHDL/Verilog, Bash
-- **Linux**: Linux System Administration & Development
-- **Frameworks**: React.js, Node.js, Express.js
-- **Tools**: Git, Docker, Jenkins, Jira
-- **Databases**: SQLite, MongoDB, PostgreSQL
+## Educational Background
 
-### **Development Tools**
-- **IDEs**: Visual Studio Code, Eclipse, IAR Workbench
-- **Version Control**: Git, GitHub, GitLab
-- **Testing**: Unit Testing, Integration Testing, Hardware Testing
-- **Documentation**: Technical Writing, API Documentation
+### Karlsruhe Institute of Technology
+**2022–Present** | Electrical Engineering and Information Technology, Karlsruhe, Germany
 
----
+### University of Duke CE
+**2022–2023** | Product Management Certification Program
 
-## 🎓 Education
+### University of Mumbai
+**2016–2020** | Electronics Engineering, Mumbai
 
-### **Karlsruhe Institute of Technology (KIT)**
-- **Master's in Electrical Engineering** | 2023 - Present
-- Focus: Embedded Systems, Signal Processing, Control Systems
+## Featured Projects
 
-### **Previous Education**
-- **Bachelor's in Electrical Engineering**
-- Specialization: Electronics and Communication
+### FPGA-Based Control for Atomic Force Microscope (AFM)
+Developed a precision control system using Verilog on FPGA for nanoscale piezoelectric actuation in Atomic Force Microscopy. Integrated feedback mechanisms for sub-nanometer positioning and designed a real-time interface for scan control and visualization.
 
----
+### Smart Cloud-Based Heating Management System
+Designed and deployed an IoT-enabled solution to remotely monitor and control smart heating systems using cloud analytics and mobile interfaces. Built with MQTT protocol, ESP32 microcontroller, and Firebase backend for real-time data visualization and user alerts.
 
-## 💼 Professional Experience
+### Speak Out – Assistive Glove for Speech-Impaired Individuals
+Engineered a wearable glove with embedded flex sensors and a microcontroller to detect sign gestures and translate them into audible speech using text-to-speech (TTS) modules. Enabled real-time communication for vocally impaired users with a portable battery-powered design.
 
-### **Graduate Research Assistant** | KIT
-*2023 - Present*
-- Conducting research in embedded systems and IoT applications
-- Developing innovative solutions for industrial automation
-- Collaborating with industry partners on cutting-edge projects
+### Task-Specific Robots (ROBOCON – National Level)
+Designed and programmed two cooperative robots (manual and autonomous) for India's ROBOCON competition. Focused on precise task coordination using PID control, RF communication, and modular actuation to complete competition-specific challenges under time constraints.
 
-### **Embedded Systems Engineer** | Previous Role
-*2022 - 2023*
-- Designed and developed embedded systems for consumer electronics
-- Led PCB design projects from concept to production
-- Implemented firmware for various microcontrollers
+## Technical Skills
 
----
+### Embedded Systems
+- FPGA, Arduino, STM32, ESP32
 
-## 🏆 Featured Projects
+### Languages & Frameworks
+- Python, C, Bash, Jupyter, NumPy, Pandas, SciPy, Matplotlib, Tkinter, PyQt, PyVISA
 
-### **Precision Signal Conditioning & Acquisition System**
-- **Technologies**: Instrumentation Amplifiers, High-Resolution ADC, Python, PCB Design
-- **Description**: Designed and implemented a high-precision analog front-end system for acquiring and processing ultra-low voltage signals generated by thermoelectric sensors. The project focused on addressing challenges inherent to microvolt-level signal acquisition, such as noise, offset, and thermal drift.
-- **Key Features**:
-  - Multi-stage signal conditioning using instrumentation amplifier architecture
-  - Programmable gain control through external precision resistors
-  - High-resolution analog-to-digital conversion (ADC) stage
-  - Real-time data acquisition pipeline using Python
-  - USB-based communication with measurement instruments
-  - Live waveform plotting and structured CSV data logging
-  - Applied in infrared heat flux measurement and multi-channel thermal sensor arrays
+### Design Tools
+- Fusion 360, AutoCAD, Cadence, OptiSystem
 
-### **Smart Heating System**
-- **Technologies**: ESP32, IoT, MQTT, React.js
-- **Description**: Intelligent home heating control system with mobile app interface
-- **Features**: Temperature monitoring, automated control, energy optimization
+### Simulations & Analysis
+- MATLAB, Simulink, Multisim, LTSpice, Proteus
 
-### **FPGA-Based AFM Controller**
-- **Technologies**: VHDL, FPGA, High-Speed Data Acquisition
-- **Description**: Field Programmable Gate Array implementation for Atomic Force Microscope control
-- **Features**: Real-time signal processing, precise positioning control
+### PCB Tools
+- EAGLE, KiCAD, Altium
 
-### **Hyperloop Pod Design**
-- **Technologies**: CAD, Structural Analysis, Control Systems
-- **Description**: Participated in SpaceX Hyperloop competition
-- **Features**: Aerodynamic design, propulsion systems, safety mechanisms
+### Product & Project Management
+- Product Strategy, Agile, User Research, PM Tools
 
-### **Smart Glove for Sign Language**
-- **Technologies**: Flex Sensors, Arduino, Machine Learning
-- **Description**: Wearable device for sign language translation
-- **Features**: Real-time gesture recognition, mobile app integration
+### Sensor Fabrication
+- Screen Printing, Inkjet Printing, Printed Electronics
 
----
+### Other Tools
+- MS Office, Git, LaTeX
 
-## 🔬 Research Interests
+## Personal Skills
+- Technical Leadership
+- Critical Thinking & Problem Solving
+- Communication & Public Speaking
 
-- **IoT and Edge Computing**: Distributed systems and edge intelligence
-- **Machine Learning in Embedded Systems**: On-device AI and optimization
-- **Sustainable Electronics**: Green computing and energy-efficient design
-- **Human-Computer Interaction**: Wearable technology and accessibility
-- **Precision Signal Processing**: Ultra-low voltage sensing and signal conditioning
+## Language Proficiency
+- **German (A2)** – Basic
+- **English (C1)** – Fluent
+- **Hindi, Marathi** – Native
 
----
+## Publications
 
-## 🌟 Achievements & Certifications
+### Technical Research Paper
+**Fiber & Integrated Optics by Taylor & Francis**
+DOI: [10.1080/01468030.2021.1945171](https://doi.org/10.1080/01468030.2021.1945171)
 
-- **SpaceX Hyperloop Competition** - Finalist
-- **Best Project Award** - University Level
-- **Technical Paper Publications** - IEEE Conferences
-- **Open Source Contributions** - GitHub Projects
+### Conference Papers
+- **ICCICT 2021, Mumbai**: [10.1109/ICCICT50803.2021.9509947](https://doi.org/10.1109/ICCICT50803.2021.9509947)
+- **SCEECS 2020, MANIT Bhopal**: [10.1109/SCEECS48394.2020.169](https://doi.org/10.1109/SCEECS48394.2020.169)
 
----
+## Portfolio Features
+- **Responsive Design** - Optimized for all devices
+- **Interactive Skills Section** - Hover tooltips with skill descriptions
+- **Project Showcase** - Detailed project descriptions with technologies used
+- **Professional Contact Section** - Multiple ways to get in touch
+- **Modern UI/UX** - Clean, professional design with smooth animations
 
-## 📫 Contact Information
-
-- **Email**: [Your Email]
-- **LinkedIn**: [https://www.linkedin.com/in/apoorvskulkarni/](https://www.linkedin.com/in/apoorvskulkarni/)
-- **GitHub**: [https://github.com/ak-apoorvkulkarni](https://github.com/ak-apoorvkulkarni)
-- **Portfolio**: https://ak-apoorvkulkarni.github.io/
-- **Location**: Karlsruhe, Germany
+## Technologies Used
+- **Frontend**: React.js, CSS3, HTML5
+- **Deployment**: GitHub Pages
+- **Version Control**: Git
+- **Icons**: Font Awesome
+- **Styling**: Custom CSS with gradients and animations
 
 ---
 
-## 🚀 Live Portfolio
-
-**🌐 Visit my interactive portfolio**: [https://ak-apoorvkulkarni.github.io/](https://ak-apoorvkulkarni.github.io/)
-
-### **Portfolio Features**
-- Responsive design for all devices
-- Modern UI/UX with dark theme
-- Interactive project showcases with detailed descriptions
-- Contact terminal interface
-- Mobile-optimized navigation
-- Interactive skill tooltips with brand colors
-- Space-efficient layout with masonry design
-
-### **Technologies Used**
-- React.js, CSS3, JavaScript
-- Responsive Design, CSS Grid, Flexbox
-- Modern Animations and Transitions
-- Mobile-First Approach
-- Interactive Tooltips and Hover Effects
-
----
-
-## 🛠️ Project Setup & Development
-
-### **Prerequisites**
-- Node.js (v14 or higher)
-- npm or yarn package manager
-
-### **Installation**
-```bash
-# Clone the repository
-git clone https://github.com/ak-apoorvkulkarni/apoorv-portfolio-react.git
-
-# Navigate to project directory
-cd apoorv-portfolio-react
-
-# Install dependencies
-npm install
-
-# Start development server
-npm start
-```
-
-### **Available Scripts**
-- `npm start` - Runs the app in development mode
-- `npm run build` - Builds the app for production
-- `npm test` - Launches the test runner
-- `npm run deploy` - Deploys to GitHub Pages
-- `npm run clean` - Cleans build artifacts and node_modules
-
-### **Deployment**
-This portfolio is automatically deployed to GitHub Pages. The build process creates optimized production files that are served from the `gh-pages` branch.
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-*"Innovation is the ability to see change as an opportunity, not a threat."* - Steve Jobs
-
----
-
-**Last Updated**: December 2024
+*This portfolio showcases my journey in embedded systems, electronics, and product development. Feel free to reach out for collaborations or opportunities!*
