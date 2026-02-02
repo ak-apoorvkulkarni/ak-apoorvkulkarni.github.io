@@ -1,11 +1,7 @@
-# GitHub Pages – One-time setup
+# GitHub Pages
 
-Your site is built and deployed to the **gh-pages** branch. For it to appear at **https://ak-apoorvkulkarni.github.io** you must set the source once:
+The site is served from the **main** branch at **https://ak-apoorvkulkarni.github.io**.
 
-1. Open: **https://github.com/ak-apoorvkulkarni/ak-apoorvkulkarni.github.io**
-2. Go to **Settings** → **Pages** (left sidebar).
-3. Under **Build and deployment** → **Source**, choose **Deploy from a branch**.
-4. Under **Branch**: select **gh-pages** and **/ (root)**.
-5. Click **Save**.
+For a **username.github.io** repo, GitHub Pages uses **main** by default, so no Settings change is needed. The site should be live within 1–2 minutes after deploy.
 
-After 1–2 minutes the site will be live. Every push to `main` will rebuild and update the site automatically.
+To update the site, push your code to the **source** branch (see DEPLOY.md).
