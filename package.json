@@ -18,7 +18,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build -b main",
     "clean": "rm -rf build node_modules package-lock.json",
     "install-prod": "npm ci --only=production",
     "build-prod": "npm run build && npm run clean",
