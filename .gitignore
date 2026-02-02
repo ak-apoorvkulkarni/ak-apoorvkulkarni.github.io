@@ -3,6 +3,9 @@ node_modules/
 
 # Build output
 build/
+.nojekyll
+/static/
+/images/
 
 # OS
 .DS_Store
