@@ -7,7 +7,6 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   const openProjectModal = (projectId) => {
     setSelectedProject(projectId);
     setIsModalOpen(true);
@@ -258,16 +257,15 @@ function App() {
             <div className="about-content">
               <div className="about-text">
                 <p>
-                  I am a graduate student at the Karlsruhe Institute of Technology with a solid background in 
-                  embedded systems, PCB design, and applied electronics. My work focuses on building practical, 
-                  hardware‑driven solutions that integrate both hardware and software effectively.
+                  I am an Electrical Engineering graduate from the Karlsruhe Institute of Technology with a solid 
+                  background in embedded systems, PCB design, and applied electronics. My work focuses on building 
+                  practical, hardware driven solutions that integrate both hardware and software effectively.
                 </p>
                 <p>
-                  Currently, I am developing an ultra‑low voltage sensing and signal processing unit for 
-                  thermoelectric sensors. This includes designing precision analog front‑end circuits, 
-                  amplification and filtering systems, and digital readout interfaces optimized for microvolt‑level 
-                  signals. The project aims to enable reliable, low‑power sensing for applications such as temperature 
-                  and energy monitoring.
+                  Currently, I work as a Junior Drone Engineer at Dronivo GmbH, where I contribute to drone 
+                  development and avionics. I also have hands on experience in precision analog design, including 
+                  ultra low voltage sensing and signal conditioning for thermoelectric sensors, and in developing 
+                  reliable, low power systems for temperature and energy monitoring.
                 </p>
               </div>
             </div>
@@ -289,18 +287,16 @@ function App() {
                                         <div className="card-header">
                         <h3>Karlsruhe Institute of Technology</h3>
                       </div>
-                  <p className="degree">Electrical Engineering and Information Technology</p>
+                  <p className="degree">Electrical Engineering & Information Technology</p>
                   <p className="location">📍 Karlsruhe, Germany</p>
                   <div className="timeline-info">
-                    <span className="year">2022 - Present</span>
-                    <div className="progress-bar">
-                      <div className="progress-fill" style={{width: '75%'}}></div>
-                    </div>
+                    <span className="year">2022 - 2025</span>
                   </div>
                   <div className="card-highlights">
                     <span className="highlight">Research Focus</span>
                     <span className="highlight">Embedded Systems</span>
                     <span className="highlight">PCB Design</span>
+                    <span className="highlight">Power Electronics</span>
                   </div>
                 </div>
               </div>
@@ -320,9 +316,6 @@ function App() {
                   <p className="location">📍 Online Program</p>
                   <div className="timeline-info">
                     <span className="year">2022 - 2023</span>
-                    <div className="progress-bar">
-                      <div className="progress-fill completed" style={{width: '100%'}}></div>
-                    </div>
                   </div>
                   <div className="card-highlights">
                     <span className="highlight">Product Strategy</span>
@@ -347,9 +340,6 @@ function App() {
                   <p className="location">📍 Mumbai, India</p>
                   <div className="timeline-info">
                     <span className="year">2016 - 2020</span>
-                    <div className="progress-bar">
-                      <div className="progress-fill completed" style={{width: '100%'}}></div>
-                    </div>
                   </div>
                   <div className="card-highlights">
                     <span className="highlight">Electronics</span>
@@ -369,12 +359,46 @@ function App() {
               <div className="experience-card current">
                 <div className="card-header">
                   <div className="role-icon">
+                    <span className="icon">🚁</span>
+                  </div>
+                  <div className="role-info">
+                    <h3>Junior Drone Engineer</h3>
+                    <p className="company">Dronivo GmbH</p>
+                    <span className="duration">2025 - Present</span>
+                  </div>
+                </div>
+                <div className="card-body">
+                  <div className="achievements">
+                    <div className="achievement-item">
+                      <span className="achievement-icon">🚀</span>
+                      <p>Drone development & control development.</p>
+                    </div>
+                    <div className="achievement-item">
+                      <span className="achievement-icon">⚡</span>
+                      <p>Electrical solution design for field deployment & operational requirements.</p>
+                    </div>
+                    <div className="achievement-item">
+                      <span className="achievement-icon">🔧</span>
+                      <p>Drone subsystem testing, integration, & application specific customization.</p>
+                    </div>
+                  </div>
+                  <div className="tech-tags">
+                    <span className="tech-tag">Drone Development</span>
+                    <span className="tech-tag">Control Systems</span>
+                    <span className="tech-tag">Electrical Design</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="experience-card">
+                <div className="card-header">
+                  <div className="role-icon">
                     <span className="icon">🔬</span>
                   </div>
                   <div className="role-info">
                     <h3>Research & Student Assistant</h3>
                     <p className="company">Karlsruhe Institute of Technology</p>
-                    <span className="duration">08/2022 - Present</span>
+                    <span className="duration">08/2022 - 08/2025</span>
                   </div>
 
                 </div>
@@ -386,15 +410,15 @@ function App() {
                     </div>
                     <div className="achievement-item">
                       <span className="achievement-icon">🔌</span>
-                      <p>Designing analog front-end circuits for ultra-low voltage IR and heat flux signals</p>
+                      <p>Designing analog front end circuits for ultra low voltage IR and heat flux signals</p>
                     </div>
                     <div className="achievement-item">
                       <span className="achievement-icon">🖥️</span>
-                      <p>Created FPGA-based control logic for Atomic Force Microscopy</p>
+                      <p>Created FPGA based control logic for Atomic Force Microscopy</p>
                     </div>
                     <div className="achievement-item">
                       <span className="achievement-icon">🐍</span>
-                      <p>Built Python GUI for CO2 laser alignment with real-time control and visualization</p>
+                      <p>Built Python GUI for CO2 laser alignment with real time control and visualization</p>
                     </div>
                   </div>
                   <div className="tech-tags">
@@ -429,7 +453,7 @@ function App() {
                     </div>
                     <div className="achievement-item">
                       <span className="achievement-icon">📚</span>
-                      <p>Restructured help content to enhance user self-service</p>
+                      <p>Restructured help content to enhance user self service</p>
                     </div>
                   </div>
                   <div className="tech-tags">
@@ -455,7 +479,7 @@ function App() {
                   <div className="achievements">
                     <div className="achievement-item">
                       <span className="achievement-icon">👥</span>
-                      <p>Led cross-functional teams to design, build, and test electronic systems</p>
+                      <p>Led cross functional teams to design, build, and test electronic systems</p>
                     </div>
                     <div className="achievement-item">
                       <span className="achievement-icon">🔧</span>
@@ -489,7 +513,7 @@ function App() {
                   <div className="achievements">
                     <div className="achievement-item">
                       <span className="achievement-icon">✅</span>
-                      <p>Performed data validation, QA testing, and client-side reporting for enterprise-level processes</p>
+                      <p>Performed data validation, QA testing, and client side reporting for enterprise level processes</p>
                     </div>
                     <div className="achievement-item">
                       <span className="achievement-icon">📋</span>
@@ -519,7 +543,7 @@ function App() {
                   <div className="achievements">
                     <div className="achievement-item">
                       <span className="achievement-icon">💓</span>
-                      <p>Conducted research on biosensor interfacing and biomedical signal processing for real-time health monitoring</p>
+                      <p>Conducted research on biosensor interfacing and biomedical signal processing for real time health monitoring</p>
                     </div>
                     <div className="achievement-item">
                       <span className="achievement-icon">📡</span>
@@ -545,7 +569,7 @@ function App() {
               <div className="project-card">
                 <div className="project-content">
                   <h3>Precision Signal Conditioning & Acquisition System</h3>
-                  <p>High-precision analog front-end and data acquisition pipeline for microvolt-level thermoelectric sensors, featuring low-noise amplification, filtering, high-resolution ADC, and real-time Python tooling.</p>
+                  <p>High precision analog front end and data acquisition pipeline for microvolt level thermoelectric sensors, featuring low noise amplification, filtering, high resolution ADC, and real time Python tooling.</p>
                   <div className="project-links">
                     <button onClick={() => openProjectModal('signal-conditioning')} className="btn btn-outline">View Details</button>
                   </div>
@@ -554,8 +578,8 @@ function App() {
 
               <div className="project-card">
                 <div className="project-content">
-                  <h3>FPGA-Based Control for AFM</h3>
-                  <p>Developed precision control system using Verilog on FPGA for nanoscale piezoelectric actuation in Atomic Force Microscopy with sub-nanometer positioning.</p>
+                  <h3>FPGA Based Control for AFM</h3>
+                  <p>Developed precision control system using Verilog on FPGA for nanoscale piezoelectric actuation in Atomic Force Microscopy with sub nanometer positioning.</p>
                   <div className="project-links">
                     <button onClick={() => openProjectModal('fpga-afm')} className="btn btn-outline">View Details</button>
                   </div>
@@ -564,8 +588,8 @@ function App() {
 
               <div className="project-card">
                 <div className="project-content">
-                  <h3>Smart Cloud-Based Heating System</h3>
-                  <p>IoT-enabled solution for remote monitoring and control of smart heating systems using cloud analytics and mobile interfaces with Firebase backend.</p>
+                  <h3>Smart Cloud Based Heating System</h3>
+                  <p>IoT enabled solution for remote monitoring and control of smart heating systems using cloud analytics and mobile interfaces with Firebase backend.</p>
                   <div className="project-links">
                     <button onClick={() => openProjectModal('smart-heating')} className="btn btn-outline">View Details</button>
                   </div>
@@ -574,8 +598,8 @@ function App() {
 
               <div className="project-card">
                 <div className="project-content">
-                  <h3>Assistive Glove for Speech-Impaired</h3>
-                  <p>Wearable glove with embedded flex sensors to detect sign gestures and translate them into audible speech using text-to-speech modules.</p>
+                  <h3>Assistive Glove for Speech Impaired</h3>
+                  <p>Wearable glove with embedded flex sensors to detect sign gestures and translate them into audible speech using text to speech modules.</p>
                   <div className="project-links">
                     <button onClick={() => openProjectModal('glove')} className="btn btn-outline">View Details</button>
                   </div>
@@ -584,7 +608,7 @@ function App() {
 
               <div className="project-card">
                 <div className="project-content">
-                  <h3>Task-Specific Robots (ROBOCON)</h3>
+                  <h3>Task Specific Robots (ROBOCON)</h3>
                   <p>Designed and programmed two cooperative robots for India's ROBOCON competition with precise task coordination using PID control and RF communication.</p>
                   <div className="project-links">
                     <button onClick={() => openProjectModal('robocon')} className="btn btn-outline">View Details</button>
@@ -608,48 +632,48 @@ function App() {
                     <h2>Precision Signal Conditioning & Acquisition System</h2>
                     <div className="project-tech-modal">
                       <span>Instrumentation Amplifier</span>
-                      <span>Low-Noise AFE</span>
+                      <span>Low Noise AFE</span>
                       <span>Programmable Gain</span>
                       <span>Filtering</span>
                       <span>Impedance Matching</span>
-                      <span>High-Res ADC</span>
+                      <span>High Res ADC</span>
                       <span>Python</span>
                       <span>USB DAQ</span>
                       <span>PCB Design</span>
                     </div>
                     <div className="project-description">
                       <h3>Project Overview</h3>
-                      <p>Designed and implemented a high-precision analog front-end (AFE) to acquire and process ultra-low voltage signals generated by thermoelectric sensors. The design addresses the core challenges of microvolt-level acquisition including noise, offset, and thermal drift while preserving signal fidelity for downstream analysis.</p>
+                      <p>Designed and implemented a high precision analog front end (AFE) to acquire and process ultra low voltage signals generated by thermoelectric sensors. The design addresses the core challenges of microvolt level acquisition including noise, offset, and thermal drift while preserving signal fidelity for downstream analysis.</p>
 
                       <h3>Key Features</h3>
                       <ul>
-                        <li>Multi-stage instrumentation amplifier architecture with high CMRR and low input-referred noise.</li>
+                        <li>Multi stage instrumentation amplifier architecture with high CMRR and low input referred noise.</li>
                         <li>Programmable gain via precision external resistors to adapt to varying sensor amplitudes.</li>
-                        <li>Input and post-amplification filtering plus impedance matching for stable, wideband operation.</li>
-                        <li>Integrated high-resolution ADC stage to digitize conditioned signals for analysis.</li>
-                        <li>Real-time Python data acquisition over USB, live waveform plotting, and CSV logging with metadata.</li>
+                        <li>Input and post amplification filtering plus impedance matching for stable, wideband operation.</li>
+                        <li>Integrated high resolution ADC stage to digitize conditioned signals for analysis.</li>
+                        <li>Real time Python data acquisition over USB, live waveform plotting, and CSV logging with metadata.</li>
                       </ul>
 
                       <h3>Technical Implementation</h3>
                       <ul>
-                        <li>Differential sensing front-end with careful layout for low leakage and minimal parasitic coupling.</li>
-                        <li>Analog–digital isolation, star-grounding strategy, decoupling and ground plane optimization.</li>
+                        <li>Differential sensing front end with careful layout for low leakage and minimal parasitic coupling.</li>
+                        <li>Analog digital isolation, star grounding strategy, decoupling and ground plane optimization.</li>
                         <li>Thermal stability considerations in component selection and placement.</li>
-                        <li>Impedance matching network and anti-alias filtering preceding the ADC.</li>
+                        <li>Impedance matching network and anti alias filtering preceding the ADC.</li>
                       </ul>
 
                       <h3>Applications</h3>
                       <ul>
                         <li>Infrared heat flux measurement and thermal energy sensing.</li>
-                        <li>Multi-channel thermal sensor arrays for environmental monitoring and wearable systems.</li>
-                        <li>General-purpose scientific instrumentation requiring microvolt-level measurements.</li>
+                        <li>Multi channel thermal sensor arrays for environmental monitoring and wearable systems.</li>
+                        <li>General purpose scientific instrumentation requiring microvolt level measurements.</li>
                       </ul>
 
                       <h3>Documentation & Deliverables</h3>
                       <ul>
                         <li>Complete schematics and PCB layout files with simulation notes.</li>
                         <li>Python acquisition scripts with instrument control, plotting, and structured CSV logging.</li>
-                        <li>Assembly, calibration, and test procedure notes enabling reproducibility and scale-up.</li>
+                        <li>Assembly, calibration, and test procedure notes enabling reproducibility and scale up.</li>
                       </ul>
                     </div>
                   </div>
@@ -657,7 +681,7 @@ function App() {
 
                 {selectedProject === 'fpga-afm' && (
                   <div className="project-details">
-                    <h2>FPGA-Based Control for AFM</h2>
+                    <h2>FPGA Based Control for AFM</h2>
                     <div className="project-tech-modal">
                       <span>FPGA</span>
                       <span>Verilog</span>
@@ -667,35 +691,35 @@ function App() {
                     </div>
                     <div className="project-description">
                       <h3>Project Overview</h3>
-                      <p>Developed a precision control system for Atomic Force Microscopy (AFM) using Field Programmable Gate Arrays (FPGA) and Verilog hardware description language. The system provides sub-nanometer positioning accuracy for piezoelectric actuators.</p>
+                      <p>Developed a precision control system for Atomic Force Microscopy (AFM) using Field Programmable Gate Arrays (FPGA) and Verilog hardware description language. The system provides sub nanometer positioning accuracy for piezoelectric actuators.</p>
                       
                       <h3>Key Features</h3>
                       <ul>
-                        <li>Sub-nanometer positioning accuracy</li>
-                        <li>Real-time control using FPGA</li>
+                        <li>Sub nanometer positioning accuracy</li>
+                        <li>Real time control using FPGA</li>
                         <li>Piezoelectric actuator control</li>
-                        <li>Verilog-based digital design</li>
-                        <li>High-frequency control signals</li>
+                        <li>Verilog based digital design</li>
+                        <li>High frequency control signals</li>
                       </ul>
                       
                       <h3>Technical Implementation</h3>
                       <ul>
-                        <li>FPGA-based control architecture</li>
+                        <li>FPGA based control architecture</li>
                         <li>Verilog HDL for digital logic design</li>
                         <li>Precision timing control</li>
                         <li>Analog signal conditioning</li>
-                        <li>Real-time feedback systems</li>
+                        <li>Real time feedback systems</li>
                       </ul>
                       
                       <h3>Results</h3>
-                      <p>Achieved sub-nanometer positioning accuracy with real-time control capabilities, enabling precise manipulation of AFM probes for advanced microscopy applications.</p>
+                      <p>Achieved sub nanometer positioning accuracy with real time control capabilities, enabling precise manipulation of AFM probes for advanced microscopy applications.</p>
                     </div>
                   </div>
                 )}
                 
                 {selectedProject === 'smart-heating' && (
                   <div className="project-details">
-                    <h2>Smart Cloud-Based Heating System</h2>
+                    <h2>Smart Cloud Based Heating System</h2>
                     <div className="project-tech-modal">
                       <span>IoT</span>
                       <span>ESP32</span>
@@ -705,35 +729,35 @@ function App() {
                     </div>
                     <div className="project-description">
                       <h3>Project Overview</h3>
-                      <p>Developed an IoT-enabled smart heating system with cloud-based monitoring and control capabilities. The system provides remote access, real-time analytics, and intelligent temperature management.</p>
+                      <p>Developed an IoT enabled smart heating system with cloud based monitoring and control capabilities. The system provides remote access, real time analytics, and intelligent temperature management.</p>
                       
                       <h3>Key Features</h3>
                       <ul>
                         <li>Remote monitoring and control</li>
-                        <li>Cloud-based data analytics</li>
+                        <li>Cloud based data analytics</li>
                         <li>Mobile app interface</li>
-                        <li>Real-time temperature monitoring</li>
+                        <li>Real time temperature monitoring</li>
                         <li>Automated scheduling</li>
                       </ul>
                       
                       <h3>Technical Implementation</h3>
                       <ul>
                         <li>ESP32 microcontroller for IoT connectivity</li>
-                        <li>MQTT protocol for real-time communication</li>
+                        <li>MQTT protocol for real time communication</li>
                         <li>Firebase backend for data storage</li>
                         <li>Mobile app for user interface</li>
                         <li>Cloud analytics for optimization</li>
                       </ul>
                       
                       <h3>Results</h3>
-                      <p>Successfully implemented a complete IoT heating solution with 24/7 remote monitoring, reducing energy consumption by 25% through intelligent scheduling and analytics-driven optimization.</p>
+                      <p>Successfully implemented a complete IoT heating solution with 24/7 remote monitoring, reducing energy consumption by 25% through intelligent scheduling and analytics driven optimization.</p>
                     </div>
                   </div>
                 )}
                 
                 {selectedProject === 'glove' && (
                   <div className="project-details">
-                    <h2>Assistive Glove for Speech-Impaired</h2>
+                    <h2>Assistive Glove for Speech Impaired</h2>
                     <div className="project-tech-modal">
                       <span>Embedded</span>
                       <span>Sensors</span>
@@ -743,35 +767,35 @@ function App() {
                     </div>
                     <div className="project-description">
                       <h3>Project Overview</h3>
-                      <p>Designed and developed a wearable assistive device that translates sign language gestures into audible speech. The system uses flex sensors to detect hand movements and converts them to speech through text-to-speech technology.</p>
+                      <p>Designed and developed a wearable assistive device that translates sign language gestures into audible speech. The system uses flex sensors to detect hand movements and converts them to speech through text to speech technology.</p>
                       
                       <h3>Key Features</h3>
                       <ul>
-                        <li>Real-time gesture recognition</li>
-                        <li>Text-to-speech conversion</li>
+                        <li>Real time gesture recognition</li>
+                        <li>Text to speech conversion</li>
                         <li>Wearable design</li>
                         <li>Multiple sensor integration</li>
-                        <li>Battery-powered operation</li>
+                        <li>Battery powered operation</li>
                       </ul>
                       
                       <h3>Technical Implementation</h3>
                       <ul>
                         <li>Flex sensors for gesture detection</li>
                         <li>Microcontroller for signal processing</li>
-                        <li>Text-to-speech module integration</li>
+                        <li>Text to speech module integration</li>
                         <li>Wireless communication</li>
                         <li>Machine learning for gesture recognition</li>
                       </ul>
                       
                       <h3>Results</h3>
-                      <p>Created a functional prototype capable of recognizing 15+ basic sign language gestures with 85% accuracy, providing a communication bridge for speech-impaired individuals.</p>
+                      <p>Created a functional prototype capable of recognizing 15+ basic sign language gestures with 85% accuracy, providing a communication bridge for speech impaired individuals.</p>
                     </div>
                   </div>
                 )}
                 
                 {selectedProject === 'robocon' && (
                   <div className="project-details">
-                    <h2>Task-Specific Robots (ROBOCON)</h2>
+                    <h2>Task Specific Robots (ROBOCON)</h2>
                     <div className="project-tech-modal">
                       <span>Robotics</span>
                       <span>PID</span>
@@ -797,7 +821,7 @@ function App() {
                         <li>PID control algorithms for precision</li>
                         <li>RF communication protocols</li>
                         <li>Sensor fusion for navigation</li>
-                        <li>Real-time task coordination</li>
+                        <li>Real time task coordination</li>
                         <li>Robust mechanical design</li>
                       </ul>
                       
@@ -823,7 +847,7 @@ function App() {
                   <h3>Embedded Systems</h3>
                 </div>
                 <div className="skills-grid">
-                  <div className="skill-item" data-tooltip="Field Programmable Gate Arrays - Digital Design & Implementation">
+                  <div className="skill-item" data-tooltip="Field Programmable Gate Arrays, Digital Design & Implementation">
                     <div className="skill-logo fpga">
                       <i className="fas fa-cogs"></i>
                     </div>
@@ -835,7 +859,7 @@ function App() {
                     </div>
                     <span className="skill-name">Arduino</span>
                   </div>
-                  <div className="skill-item" data-tooltip="ARM Cortex-M Development & Real-time Systems">
+                  <div className="skill-item" data-tooltip="ARM Cortex-M Development & Real time Systems">
                     <div className="skill-logo stm32">
                       <i className="fas fa-microchip"></i>
                     </div>
@@ -870,7 +894,7 @@ function App() {
                     </div>
                     <span className="skill-name">MATLAB</span>
                   </div>
-                  <div className="skill-item" data-tooltip="Model-Based Design & Simulation">
+                  <div className="skill-item" data-tooltip="Model Based Design & Simulation">
                     <div className="skill-logo simulink">
                       <i className="fas fa-project-diagram"></i>
                     </div>
@@ -1159,7 +1183,7 @@ function App() {
                     <span className="command typing-text" data-text="whoami">whoami</span>
                   </div>
                   <div className="output-line">
-                    <span className="output">Apoorv Kulkarni - Electrical Engineer</span>
+                    <span className="output">Apoorv Kulkarni, Electrical Engineer</span>
                   </div>
                   
                   <div className="command-line">
