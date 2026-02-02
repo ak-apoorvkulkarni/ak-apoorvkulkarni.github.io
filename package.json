@@ -21,7 +21,9 @@
     "deploy": "gh-pages -d build",
     "clean": "rm -rf build node_modules package-lock.json",
     "install-prod": "npm ci --only=production",
-    "build-prod": "npm run build && npm run clean"
+    "build-prod": "npm run build && npm run clean",
+    "serve": "serve -s build -l 3000",
+    "server": "npm run build && npm run serve"
   },
   "eslintConfig": {
     "extends": [
@@ -42,7 +44,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^3.2.3",
+    "serve": "^14.2.1"
   },
   "keywords": [
     "portfolio",
